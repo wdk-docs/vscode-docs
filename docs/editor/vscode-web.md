@@ -7,6 +7,7 @@ PageTitle: Visual Studio Code for the Web
 DateApproved: 7/6/2023
 MetaDescription: Visual Studio Code for the Web and the vscode.dev URL
 ---
+
 # Visual Studio Code for the Web
 
 Visual Studio Code for the Web provides a free, zero-install Microsoft Visual Studio Code experience running entirely in your browser, allowing you to quickly and safely browse source code repositories and make lightweight code changes. To get started, go to **[https://vscode.dev](https://vscode.dev)** in your browser.
@@ -47,7 +48,7 @@ GitHub Repositories is the core component that provides the ability to remotel
 
 Rather than cloning your work, GitHub Repositories creates a virtual file system to access repositories and pull requests, allowing you to become productive quickly without needing to pull code onto your local machine. You can learn more about the extension in our [GitHub Repositories](/docs/sourcecontrol/github.md#github-repositories-extension) guide.
 
->**Note**: The GitHub Repositories extension works in VS Code Desktop as well to provide fast repository browsing and editing.
+> **Note**: The GitHub Repositories extension works in VS Code Desktop as well to provide fast repository browsing and editing.
 
 You can create a new file in the web just as you would in a VS Code Desktop environment, using **File** > **New File** from the Command Palette (`kbstyle(F1)`).
 
@@ -127,9 +128,9 @@ Language support is a bit more nuanced on the web, including code editing, navig
 
 Generally, experiences fall into the following categories:
 
-* **Good:** For most programming languages, VS Code for the Web gives you code syntax colorization, text-based completions, and bracket pair colorization. Using a [Tree-sitter](https://tree-sitter.github.io/tree-sitter) syntax tree through the [anycode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.anycode), we're able to provide additional experiences such as **Outline/Go to Symbol** and **Symbol Search** for popular languages such as C/C++, C#, Java, PHP, Rust, and Go.
-* **Better:** The TypeScript, JavaScript, and Python experiences are all powered by language services that run natively in the browser. With these programming languages, you'll get the "**Good**" experience plus rich single file completions, semantic highlighting, syntax errors, and more.
-* **Best:** For many "webby" languages, such as JSON, HTML, CSS, and LESS, etc., the coding experience in vscode.dev is nearly identical to the desktop (including Markdown preview!).
+- **Good:** For most programming languages, VS Code for the Web gives you code syntax colorization, text-based completions, and bracket pair colorization. Using a [Tree-sitter](https://tree-sitter.github.io/tree-sitter) syntax tree through the [anycode extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.anycode), we're able to provide additional experiences such as **Outline/Go to Symbol** and **Symbol Search** for popular languages such as C/C++, C#, Java, PHP, Rust, and Go.
+- **Better:** The TypeScript, JavaScript, and Python experiences are all powered by language services that run natively in the browser. With these programming languages, you'll get the "**Good**" experience plus rich single file completions, semantic highlighting, syntax errors, and more.
+- **Best:** For many "webby" languages, such as JSON, HTML, CSS, and LESS, etc., the coding experience in vscode.dev is nearly identical to the desktop (including Markdown preview!).
 
 You can determine the level of language support in your current file through the Language Status Indicator in the Status bar:
 
@@ -175,13 +176,13 @@ You can use VS Code for the Web on mobile devices, but smaller screens may have 
 
 Certain keybindings may also work differently in the web.
 
-| Issue | Reason |
-|-|-|
-| `kb(workbench.action.showCommands)` won't launch the Command Palette in Firefox. | `kb(workbench.action.showCommands)` is reserved in Firefox. <br /> As a workaround, use `kbstyle(F1)` to launch the Command Palette. |
-| `kb(workbench.action.files.newUntitledFile)` for new file doesn't work in web. | `kb(workbench.action.files.newUntitledFile)` opens a new window instead. <br /> As a workaround, you can use `kbstyle(Ctrl+Alt+N)` (`kbstyle(Cmd+Alt+N)` on macOS). |
-| `kb(workbench.action.closeActiveEditor)` for closing an editor doesn't work in web. | `kb(workbench.action.closeActiveEditor)` closes the current tab in browsers. <br /> As a workaround, you can use `kbstyle(Ctrl+Shift+Alt+N)` (`kbstyle(Cmd+Shift+Alt+N)` on macOS). |
-| `kb(workbench.action.tasks.build)` will not toggle the favorites bar in the browser. | VS Code for the Web overrides this and redirects to the "Build" menu in the Command Palette. |
-| `kbstyle(Alt+Left)` and `kbstyle(Alt+Right)` should navigate within the editor but may incorrectly trigger tab history navigation. | If focus is outside the editor, these shortcuts trigger tab history navigation instead. |
+| Issue                                                                                                                              | Reason                                                                                                                                                                              |
+| ---------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `kb(workbench.action.showCommands)` won't launch the Command Palette in Firefox.                                                   | `kb(workbench.action.showCommands)` is reserved in Firefox. <br /> As a workaround, use `kbstyle(F1)` to launch the Command Palette.                                                |
+| `kb(workbench.action.files.newUntitledFile)` for new file doesn't work in web.                                                     | `kb(workbench.action.files.newUntitledFile)` opens a new window instead. <br /> As a workaround, you can use `kbstyle(Ctrl+Alt+N)` (`kbstyle(Cmd+Alt+N)` on macOS).                 |
+| `kb(workbench.action.closeActiveEditor)` for closing an editor doesn't work in web.                                                | `kb(workbench.action.closeActiveEditor)` closes the current tab in browsers. <br /> As a workaround, you can use `kbstyle(Ctrl+Shift+Alt+N)` (`kbstyle(Cmd+Shift+Alt+N)` on macOS). |
+| `kb(workbench.action.tasks.build)` will not toggle the favorites bar in the browser.                                               | VS Code for the Web overrides this and redirects to the "Build" menu in the Command Palette.                                                                                        |
+| `kbstyle(Alt+Left)` and `kbstyle(Alt+Right)` should navigate within the editor but may incorrectly trigger tab history navigation. | If focus is outside the editor, these shortcuts trigger tab history navigation instead.                                                                                             |
 
 ## Additional browser setup
 
@@ -191,8 +192,8 @@ There are additional browser configuration steps you can take when working with 
 
 In certain cases, you may need to open a new tab or window while working in VS Code for the Web. VS Code might ask you for permission to access the clipboard when reading from it. Depending on your browser, you may grant access to the clipboard or otherwise allow for pop-up windows in different ways:
 
-* Chrome, Edge, Firefox: Search for "site permissions" in your browser's settings, or look for the following option in the address bar on the right:
+- Chrome, Edge, Firefox: Search for "site permissions" in your browser's settings, or look for the following option in the address bar on the right:
 
 ![Allow clipboard access in the browser](images/vscode-web/allow-clipboard-access.png)
 
-* Safari: In the Safari browser, go to **Preferences...** > **Websites** > **Pop-up Windows** > the domain you're accessing (for example, `vscode.dev`), and select **Allow** from the dropdown.
+- Safari: In the Safari browser, go to **Preferences...** > **Websites** > **Pop-up Windows** > the domain you're accessing (for example, `vscode.dev`), and select **Allow** from the dropdown.
