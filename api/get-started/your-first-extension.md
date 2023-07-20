@@ -5,17 +5,20 @@ DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
 MetaDescription: Create your first Visual Studio Code extension (plug-in) with a simple Hello World example.
+sidebar_position: 1
 ---
 
-# Your First Extension
+# 你的第一个扩展
 
-In this topic, we'll teach you the fundamental concepts for building extensions. Make sure you have [Node.js](https://nodejs.org) and [Git](https://git-scm.com/) installed, then install [Yeoman](https://yeoman.io/) and [VS Code Extension Generator](https://www.npmjs.com/package/generator-code) with:
+在本主题中，我们将教你建筑扩展的基本概念。
+
+确保你已经安装了[Node.js](https://nodejs.org)和[Git](https://git-scm.com/)，然后安装[Yeoman](https://yeoman.io/)和[VS Code Extension Generator](https://www.npmjs.com/package/generator-code):
 
 ```bash
 npm install -g yo generator-code
 ```
 
-The generator scaffolds a TypeScript or JavaScript project ready for development. Run the generator and fill out a few fields for a TypeScript project:
+生成器搭建一个TypeScript或JavaScript项目，为开发做好准备。运行生成器并为TypeScript项目填写一些字段:
 
 ```bash
 yo code
@@ -34,56 +37,61 @@ yo code
 
 ```
 
-Then, inside the editor, press `kb(workbench.action.debug.start)`. This will compile and run the extension in a new **Extension Development Host** window.
+然后，进入编辑器，按下按钮 `F5` `kb(workbench.action.debug.start)`.
+这将在一个新 **Extension Development Host** 窗口中编译并运行扩展。
 
-Run the **Hello World** command from the Command Palette (`kb(workbench.action.showCommands)`) in the new window:
+在新窗口的命令面板(`⇧⌘P` `kb(workbench.action.showCommands)`)中运行命令 **Hello World** :
 
 <video loop muted playsinline controls title="Launch your first VS Code extension video">
   <source src="/api/get-started/images/launch.mp4" type="video/mp4" />
 </video>
- 
-You should see the `Hello World from HelloWorld!` notification showing up. Success!
 
-## Developing the extension
+你应该看到 `Hello World from HelloWorld!` 通知出现. 成功!
 
-Let's make a change to the message:
+## 开发扩展
 
-1. Change the message from "Hello World from HelloWorld!" to "Hello VS Code" in `extension.ts`.
-1. Run **Developer: Reload Window** in the new window.
-1. Run the command **Hello World** again.
+让我们对消息进行更改:
 
-You should see the updated message showing up.
+1. 将`extension.ts`中的"Hello World from HelloWorld!"改为"Hello VS Code"。
+2. 在新窗口中运行 **Developer: Reload Window** 命令.
+3. 再次运行命令 **Hello World**.
 
-<!-- <video loop muted playsinline controls title="Reload VS Code extension video">
-  <source src="/api/get-started/your-first-extension/reload.mp4" type="video/mp4">
-</video> -->
+您应该会看到更新后的消息出现。
 
-Here are some ideas for things for you to try:
+<video loop muted playsinline controls title="Reload VS Code extension video">
+  <source src="/api/get-started/images/reload.mp4" type="video/mp4" />
+</video>
 
-- Give the **Hello World** command a new name in the Command Palette.
-- [Contribute](/api/references/contribution-points) another command that displays current time in an information message. Contribution points are static declarations you make in the `package.json` [Extension Manifest](/api/references/extension-manifest) to extend VS Code, such as adding commands, menus, or keybindings to your extension.
-- Replace the `vscode.window.showInformationMessage` with another [VS Code API](/api/references/vscode-api) call to show a warning message.
+这里有一些建议供你尝试:
 
-## Debugging the extension
+- 在命令面板中为 **Hello World** 命令指定一个新名称。
+- [Contribute](/api/references/contribution-points) 另一个用信息消息显示当前时间的命令. 贡献点是你在 `package.json` [Extension Manifest](/api/references/extension-manifest) 中做的静态声明，用于扩展VS Code，例如向扩展中添加命令、菜单或键绑定。
+- 将 `vscode.window.showInformationMessage` 替换为另一个 [VS Code API](/api/references/vscode-api)调用以显示警告消息。
 
-VS Code's built-in debugging functionality makes it easy to debug extensions. Set a breakpoint by clicking the gutter next to a line, and VS Code will hit the breakpoint. You can hover over variables in the editor or use the **Run and Debug** view in the left to check a variable's value. The Debug Console allows you to evaluate expressions.
+## 调试扩展
 
-<!-- <video loop muted playsinline controls title="Debug VS Code extension video">
-  <source src="/api/get-started/your-first-extension/debug.mp4" type="video/mp4">
-</video> -->
+VS Code的内置调试功能使调试扩展变得很容易。
+通过点击一行旁边的gutter来设置断点，VS Code将击中断点。
+您可以将鼠标悬停在编辑器中的变量上，或者使用左侧的 **Run and Debug** 视图来检查变量的值.
+调试控制台允许您计算表达式。
 
-You can learn more about debugging Node.js apps in VS Code in the [Node.js Debugging Topic](/docs/nodejs/nodejs-debugging).
+<video loop muted playsinline controls title="Debug VS Code extension video">
+  <source src="/api/get-started/images/debug.mp4" type="video/mp4" />
+</video>
 
-## Next steps
+你可以在[Node.js调试主题](/docs/nodejs/nodejs-debugging)中了解更多关于在VS Code中调试Node.js应用程序的信息。
 
-In the next topic, [Extension Anatomy](/api/get-started/extension-anatomy), we'll take a closer look at the source code of the `Hello World` sample and explain key concepts.
+## 下一步
 
-You can find the source code of this tutorial at: [https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-sample](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-sample). The [Extension Guides](/api/extension-guides/overview) topic contains other samples, each illustrating a different VS Code API or Contribution Point, and following the recommendations in our [UX Guidelines](/api/ux-guidelines/overview).
+在下一个主题中，[扩展剖析](/api/get-started/extension-anatomy)，我们将仔细研究 `Hello World` 示例的源代码并解释关键概念。
 
-### Using JavaScript
+您可以在此找到本教程的源代码: [https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-sample](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-sample).
+The [Extension Guides](/api/extension-guides/overview) 主题包含其他示例，每个示例都说明了不同的VS Code api或贡献点，并遵循我们的 [UX Guidelines](/api/ux-guidelines/overview)中的建议.
 
-In this guide, we mainly describe how to develop VS Code extension with TypeScript because we believe TypeScript offers the best experience for developing VS Code extensions. However, if you prefer JavaScript, you can still follow along using [helloworld-minimal-sample](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-minimal-sample).
+### 使用 JavaScript
 
-### UX Guidelines
+在本指南中，我们主要描述如何使用TypeScript开发VS Code扩展，因为我们相信TypeScript为开发VS Code扩展提供了最好的体验。但是，如果你更喜欢JavaScript，你仍然可以使用[helloworld minimal sample](https://github.com/microsoft/vscode-extension-samples/tree/main/helloworld-minimal-sample).
 
-This is also a good time to review our [UX Guidelines](/api/ux-guidelines/overview) so you can start designing your extension user interface to follow the VS Code best practices.
+### UX 的指导方针
+
+这也是回顾我们的[UX指南](/api/ux-guidelines/overview)的好时机，这样你就可以开始按照VS Code的最佳实践来设计你的扩展用户界面了。
