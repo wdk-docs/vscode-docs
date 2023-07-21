@@ -1,11 +1,11 @@
 ---
 Order: 11
 Area: csharp
-TOCTitle: FAQ
-ContentId: edd2c270-152c-419d-b5d9-06f2f95979cd
+title: FAQ
+id: edd2c270-152c-419d-b5d9-06f2f95979cd
 PageTitle: C# Dev Kit extension FAQ
 DateApproved: 7/11/2023
-MetaDescription: C# Dev Kit extension Frequently Asked Questions (FAQ)
+description: C# Dev Kit extension Frequently Asked Questions (FAQ)
 ---
 
 # C# Dev Kit FAQ
@@ -18,15 +18,15 @@ Use this FAQ (Frequently Asked Questions) topic to learn more about the C# Dev K
 
 ## What project types are currently supported?
 
-With an initial focus on cloud native development, the first preview of C# Dev Kit brings support for creating web apps, console apps, class library projects, and test projects.  We'll expand on this set of supported applications over time based on feedback that we gather from you and the community. You can build [.NET Multi-platform App UI (MAUI)](https://dotnet.microsoft.com/apps/maui) apps using the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui), which is built on top of C# Dev Kit.
+With an initial focus on cloud native development, the first preview of C# Dev Kit brings support for creating web apps, console apps, class library projects, and test projects. We'll expand on this set of supported applications over time based on feedback that we gather from you and the community. You can build [.NET Multi-platform App UI (MAUI)](https://dotnet.microsoft.com/apps/maui) apps using the [.NET MAUI extension](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui), which is built on top of C# Dev Kit.
 
 ## What extensions are included in C# Dev Kit?
 
 Today the extensions included in the C# Dev Kit family are:
 
-* [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
-* [IntelliCode for C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscodeintellicode-csharp)
-* [.NET MAUI](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
+- [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit)
+- [IntelliCode for C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.vscodeintellicode-csharp)
+- [.NET MAUI](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.dotnet-maui)
 
 Use of these extensions are governed under the [EULA for the C# Dev Kit family of extensions](https://aka.ms/vs/csdevkit/license).
 
@@ -46,7 +46,7 @@ Users can report an issue or a suggestion through VS Code's **Help > Report Issu
 
 ## Is C# Dev Kit open source? Why not?
 
-No. C# Dev Kit is closed source but depends upon the C# for VS Code extension, which is open source, and both communicate with open-source components such as [Roslyn](https://github.com/dotnet/roslyn) and [Razor](https://github.com/dotnet/razor). One of our goals with C# Dev Kit is to provide an improved productivity experience for C# developers who use VS Code.  To achieve this, C# Dev Kit includes some proprietary, closed-source features that are shared with our other tools. To make these experiences available to VS Code users, we needed to introduce C# Dev Kit as a closed source extension.
+No. C# Dev Kit is closed source but depends upon the C# for VS Code extension, which is open source, and both communicate with open-source components such as [Roslyn](https://github.com/dotnet/roslyn) and [Razor](https://github.com/dotnet/razor). One of our goals with C# Dev Kit is to provide an improved productivity experience for C# developers who use VS Code. To achieve this, C# Dev Kit includes some proprietary, closed-source features that are shared with our other tools. To make these experiences available to VS Code users, we needed to introduce C# Dev Kit as a closed source extension.
 
 ## How can I contribute?
 

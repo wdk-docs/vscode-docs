@@ -1,13 +1,14 @@
 ---
 Order: 7
 Area: containers
-TOCTitle: Registries
-ContentId: 318A4299-AF24-4ADA-863D-E73B314FC440
+title: Registries
+id: 318A4299-AF24-4ADA-863D-E73B314FC440
 PageTitle: Quickstart - Using container registries
 DateApproved: 12/21/2022
-MetaDescription: Work with Docker container registries in Visual Studio Code
+description: Work with Docker container registries in Visual Studio Code
 ---
-# Using container registries
+
+# 使用容器注册表
 
 A container registry is a storage and content delivery system, holding named Docker images, available in different tagged versions.
 
@@ -24,26 +25,28 @@ Before you can deploy a Docker image, the image must be uploaded to a container 
 
 1. Open the Docker Explorer, select **Connect Registry...** icon under the **Registries** group, and follow the prompt. Choose the provider (for example, Azure or Docker Hub) and provide the credential to connect to the registry. If prompted, install the [Azure Account](https://marketplace.visualstudio.com/items?itemName=ms-vscode.azure-account) extension.
 
-    ![Connect to Registry](images/registries/connect-registry-2.png)
+   ![Connect to Registry](images/registries/connect-registry-2.png)
 
 2. Now the registry will be visible under **Registries**.
 
    ![Registries](images/registries/explorer-registries.png)
 
 3. Optionally, tag the image. In order to upload an image to a registry, the image needs to be tagged with registry name so that the docker push will upload it to the right registry. If the image isn't tagged when you try to push it, VS Code asks you what registry you want to associate with the image.
-    - Images you previously built appear in the Docker Explorer under the **Images** tab. Right-click and choose **Tag...**.
 
-        ![Tag image](images/registries/explorer-tag-image.png)
-    - Specify the new name `<your registry or username>/<image name>:<tag>` and complete the
-    tag action. For example, new image name for ACR would be `mainacr.azurecr.io/webapp6:latest` and for Docker Hub it would be `myusername/webapp6:latest`.
+   - Images you previously built appear in the Docker Explorer under the **Images** tab. Right-click and choose **Tag...**.
+
+     ![Tag image](images/registries/explorer-tag-image.png)
+
+   - Specify the new name `<your registry or username>/<image name>:<tag>` and complete the
+     tag action. For example, new image name for ACR would be `mainacr.azurecr.io/webapp6:latest` and for Docker Hub it would be `myusername/webapp6:latest`.
 
 4. The image shows up in the Docker Explorer in the **Images** tab under the registry that the image tag points to. Select this image and choose **Push**. If the image has not yet been tagged, you're prompted to choose a registry to push to, or create a new registry, and the image is tagged based on the selection.
 
-    ![Push image](images/registries/explorer-push-image.png)
+   ![Push image](images/registries/explorer-push-image.png)
 
 5. Once the push command is completed, refresh the registry node where the image is pushed to and the uploaded image will show up.
 
-    ![Refresh registry](images/registries/explorer-refresh-registry.png)
+   ![Refresh registry](images/registries/explorer-refresh-registry.png)
 
 ## Docker Hub
 

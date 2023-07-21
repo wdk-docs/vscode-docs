@@ -1,12 +1,13 @@
 ---
 Order: 2
 Area: terminal
-TOCTitle: Terminal Profiles
-ContentId: 1a9d76e8-9c8c-446e-974e-d71570e7d62a
+title: Terminal Profiles
+id: 1a9d76e8-9c8c-446e-974e-d71570e7d62a
 PageTitle: Terminal Profiles in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code's integrated terminal allows configuring various profiles to make launching various shells easier.
+description: Visual Studio Code's integrated terminal allows configuring various profiles to make launching various shells easier.
 ---
+
 # Terminal Profiles
 
 Terminal profiles are platform-specific shell configurations comprised of an executable path, arguments, and other customizations. By default several profiles are automatically detected which can be customized or added to.
@@ -20,11 +21,7 @@ Example profile:
   "terminal.integrated.profiles.windows": {
     "Custom Init": {
       "path": "pwsh.exe",
-      "args": [
-         "-noexit",
-         "-file",
-         "${env:APPDATA}\\PowerShell\\custom-init.ps1"
-      ]
+      "args": ["-noexit", "-file", "${env:APPDATA}\\PowerShell\\custom-init.ps1"]
     }
   },
   "terminal.integrated.defaultProfile.windows": "Custom Init"
@@ -64,12 +61,12 @@ Profiles can be created using either a `path` or a `source`, as well as a set of
 
 Other arguments supported in profiles include:
 
-* `overrideName`: A boolean indicating whether or not to replace the dynamic terminal title that detects what program is running with the static profile name.
-* `env`: A map defining environment variables and their values, set the variable to `null` to delete it from the environment. This can be configured for all profiles using the `terminal.integrated.env.<platform>` setting.
-* `icon`: An icon ID to use for the profile.
-* `color`: A theme color ID to style the icon.
+- `overrideName`: A boolean indicating whether or not to replace the dynamic terminal title that detects what program is running with the static profile name.
+- `env`: A map defining environment variables and their values, set the variable to `null` to delete it from the environment. This can be configured for all profiles using the `terminal.integrated.env.<platform>` setting.
+- `icon`: An icon ID to use for the profile.
+- `color`: A theme color ID to style the icon.
 
->**Tip:** Path, args, and env all support [resolving variables](https://code.visualstudio.com/docs/editor/variables-reference)
+> **Tip:** Path, args, and env all support [resolving variables](https://code.visualstudio.com/docs/editor/variables-reference)
 
 The **default profile** can be defined manually with the `terminal.integrated.defaultProfile.*` settings. This should be set to the name of an existing profile:
 
@@ -85,7 +82,7 @@ The **default profile** can be defined manually with the `terminal.integrated.de
 }
 ```
 
->**Tip:** The integrated terminal shell is running with the permissions of VS Code. If you need to run a shell command with elevated (administrator) or different permissions, use platform utilities such as `runas.exe` within a terminal.
+> **Tip:** The integrated terminal shell is running with the permissions of VS Code. If you need to run a shell command with elevated (administrator) or different permissions, use platform utilities such as `runas.exe` within a terminal.
 
 ## Removing built-in profiles
 
@@ -175,10 +172,7 @@ MSYS2's bash shell can be configured with the following profile:
   "terminal.integrated.profiles.windows": {
     "bash (MSYS2)": {
       "path": "C:\\msys64\\usr\\bin\\bash.exe",
-      "args": [
-        "--login",
-        "-i"
-      ]
+      "args": ["--login", "-i"]
     }
   }
 }
@@ -199,10 +193,7 @@ When running VS Code on your local machine, Windows Subsystem for Linux shells s
   "terminal.integrated.profiles.windows": {
     "Debian (WSL)": {
       "path": "C:\\WINDOWS\\System32\\wsl.exe",
-      "args": [
-        "-d",
-        "Debian"
-      ]
+      "args": ["-d", "Debian"]
     }
   }
 }

@@ -1,11 +1,11 @@
 ---
 Order: 8
 Area: csharp
-TOCTitle: Package Management
-ContentId: 6e7d5ecf-d7aa-44b5-abc0-2257a2075906
+title: Package Management
+id: 6e7d5ecf-d7aa-44b5-abc0-2257a2075906
 PageTitle: C# package management with NuGet in Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: C# package management with NuGet in Visual Studio Code
+description: C# package management with NuGet in Visual Studio Code
 ---
 
 # NuGet in Visual Studio Code

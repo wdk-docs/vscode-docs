@@ -1,13 +1,14 @@
 ---
 Order: 9
 Area: languages
-TOCTitle: C++
-ContentId: D06C8C5C-2D3A-4B2E-B31F-12F1907E6402
+title: C++
+id: D06C8C5C-2D3A-4B2E-B31F-12F1907E6402
 PageTitle: C++ programming with Visual Studio Code
 DateApproved: 1/21/2022
-MetaDescription: Find out how to get the best out of Visual Studio Code and C++.
+description: Find out how to get the best out of Visual Studio Code and C++.
 MetaSocialImage: images/cpp/languages_cpp.png
 ---
+
 # C/C++ for Visual Studio Code
 
 C/C++ support for Visual Studio Code is provided by a [Microsoft C/C++ extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) to enable cross-platform C and C++ development on Windows, Linux, and macOS.
@@ -57,7 +58,7 @@ If you don't have a compiler installed, in the example below, we describe how to
 
 ## Example: Install MinGW-x64
 
-We will install Mingw-w64 via [MSYS2](https://www.msys2.org/), which provides up-to-date native builds of GCC, Mingw-w64, and other helpful C++ tools and libraries.  You can download the latest installer from the MSYS2 page or use this [link to the installer](https://github.com/msys2/msys2-installer/releases/download/2022-06-03/msys2-x86_64-20220603.exe).
+We will install Mingw-w64 via [MSYS2](https://www.msys2.org/), which provides up-to-date native builds of GCC, Mingw-w64, and other helpful C++ tools and libraries. You can download the latest installer from the MSYS2 page or use this [link to the installer](https://github.com/msys2/msys2-installer/releases/download/2022-06-03/msys2-x86_64-20220603.exe).
 
 Follow the **Installation** instructions on the [MSYS2 website](https://www.msys2.org/) to install Mingw-w64. Take care to run each required Start menu and `pacman` command.
 
@@ -67,11 +68,11 @@ You will need to install the full Mingw-w64 toolchain (`pacman -S --needed base-
 
 Add the path to your Mingw-w64 `bin` folder to the Windows `PATH` environment variable by using the following steps:
 
-   1. In the Windows search bar, type 'settings' to open your Windows Settings.
-   1. Search for **Edit environment variables for your account**.
-   1. Choose the `Path` variable in your **User variables** and then select **Edit**.
-   1. Select **New** and add the Mingw-w64 destination folder path, with `\mingw64\bin` appended, to the system path. The exact path depends on which version of Mingw-w64 you have installed and where you installed it. If you used the settings above to install Mingw-w64, then add this to the path: `C:\msys64\mingw64\bin`.
-   1. Select **OK** to save the updated PATH. You will need to reopen any console windows for the new PATH location to be available.
+1.  In the Windows search bar, type 'settings' to open your Windows Settings.
+1.  Search for **Edit environment variables for your account**.
+1.  Choose the `Path` variable in your **User variables** and then select **Edit**.
+1.  Select **New** and add the Mingw-w64 destination folder path, with `\mingw64\bin` appended, to the system path. The exact path depends on which version of Mingw-w64 you have installed and where you installed it. If you used the settings above to install Mingw-w64, then add this to the path: `C:\msys64\mingw64\bin`.
+1.  Select **OK** to save the updated PATH. You will need to reopen any console windows for the new PATH location to be available.
 
 ### Check your MinGW installation
 

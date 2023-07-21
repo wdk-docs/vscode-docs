@@ -1,11 +1,11 @@
 ---
 Order: 9
 Area: csharp
-TOCTitle: Run and Debug
-ContentId: f4507411-1780-4b80-8816-657c09585c19
+title: Run and Debug
+id: f4507411-1780-4b80-8816-657c09585c19
 PageTitle: Debugging C# in Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: See how you can run and debug your C# source code
+description: See how you can run and debug your C# source code
 MetaSocialImage:
 ---
 

@@ -1,25 +1,26 @@
 ---
 Order: 22
 Area: editor
-TOCTitle: Accessibility
-ContentId: 62894B41-CC33-400A-8A56-8C761C77B4C7
+title: Accessibility
+id: 62894B41-CC33-400A-8A56-8C761C77B4C7
 PageTitle: Accessibility in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code user accessibility features.  Learn here about the various ways VS Code aids user accessibility.
+description: Visual Studio Code user accessibility features.  Learn here about the various ways VS Code aids user accessibility.
 ---
+
 # Accessibility
 
 Visual Studio Code has many features to help make the editor accessible to all users. Zoom and High Contrast colors improve editor visibility, keyboard-only navigation allows use without a mouse, and the editor has been optimized for screen readers.
 
 ## Zoom
 
-You can adjust the Zoom level in VS Code with the **View** > **Appearance** > **Zoom** commands.  The zoom level increases or decreases by 20% each time a **Zoom** command is executed.
+You can adjust the Zoom level in VS Code with the **View** > **Appearance** > **Zoom** commands. The zoom level increases or decreases by 20% each time a **Zoom** command is executed.
 
-* **View** > **Appearance** > **Zoom In** (`kb(workbench.action.zoomIn)`) - increase the Zoom level.
-* **View** > **Appearance** > **Zoom Out** (`kb(workbench.action.zoomOut)`) - decrease the Zoom level.
-* **View** > **Appearance** > **Reset Zoom** (`kb(workbench.action.zoomReset)`) - reset the Zoom level to 0.
+- **View** > **Appearance** > **Zoom In** (`kb(workbench.action.zoomIn)`) - increase the Zoom level.
+- **View** > **Appearance** > **Zoom Out** (`kb(workbench.action.zoomOut)`) - decrease the Zoom level.
+- **View** > **Appearance** > **Reset Zoom** (`kb(workbench.action.zoomReset)`) - reset the Zoom level to 0.
 
->**Note**: If you are using a magnifier make sure to hold the `alt` key while viewing the hover to allow the mouse to move over the hover.
+> **Note**: If you are using a magnifier make sure to hold the `alt` key while viewing the hover to allow the mouse to move over the hover.
 
 ![Zoomed in editor](images/accessibility/zoomed-in.png)
 
@@ -29,7 +30,7 @@ When you adjust the zoom level with the **View** > **Zoom In / Out** commands, t
 
 ## High Contrast theme
 
-We support a High Contrast color theme on all platforms.  Use **File** > **Preferences** > **Theme* > **Color Theme** (`kb(workbench.action.selectTheme)`) to display the **Select Color Theme** dropdown and select the **High Contrast** theme.
+We support a High Contrast color theme on all platforms. Use **File** > **Preferences** > **Theme\* > **Color Theme** (`kb(workbench.action.selectTheme)`) to display the **Select Color Theme** dropdown and select the **High Contrast\*\* theme.
 
 ![High Contrast Theme](images/accessibility/high-contrast.png)
 
@@ -45,17 +46,17 @@ Once you have installed a color theme from the Marketplace, you can change the [
 
 ### Recommended themes for color vision accessibility
 
-* [GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - Accessible to most forms of colorblindness and matches the themes in GitHub's settings.
-* [Gotthard](https://marketplace.visualstudio.com/items?itemName=janbiasi.gotthard-theme) - Optimized for approximately 20 programming languages.
-* [Blinds](https://marketplace.visualstudio.com/items?itemName=tankashing.blinds-theme) - Created with Deuteranopia in mind and possesses a high contrast color ratio.
-* [Greative](https://marketplace.visualstudio.com/items?itemName=Greative.greative) - Considers both colorblindness and light sensitivity.
-* [Pitaya Smoothie](https://marketplace.visualstudio.com/items?itemName=trallard.pitaya-smoothie) - Accessible to most forms of colorblindness and compliant with [WCAG 2.1 criteria for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
+- [GitHub](https://marketplace.visualstudio.com/items?itemName=GitHub.github-vscode-theme) - Accessible to most forms of colorblindness and matches the themes in GitHub's settings.
+- [Gotthard](https://marketplace.visualstudio.com/items?itemName=janbiasi.gotthard-theme) - Optimized for approximately 20 programming languages.
+- [Blinds](https://marketplace.visualstudio.com/items?itemName=tankashing.blinds-theme) - Created with Deuteranopia in mind and possesses a high contrast color ratio.
+- [Greative](https://marketplace.visualstudio.com/items?itemName=Greative.greative) - Considers both colorblindness and light sensitivity.
+- [Pitaya Smoothie](https://marketplace.visualstudio.com/items?itemName=trallard.pitaya-smoothie) - Accessible to most forms of colorblindness and compliant with [WCAG 2.1 criteria for color contrast](https://www.w3.org/TR/UNDERSTANDING-WCAG20/visual-audio-contrast-contrast.html).
 
 ## Customizing warning colors
 
 The default Color Theme for VS Code is **Dark+**. However, you can customize both the theme and property colors in the user interface.
 
->**Note**: Visit [Customizing a Color Theme](/docs/getstarted/themes.md#customizing-a-color-theme) to learn more about overriding the colors in your current theme.
+> **Note**: Visit [Customizing a Color Theme](/docs/getstarted/themes.md#customizing-a-color-theme) to learn more about overriding the colors in your current theme.
 
 To customize the error/warning squigglies, go to **File** > **Preference** > **Settings** (**Code** > **Preference** > **Settings** for macOS) to find user settings. Search for "color customizations", find the **Workbench: Color Customizations** setting, and open your user `settings.json` by selecting **Edit in settings.json**.
 
@@ -74,10 +75,10 @@ In the example below, the warning color is applied when a comma is missing after
 
 ![JSON code to alter error/warning squiggle colors](images/accessibility/accessibility-extension-squiggles.png)
 
-* `editorError.foreground` - Overrides the wavy line beneath an error.
-* `editorWarning.foreground` - Overrides the wavy line beneath a warning.
-* `editorError.background` - Overrides the highlight color of an error.
-* `editorWarning.background` - Overrides the highlight color of a warning.
+- `editorError.foreground` - Overrides the wavy line beneath an error.
+- `editorWarning.foreground` - Overrides the wavy line beneath a warning.
+- `editorError.background` - Overrides the highlight color of an error.
+- `editorWarning.background` - Overrides the highlight color of a warning.
 
 Assigning a color to the background of `editorError` and `editorWarning` also helps to identify potential issues. The color that you choose will highlight the respective error or warning. The colors shown in the example above `#ffef0f` (yellow) and `#37777ff` (blue), are more accessible to individuals with common forms of color vision deficiencies.
 
@@ -85,22 +86,22 @@ Assigning a color to the background of `editorError` and `editorWarning` also he
 
 The accessibility of colors is subjective to the type of anomalous trichromacy (color blindness). The level of severity ranges per person and can be divided into four condition types:
 
-|   Condition      |   Type    |
-|       ---        |    ---    |
-|   Deuteranopia   |   Defined by the reduced sensitivity to green light. It is the most common form of color blindness.
-|   Protanopia     |   Defined by the reduced sensitivity to red light.
-|   Tritanopia     |   Defined by the reduced sensitivity to blue light. This condition is considered rare.
-|   Monochromia    |   Also referred to as, achromatopsia and is defined by the inability to see all colors. This is the rarest form of color blindness. Go to [Foundation for Fighting Blindness](https://www.fightingblindness.org/diseases/achromatopsia) for more information.
+| Condition    | Type                                                                                                                                                                                                                                                        |
+| ------------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Deuteranopia | Defined by the reduced sensitivity to green light. It is the most common form of color blindness.                                                                                                                                                           |
+| Protanopia   | Defined by the reduced sensitivity to red light.                                                                                                                                                                                                            |
+| Tritanopia   | Defined by the reduced sensitivity to blue light. This condition is considered rare.                                                                                                                                                                        |
+| Monochromia  | Also referred to as, achromatopsia and is defined by the inability to see all colors. This is the rarest form of color blindness. Go to [Foundation for Fighting Blindness](https://www.fightingblindness.org/diseases/achromatopsia) for more information. |
 
 One of the best approaches to selecting the best colors for a specific condition is to apply complementary colors. These are colors located opposite of one another on a color wheel.
 
 ![A color wheel highlighting complementary colors for regular vision, deuteranopia, protanopia, tritanopia and monochromacy](images/accessibility/accessibility-color-wheels.png)
 
->**Note**: For more information on finding complementary colors, go to [Adobe Color](https://color.adobe.com/create/color-accessibility) to access the color blind simulator and interactive color wheel.
+> **Note**: For more information on finding complementary colors, go to [Adobe Color](https://color.adobe.com/create/color-accessibility) to access the color blind simulator and interactive color wheel.
 
 ## Keyboard navigation
 
-You will find that VS Code provides an exhaustive list of commands in the **Command Palette** (`kb(workbench.action.showCommands)`) so that you can run VS Code without using the mouse.  Press `kb(workbench.action.showCommands)` then type a command name (for example 'git') to filter the list of commands.
+You will find that VS Code provides an exhaustive list of commands in the **Command Palette** (`kb(workbench.action.showCommands)`) so that you can run VS Code without using the mouse. Press `kb(workbench.action.showCommands)` then type a command name (for example 'git') to filter the list of commands.
 
 VS Code also has many preset keyboard shortcuts for commands.
 
@@ -116,7 +117,7 @@ To make it easier to start and end selection using the keyboard we have four com
 
 ## Tab navigation
 
-You can use the `kbstyle(Tab)` key to jump between VS Code UI controls. Use `kbstyle(Shift+Tab)` to tab in reverse order.  As you tab through the UI controls, you can see an indicator around the UI element once the element gains focus.
+You can use the `kbstyle(Tab)` key to jump between VS Code UI controls. Use `kbstyle(Shift+Tab)` to tab in reverse order. As you tab through the UI controls, you can see an indicator around the UI element once the element gains focus.
 
 All elements in the workbench support tab navigation, but workbench toolbars and tab lists have only one tab stop, to avoid having too many. Once the focus is on a toolbar or a tab list, you can use the arrow keys to navigate within them.
 
@@ -124,7 +125,7 @@ All elements in the workbench support tab navigation, but workbench toolbars and
 
 ## Tab trapping
 
-By default, pressing the `kbstyle(Tab)` within a source code file inserts the Tab character (or spaces depending on your Indentation setting) and does not leave the open file. You can toggle the trapping of `kbstyle(Tab)` with `kb(editor.action.toggleTabFocusMode)` and subsequent `kbstyle(Tab)` keys will move focus out of the file.  When default `kbstyle(Tab)` trapping is off, you will see an indicator in the Status Bar.
+By default, pressing the `kbstyle(Tab)` within a source code file inserts the Tab character (or spaces depending on your Indentation setting) and does not leave the open file. You can toggle the trapping of `kbstyle(Tab)` with `kb(editor.action.toggleTabFocusMode)` and subsequent `kbstyle(Tab)` keys will move focus out of the file. When default `kbstyle(Tab)` trapping is off, you will see an indicator in the Status Bar.
 
 Tab trapping also exists in the integrated terminal. The default behavior for each feature can be configured with `editor.tabFocusMode` and `terminal.integrated.tabFocusMode`.
 
@@ -136,7 +137,7 @@ Read-only files never trap the `kbstyle(Tab)` key. The **Integrated Terminal** p
 
 ## Screen readers
 
-VS Code supports screen readers in the editor using a strategy based on paging the text. We have tested using the following screen readers: [NVDA](https://www.nvaccess.org) and JAWS on Windows,  VoiceOver on macOS and Orca on Linux.
+VS Code supports screen readers in the editor using a strategy based on paging the text. We have tested using the following screen readers: [NVDA](https://www.nvaccess.org) and JAWS on Windows, VoiceOver on macOS and Orca on Linux.
 
 > For NVDA, we recommend staying in focus mode and using the hotkeys to navigate, instead of using browse mode.
 
@@ -196,11 +197,11 @@ There is a review pane in the Diff editor that presents changes in a unified pat
 
 The VS Code debugger UI is user accessible and has the following features:
 
-* Changes in debug state are read out (for example 'started', 'breakpoint hit', 'terminated', ...).
-* All debug actions are keyboard accessible.
-* Both the Run and Debug view and Debug Console support Tab navigation.
-* Debug hover is keyboard accessible (`kb(editor.action.showHover)`).
-* Keyboard shortcuts can be created to set focus to each debugger area.
+- Changes in debug state are read out (for example 'started', 'breakpoint hit', 'terminated', ...).
+- All debug actions are keyboard accessible.
+- Both the Run and Debug view and Debug Console support Tab navigation.
+- Debug hover is keyboard accessible (`kb(editor.action.showHover)`).
+- Keyboard shortcuts can be created to set focus to each debugger area.
 
 ## Audio Cues
 
@@ -226,8 +227,8 @@ There is screen reader support for the editor with VoiceOver.
 
 VS Code works well with the Orca screen reader. If on your Linux distribution Orca does not read the editor content:
 
-* Make sure to have the setting `"editor.accessibilitySupport": "on"` in VS Code. You can do this using settings, or by running the **Show Accessibility Help** command and pressing `kbstyle(Ctrl+E)` to turn on accessibilitySupport.
-* If Orca is still silent, try setting `ACCESSIBILITY_ENABLED=1` as an environment variable.
+- Make sure to have the setting `"editor.accessibilitySupport": "on"` in VS Code. You can do this using settings, or by running the **Show Accessibility Help** command and pressing `kbstyle(Ctrl+E)` to turn on accessibilitySupport.
+- If Orca is still silent, try setting `ACCESSIBILITY_ENABLED=1` as an environment variable.
 
 After enabling that setting, VS Code should work with the Orca screen reader.
 
@@ -235,6 +236,6 @@ After enabling that setting, VS Code should work with the Orca screen reader.
 
 Read on to find out about:
 
-* [Visual Studio Code User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
-* [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
-* [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
+- [Visual Studio Code User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
+- [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
+- [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.

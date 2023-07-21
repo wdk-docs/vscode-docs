@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 113b458a-3692-4ccf-a181-048bd572a120
+id: 113b458a-3692-4ccf-a181-048bd572a120
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: A guide to creating Color Theme in Visual Studio Code
+description: A guide to creating Color Theme in Visual Studio Code
 sidebar_position: 3
 ---
 

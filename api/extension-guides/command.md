@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 995c7085-5fc0-44e0-a171-30a759c0b7da
+id: 995c7085-5fc0-44e0-a171-30a759c0b7da
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: 在Visual Studio Code扩展(插件)中以编程方式使用命令的指南
+description: 在Visual Studio Code扩展(插件)中以编程方式使用命令的指南
 sidebar_position: 2
 ---
 

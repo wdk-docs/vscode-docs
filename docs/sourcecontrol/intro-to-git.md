@@ -1,15 +1,20 @@
 ---
 Order: 2
 Area: sourcecontrol
-TOCTitle: Introduction to Git
-ContentId: b3e4717d-81e2-4bfa-a022-c37aab950bce
-PageTitle: Introduction to Git in Visual Studio Code
+title: Git简介
+id: b3e4717d-81e2-4bfa-a022-c37aab950bce
+PageTitle: 在Visual Studio Code中介绍Git
 DateApproved: 7/6/2023
-MetaDescription: Get started with Git in Visual Studio Code and take control of your code! Our beginner's guide covers everything you need to know, from setting up a repository to committing changes and collaborating with others. Learn Git today and streamline your development workflow.
+description: 在Visual Studio Code中开始使用Git并控制您的代码!我们的初学者指南涵盖了您需要知道的一切，从设置存储库到提交更改以及与他人协作。今天就学习Git，简化您的开发工作流程。
+sidebar_position: 2
 ---
-# Introduction to Git in VS Code
 
-Want to easily manage your source code and collaborate with others? Git and GitHub are the tools you need! And with Visual Studio Code, you can set up and use them in a snap. Even if you're a beginner, VS Code's user-friendly interface guides you through common Git actions like pushing and pulling code, creating and merging branches, and committing code changes. And if you're a pro, you'll love the ability to perform Git actions directly within the editor, saving you time and effort compared to using the Git command line. Plus, the seamless workflow between VS Code and Git means you can stay in your editor and get more done.
+# 在VS Code中介绍Git
+
+想要轻松地管理源代码并与他人协作?Git和GitHub是你需要的工具!使用Visual Studio Code，您可以快速设置和使用它们。
+即使你是初学者，VS Code的用户友好界面也会指导你完成常见的Git操作，如推拉代码、创建和合并分支以及提交代码更改。
+如果您是专业人员，您会喜欢直接在编辑器中执行Git操作的功能，与使用Git命令行相比，这节省了您的时间和精力。
+另外，VS Code和Git之间无缝的工作流程意味着你可以呆在你的编辑器里完成更多的工作。
 
 ## Set up Git in VS Code
 

@@ -1,51 +1,53 @@
 ---
 Order: 7
 Area: setup
-TOCTitle: Additional Components
-ContentId: 243B79C2-819F-4257-B80D-2CD9CCB04C84
+title: 附加组件
+id: 243B79C2-819F-4257-B80D-2CD9CCB04C84
 PageTitle: Setting up additional components to use with Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Setting up additional components to use with Visual Studio Code.
+description: 设置与Visual Studio Code一起使用的其他组件。
+sidebar_position: 7
 ---
-# Additional components and tools
 
-Visual Studio Code is a small download by design and only includes the minimum number of components shared across most development workflows. Basic functionality like the editor, file management, window management, and preference settings are included. A JavaScript/TypeScript language service and Node.js debugger are also part of the base install.
+# 其他组件和工具
 
-If you are used to working with larger, monolithic development tools (IDEs), you may be surprised that your scenarios aren't completely supported out of the box.  For example, there isn't a **File** > **New Project** dialog with pre-installed project templates.  Most VS Code users will need to install additional components depending on their specific needs.
+根据设计，Visual Studio Code是一个很小的下载，并且只包含在大多数开发工作流中共享的最小数量的组件。包括编辑器、文件管理、窗口管理和首选项设置等基本功能。JavaScript/TypeScript语言服务和Node.js调试器也是基本安装的一部分。
 
-## Commonly used components
+如果您习惯于使用大型的单片开发工具(ide)，您可能会惊讶于您的场景没有得到开箱即用的完全支持。例如，没有一个 **文件** > **新建项目** 对话框与预安装的项目模板。大多数VS Code用户将需要根据他们的具体需求安装额外的组件。
+
+## 常用部件
 
 Here are a few commonly installed components:
 
-* [Git](https://git-scm.com/download) - VS Code has built-in support for source code control using Git but requires Git to be installed separately.
-* [Node.js (includes npm)](https://nodejs.org/) - A cross platform runtime for building and running JavaScript applications.
-* [TypeScript](https://www.typescriptlang.org) - The TypeScript compiler, `tsc`, for transpiling TypeScript to JavaScript.
+- [Git](https://git-scm.com/download) -VS Code内置了对使用Git进行源代码控制的支持，但是需要单独安装Git。
+- [Node.js (includes npm)](https://nodejs.org/) - 用于构建和运行JavaScript应用程序的跨平台运行时。
+- [TypeScript](https://www.typescriptlang.org) - TypeScript编译器`tsc`，用于将TypeScript转换为JavaScript。
 
-You'll find the components above mentioned often in our documentation and walkthroughs.
+您可以在我们的文档和演练中经常找到上述组件。
 
-## VS Code extensions
+## VS Code 扩展
 
-You can extend the VS Code editor itself through [extensions](/docs/editor/extension-marketplace.md). The VS Code community has built hundreds of useful extensions available on the VS Code [Marketplace](https://marketplace.visualstudio.com/VSCode).
+你可以通过[extensions](/docs/editor/extension-marketplace.md)扩展VS Code编辑器。VSCode社区已经在VSCode[市场](https://marketplace.visualstudio.com/VSCode)上建立了数百个有用的扩展。
 
 <div class="marketplace-extensions-top"></div>
 
-The extensions shown above are the current most popular on Marketplace. Click on an extension tile above to read the description and reviews of the extension.
+上面显示的扩展是目前最流行的市场。点击上面的扩展tile来阅读扩展的描述和评论。
 
-## Additional tools
+## 额外的工具
 
-Visual Studio Code integrates with existing tool chains.  We think the following tools will enhance your development experiences.
+Visual Studio Code与现有的工具链集成。我们认为以下工具将增强您的开发经验。
 
-* [Yeoman](https://yeoman.io/) - An application scaffolding tool, a command line version of **File** > **New Project**.
-* [generator-hottowel](https://github.com/johnpapa/generator-hottowel) - A Yeoman generator for quickly creating AngularJS applications.
-* [Express](https://expressjs.com/) - An application framework for Node.js applications using the Pug template engine.
-* [Gulp](https://gulpjs.com/) - A streaming task runner system which integrates easily with VS Code tasks.
-* [Mocha](https://mochajs.org/) - A JavaScript test framework that runs on Node.js.
-* [Yarn](https://yarnpkg.com/) - A dependency manager and alternative to npm.
+- [Yeoman](https://yeoman.io/) - 一个应用脚手架工具，命令行版本的 **File** > **New Project**。
+- [generator-hottowel](https://github.com/johnpapa/generator-hottowel) - 一个用于快速创建AngularJS应用程序的生成器。
+- [Express](https://expressjs.com/) - 一个使用Pug模板引擎的Node.js应用程序框架。
+- [Gulp](https://gulpjs.com/) - 一个流任务运行器系统，可以很容易地与VS Code任务集成。
+- [Mocha](https://mochajs.org/) - 一个运行在Node.js上的JavaScript测试框架。
+- [Yarn](https://yarnpkg.com/) - 一个依赖管理器，是npm的替代品。
 
->**Note:** Most of these tools require Node.js and the npm package manager to install and use.
+> **Note:** Most of these tools require Node.js and the npm package manager to install and use.
 
-## Next steps
+## 下一个步骤
 
-* [User Interface](/docs/getstarted/userinterface.md) - A quick orientation around VS Code.
-* [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
-* [Languages](/docs/languages/overview.md) - VS Code supports many programming languages out-of-the-box as well as many more through community created extensions.
+- [User Interface](/docs/getstarted/userinterface.md) - A quick orientation around VS Code.
+- [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
+- [Languages](/docs/languages/overview.md) - VS Code supports many programming languages out-of-the-box as well as many more through community created extensions.

@@ -1,11 +1,11 @@
 ---
 Order: 7
 Area: csharp
-TOCTitle: Build Tools
-ContentId: 1d35afc9-2439-48bf-84e5-547446d89239
+title: Build Tools
+id: 1d35afc9-2439-48bf-84e5-547446d89239
 PageTitle: C# Build Tools for Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: C# Build Tools for Visual Studio
+description: C# Build Tools for Visual Studio
 ---
 
 # Build Tools

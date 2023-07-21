@@ -1,67 +1,67 @@
 ---
 Order: 4
 Area: csharp
-TOCTitle: Refactoring
-ContentId: 76b55a1a-9666-417b-8f13-1de3fd6f36e9
+title: Refactoring
+id: 76b55a1a-9666-417b-8f13-1de3fd6f36e9
 PageTitle: C# Quick Actions and Refactorings in Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: C# Quick Actions and Refactorings in Visual Studio Code
+description: C# Quick Actions and Refactorings in Visual Studio Code
 ---
 
 # C# Quick Actions and Refactorings
 
-Visual Studio Code gives you many ways to refactor your source code as well as Quick Fixes to generate code and fix issues while you're coding. To access them, click on the 'light bulb' icon that appears or use the command **Quick Fix** command `kb(editor.action.quickFix)` to display a list of Quick Fixes and refactoring options.  You can also right-click the editor and select **Refactor** `kb(editor.action.refactor)` to only display refactoring options.
+Visual Studio Code gives you many ways to refactor your source code as well as Quick Fixes to generate code and fix issues while you're coding. To access them, click on the 'light bulb' icon that appears or use the command **Quick Fix** command `kb(editor.action.quickFix)` to display a list of Quick Fixes and refactoring options. You can also right-click the editor and select **Refactor** `kb(editor.action.refactor)` to only display refactoring options.
 
 ## Supported refactorings and Quick Fixes
 
-* [Add `await`](#add-await)
-* [Add constructor parameters from members](#add-constructor-parameters-from-members)
-* [Add `DebuggerDisplay` attribute](#add-debuggerdisplay-attribute)
-* [Add explicit cast](#add-explicit-cast)
-* [Add file header](#add-file-header)
-* [Add missing `usings` / imports](#add-missing-usings--imports)
-* [Add named argument](#add-named-argument)
-* [Convert anonymous type to class](#convert-anonymous-type-to-class)
-* [Convert between auto property and full property](#convert-between-auto-property-and-full-property)
-* [Convert between direct cast and `as` expression](#convert-between-direct-cast-and-as-expression)
-* [Convert between `for` loop and `foreach` statement](#convert-between-for-loop-and-foreach-statement)
-* [Convert between Get method and property](#convert-between-get-method-and-property)
-  * [Convert Get method to property](#convert-get-method-to-property)
-  * [Convert property to Get method](#convert-property-to-get-method)
-* [Convert between `if` and `switch` statements](#convert-between-if-and-switch-statements)
-* [Convert between regular string and verbatim string](#convert-between-regular-string-and-verbatim-string)
-* [Convert class to record](#convert-class-to-record)
-* [Convert local function to method](#convert-local-function-to-method)
-* [Convert numeric literal to hex, decimal, or binary number](#convert-numeric-literal-to-hex-decimal-or-binary-number)
-* [Convert placeholder to interpolated string](#convert-placeholder-to-interpolated-string)
-* [Convert regular string to interpolated string](#convert-regular-string-to-interpolated-string)
-* [Convert tuple to struct](#convert-tuple-to-struct)
-* [Encapsulate field](#encapsulate-field)
-* [Generate comparison operators](#generate-comparison-operators)
-* [Generate default constructors](#generate-default-constructors)
-* [Generate parameter](#generate-parameter)
-* [Implement all members explicitly](#implement-all-members-explicitly)
-* [Implement all members implicitly](#implement-all-members-implicitly)
-* [Inline method](#inline-method)
-* [Inline temporary variable](#inline-temporary-variable)
-* [Introduce local variable for expression](#introduce-local-variable-for-expression)
-* [Introduce parameter](#introduce-parameter)
-* [Introduce `using` statement](#introduce-using-statement)
-* [Invert conditional expressions and logical operations](#invert-conditional-expressions-and-logical-operations)
-* [Invert `if`](#invert-if)
-* [Make member static](#make-member-static)
-* [Move declaration near reference](#move-declaration-near-reference)
-* [Move type to matching file](#move-type-to-matching-file)
-* [Reverse `for` statement](#reverse-for-statement)
-* [Split or merge `if` statements](#split-or-merge-if-statements)
-* [Use explicit type](#use-explicit-type)
-* [Use implicit type](#use-implicit-type)
-* [Use lambda expression or block body](#use-lambda-expression-or-block-body)
-* [Use recursive patterns](#use-recursive-patterns)
-* [Wrap, indent, and align refactorings](#wrap-indent-and-align-refactorings)
-  * [Wrap and align call chains](#wrap-and-align-call-chains)
-  * [Wrap, indent, and align parameters or arguments](#wrap-indent-and-align-parameters-or-arguments)
-  * [Wrap binary expressions](#wrap-binary-expressions)
+- [Add `await`](#add-await)
+- [Add constructor parameters from members](#add-constructor-parameters-from-members)
+- [Add `DebuggerDisplay` attribute](#add-debuggerdisplay-attribute)
+- [Add explicit cast](#add-explicit-cast)
+- [Add file header](#add-file-header)
+- [Add missing `usings` / imports](#add-missing-usings--imports)
+- [Add named argument](#add-named-argument)
+- [Convert anonymous type to class](#convert-anonymous-type-to-class)
+- [Convert between auto property and full property](#convert-between-auto-property-and-full-property)
+- [Convert between direct cast and `as` expression](#convert-between-direct-cast-and-as-expression)
+- [Convert between `for` loop and `foreach` statement](#convert-between-for-loop-and-foreach-statement)
+- [Convert between Get method and property](#convert-between-get-method-and-property)
+  - [Convert Get method to property](#convert-get-method-to-property)
+  - [Convert property to Get method](#convert-property-to-get-method)
+- [Convert between `if` and `switch` statements](#convert-between-if-and-switch-statements)
+- [Convert between regular string and verbatim string](#convert-between-regular-string-and-verbatim-string)
+- [Convert class to record](#convert-class-to-record)
+- [Convert local function to method](#convert-local-function-to-method)
+- [Convert numeric literal to hex, decimal, or binary number](#convert-numeric-literal-to-hex-decimal-or-binary-number)
+- [Convert placeholder to interpolated string](#convert-placeholder-to-interpolated-string)
+- [Convert regular string to interpolated string](#convert-regular-string-to-interpolated-string)
+- [Convert tuple to struct](#convert-tuple-to-struct)
+- [Encapsulate field](#encapsulate-field)
+- [Generate comparison operators](#generate-comparison-operators)
+- [Generate default constructors](#generate-default-constructors)
+- [Generate parameter](#generate-parameter)
+- [Implement all members explicitly](#implement-all-members-explicitly)
+- [Implement all members implicitly](#implement-all-members-implicitly)
+- [Inline method](#inline-method)
+- [Inline temporary variable](#inline-temporary-variable)
+- [Introduce local variable for expression](#introduce-local-variable-for-expression)
+- [Introduce parameter](#introduce-parameter)
+- [Introduce `using` statement](#introduce-using-statement)
+- [Invert conditional expressions and logical operations](#invert-conditional-expressions-and-logical-operations)
+- [Invert `if`](#invert-if)
+- [Make member static](#make-member-static)
+- [Move declaration near reference](#move-declaration-near-reference)
+- [Move type to matching file](#move-type-to-matching-file)
+- [Reverse `for` statement](#reverse-for-statement)
+- [Split or merge `if` statements](#split-or-merge-if-statements)
+- [Use explicit type](#use-explicit-type)
+- [Use implicit type](#use-implicit-type)
+- [Use lambda expression or block body](#use-lambda-expression-or-block-body)
+- [Use recursive patterns](#use-recursive-patterns)
+- [Wrap, indent, and align refactorings](#wrap-indent-and-align-refactorings)
+  - [Wrap and align call chains](#wrap-and-align-call-chains)
+  - [Wrap, indent, and align parameters or arguments](#wrap-indent-and-align-parameters-or-arguments)
+  - [Wrap binary expressions](#wrap-binary-expressions)
 
 ## Add await
 
@@ -234,13 +234,13 @@ Select **Change to `as` expression.**
 
 **Why:** Reasons you might want to convert a for loop to a foreach statement include:
 
-* You don't use the local loop variable inside the loop except as an index to access items.
-* You want to simplify your code and reduce the likelihood of logic errors in the initializer, condition, and iterator sections.
+- You don't use the local loop variable inside the loop except as an index to access items.
+- You want to simplify your code and reduce the likelihood of logic errors in the initializer, condition, and iterator sections.
 
 Reasons you might want to convert a foreach statement to a for loop include:
 
-* You want to use the local loop variable inside the loop for more than just accessing the item.
-* You are iterating through a multi-dimensional array and you want more control over the array elements.
+- You want to use the local loop variable inside the loop for more than just accessing the item.
+- You are iterating through a multi-dimensional array and you want more control over the array elements.
 
 **How-to:**
 
@@ -430,10 +430,10 @@ Select **Convert to binary**.
 2. Press `kb(editor.action.quickFix)`to trigger the **Quick Actions and Refactorings** menu.
 3. Select one of the following options:
 
-    * Select **Convert to `struct` -> updating usages in containing member**
-    * Select **Convert to `struct` -> updating usages in containing type**
-    * Select **Convert to `struct` -> updating usages in containing project**
-    * Select **Convert to `struct` -> updating usages in in dependent projects**
+   - Select **Convert to `struct` -> updating usages in containing member**
+   - Select **Convert to `struct` -> updating usages in containing type**
+   - Select **Convert to `struct` -> updating usages in containing project**
+   - Select **Convert to `struct` -> updating usages in in dependent projects**
 
 ![Convert tuple to `struct` options](images/refactoring/convert-tuple-to-struct.png)
 
@@ -509,12 +509,12 @@ Select **Encapsulate field: &lt;fieldname&gt; (but still use field)**.
 
 ## Implement all members explicitly
 
-**What:** Define your interface's methods explicitly in a class.  An explicit interface implementation is a class member that is only called through the specified interface.
+**What:** Define your interface's methods explicitly in a class. An explicit interface implementation is a class member that is only called through the specified interface.
 
 **When:** Use when:
 
-* You don't want the same implementation to be called for multiple interfaces.
-* You want to resolve cases where two interfaces each declare different members of the same name such as a property and a method.
+- You don't want the same implementation to be called for multiple interfaces.
+- You want to resolve cases where two interfaces each declare different members of the same name such as a property and a method.
 
 **How-to:**
 
@@ -526,7 +526,7 @@ Select **Encapsulate field: &lt;fieldname&gt; (but still use field)**.
 
 ## Implement all members implicitly
 
-**What:** Define your interface's methods implicitly in a class.  An implicit interface implementation is when an interface's methods and properties are directly added to the class as public methods.
+**What:** Define your interface's methods implicitly in a class. An implicit interface implementation is when an interface's methods and properties are directly added to the class as public methods.
 
 **How-to:**
 
@@ -812,7 +812,7 @@ Select **Use expression body for lambda expressions**.
 
 ## Use recursive patterns
 
-**What:** Converts a code block to using a recursive pattern.  This refactoring works with switch statements, property pattern matching, tuple pattern matching, and positional pattern matching.
+**What:** Converts a code block to using a recursive pattern. This refactoring works with switch statements, property pattern matching, tuple pattern matching, and positional pattern matching.
 
 **When:** Using recursive patterns can make your code more readable / cleaner.
 

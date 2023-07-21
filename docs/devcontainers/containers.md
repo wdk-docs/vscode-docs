@@ -1,12 +1,13 @@
 ---
 Order: 3
 Area: devcontainers
-TOCTitle: Overview
+title: Overview
 PageTitle: Developing inside a Container using Visual Studio Code Remote Development
-ContentId: 7ec8a02b-2eb7-45c1-bb16-ddeaac694ff6
-MetaDescription: Developing inside a Container using Visual Studio Code Remote Development
+id: 7ec8a02b-2eb7-45c1-bb16-ddeaac694ff6
+description: Developing inside a Container using Visual Studio Code Remote Development
 DateApproved: 7/6/2023
 ---
+
 # Developing inside a Container
 
 The **Visual Studio Code Dev Containers** extension lets you use a container as a full-featured development environment. It allows you to open any folder inside (or mounted into) a container and take advantage of Visual Studio Code's full feature set. A [devcontainer.json file](#create-a-devcontainerjson-file) in your project tells VS Code how to access (or create) a **development container** with a well-defined tool and runtime stack. This container can be used to run an application or to separate tools, libraries, or runtimes needed for working with a codebase.
@@ -19,8 +20,8 @@ This lets VS Code provide a **local-quality development experience** including f
 
 The Dev Containers extension supports two primary operating models:
 
-* You can use a container as your full-time development environment
-* You can [attach to a running container](/docs/devcontainers/attach-container.md) to inspect it.
+- You can use a container as your full-time development environment
+- You can [attach to a running container](/docs/devcontainers/attach-container.md) to inspect it.
 
 > **Note**: The Dev Containers extension supports the open Dev Containers Specification, which empowers anyone in any tool to configure a consistent dev environment. You can learn more in our [dev container FAQ](/docs/devcontainers/faq.md#can-i-use-dev-containers-outside-of-vs-code) and on the specification's site [containers.dev](https://containers.dev/).
 
@@ -34,24 +35,24 @@ The Dev Containers extension supports two primary operating models:
 
 You can use Docker with the Dev Containers extension in a few ways, including:
 
-* Docker installed locally.
-* Docker installed on a remote environment.
-* Other Docker compliant CLIs, installed locally or remotely.
-  * While other CLIs may work, they are not officially supported. Note that [attaching to a Kubernetes cluster](/docs/devcontainers/attach-container.md#attach-to-a-container-in-a-kubernetes-cluster) only requires a properly configured [kubectl CLI](https://kubernetes.io/docs/reference/kubectl/overview/).
+- Docker installed locally.
+- Docker installed on a remote environment.
+- Other Docker compliant CLIs, installed locally or remotely.
+  - While other CLIs may work, they are not officially supported. Note that [attaching to a Kubernetes cluster](/docs/devcontainers/attach-container.md#attach-to-a-container-in-a-kubernetes-cluster) only requires a properly configured [kubectl CLI](https://kubernetes.io/docs/reference/kubectl/overview/).
 
 You can learn more in the [alternative Docker options doc](/remote/advancedcontainers/docker-options.md).
 
 Below are some specific ways you can configure Docker on a local or remote host:
 
-* **Windows:** [Docker Desktop](https://www.docker.com/products/docker-desktop) 2.0+ on Windows 10 Pro/Enterprise. Windows 10 Home (2004+) requires Docker Desktop 2.3+ and the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2). (Docker Toolbox is not supported. Windows container images are not supported.)
-* **macOS**:  [Docker Desktop](https://www.docker.com/products/docker-desktop) 2.0+.
-* **Linux**: [Docker CE/EE](https://docs.docker.com/install/#supported-platforms) 18.06+ and [Docker Compose](https://docs.docker.com/compose/install) 1.21+. (The Ubuntu snap package is not supported.)
-* **Remote hosts:** 1 GB RAM is required, but at least 2 GB RAM and a 2-core CPU is recommended.
+- **Windows:** [Docker Desktop](https://www.docker.com/products/docker-desktop) 2.0+ on Windows 10 Pro/Enterprise. Windows 10 Home (2004+) requires Docker Desktop 2.3+ and the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2). (Docker Toolbox is not supported. Windows container images are not supported.)
+- **macOS**: [Docker Desktop](https://www.docker.com/products/docker-desktop) 2.0+.
+- **Linux**: [Docker CE/EE](https://docs.docker.com/install/#supported-platforms) 18.06+ and [Docker Compose](https://docs.docker.com/compose/install) 1.21+. (The Ubuntu snap package is not supported.)
+- **Remote hosts:** 1 GB RAM is required, but at least 2 GB RAM and a 2-core CPU is recommended.
 
 **Containers**:
 
-* x86_64 / ARMv7l (AArch32) / ARMv8l (AArch64) Debian 9+, Ubuntu 16.04+, CentOS / RHEL 7+
-* x86_64 Alpine Linux 3.9+
+- x86_64 / ARMv7l (AArch32) / ARMv8l (AArch64) Debian 9+, Ubuntu 16.04+, CentOS / RHEL 7+
+- x86_64 Alpine Linux 3.9+
 
 Other `glibc` based Linux containers may work if they have [needed Linux prerequisites](/docs/remote/linux.md).
 
@@ -61,21 +62,21 @@ To get started, follow these steps:
 
 1. Install and configure [Docker](https://www.docker.com/get-started) for your operating system, using one of the paths below or an [alternative Docker option](/remote/advancedcontainers/docker-options.md), like Docker on a remote host or Docker compliant CLI.
 
-    **Windows / macOS**:
+   **Windows / macOS**:
 
-    1. Install [Docker Desktop for Windows/Mac](https://www.docker.com/products/docker-desktop).
+   1. Install [Docker Desktop for Windows/Mac](https://www.docker.com/products/docker-desktop).
 
-    2. If you are using WSL 2 on Windows, to ensure the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2) is enabled: Right-click on the Docker taskbar item and select **Settings**. Check **Use the WSL 2 based engine** and verify your distribution is enabled under **Resources > WSL Integration**.
+   2. If you are using WSL 2 on Windows, to ensure the [WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2) is enabled: Right-click on the Docker taskbar item and select **Settings**. Check **Use the WSL 2 based engine** and verify your distribution is enabled under **Resources > WSL Integration**.
 
-    3. When not using the WSL 2 back-end, right-click on the Docker task bar item, select **Settings** and update **Resources > File Sharing** with any locations your source code is kept. See [tips and tricks](/docs/devcontainers/tips-and-tricks.md) for troubleshooting.
+   3. When not using the WSL 2 back-end, right-click on the Docker task bar item, select **Settings** and update **Resources > File Sharing** with any locations your source code is kept. See [tips and tricks](/docs/devcontainers/tips-and-tricks.md) for troubleshooting.
 
-    **Linux**:
+   **Linux**:
 
-    1. Follow the [official install instructions for Docker CE/EE for your distribution](https://docs.docker.com/install/#supported-platforms). If you are using Docker Compose, follow the [Docker Compose directions](https://docs.docker.com/compose/install/) as well.
+   1. Follow the [official install instructions for Docker CE/EE for your distribution](https://docs.docker.com/install/#supported-platforms). If you are using Docker Compose, follow the [Docker Compose directions](https://docs.docker.com/compose/install/) as well.
 
-    2. Add your user to the `docker` group by using a terminal to run: `sudo usermod -aG docker $USER`
+   2. Add your user to the `docker` group by using a terminal to run: `sudo usermod -aG docker $USER`
 
-    3. Sign out and back in again so your changes take effect.
+   3. Sign out and back in again so your changes take effect.
 
 2. Install [Visual Studio Code](https://code.visualstudio.com/) or [Visual Studio Code Insiders](https://code.visualstudio.com/insiders/).
 
@@ -85,8 +86,8 @@ To get started, follow these steps:
 
 Here are two tips to consider:
 
-* If you are working with the same repository both locally in Windows and inside a container, be sure to set up consistent line endings. See [tips and tricks](/docs/remote/troubleshooting.md#resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files) for details.
-* If you clone using a Git credential manager, your container should already have access to your credentials! If you use SSH keys, you can also opt in to sharing them. See [Sharing Git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md) for details.
+- If you are working with the same repository both locally in Windows and inside a container, be sure to set up consistent line endings. See [tips and tricks](/docs/remote/troubleshooting.md#resolving-git-line-ending-issues-in-wsl-resulting-in-many-modified-files) for details.
+- If you clone using a Git credential manager, your container should already have access to your credentials! If you use SSH keys, you can also opt in to sharing them. See [Sharing Git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md) for details.
 
 ## Picking your quick start
 
@@ -110,29 +111,29 @@ This quick start covers how to set up a dev container for an existing project to
 
 1. Start VS Code, run the **Dev Containers: Open Folder in Container...** command from the Command Palette (`kbstyle(F1)`) or quick actions Status bar item, and select the project folder you would like to set up the container for.
 
-    > **Tip:** If you want to edit the container's contents or settings before opening the folder, you can run **Dev Containers: Add Dev Container Configuration Files...** instead.
+   > **Tip:** If you want to edit the container's contents or settings before opening the folder, you can run **Dev Containers: Add Dev Container Configuration Files...** instead.
 
-    ![Quick actions Status bar item](images/containers/remote-dev-status-bar.png)
+   ![Quick actions Status bar item](images/containers/remote-dev-status-bar.png)
 
 2. Now pick a starting point for your dev container. You can either select a base **Dev Container Template** from a filterable list, or use an existing [Dockerfile](https://docs.docker.com/engine/reference/builder/) or [Docker Compose file](https://docs.docker.com/compose/compose-file/#compose-file-structure-and-examples) if one exists in the folder you selected.
 
-    > **Note:** When using Alpine Linux containers, some extensions may not work due to `glibc` dependencies in native code inside the extension.
+   > **Note:** When using Alpine Linux containers, some extensions may not work due to `glibc` dependencies in native code inside the extension.
 
-    ![Select a node Dev Container Template](images/containers/select-dev-container-def.png)
+   ![Select a node Dev Container Template](images/containers/select-dev-container-def.png)
 
-    The list will be automatically sorted based on the contents of the folder you open.
+   The list will be automatically sorted based on the contents of the folder you open.
 
-    You may be able to customize your dev container with additional Features, which [you can read more about below](#dev-container-features).
+   You may be able to customize your dev container with additional Features, which [you can read more about below](#dev-container-features).
 
-    The dev container Templates displayed come from our [first-party and community index](https://containers.dev/templates), which is part of the [Dev Container Specification](https://containers.dev/). We host a set of Templates as part of the spec in the [devcontainers/templates repository](https://github.com/devcontainers/templates). You can browse the `src` folder of that repository to see the contents of each Template.
+   The dev container Templates displayed come from our [first-party and community index](https://containers.dev/templates), which is part of the [Dev Container Specification](https://containers.dev/). We host a set of Templates as part of the spec in the [devcontainers/templates repository](https://github.com/devcontainers/templates). You can browse the `src` folder of that repository to see the contents of each Template.
 
-    You can also choose to publish and distribute your own dev container Templates using the [dev container CLI](https://containers.dev/implementors/templates-distribution/).
+   You can also choose to publish and distribute your own dev container Templates using the [dev container CLI](https://containers.dev/implementors/templates-distribution/).
 
 3. After picking the starting point for your container, VS Code will add the dev container configuration files to your project (`.devcontainer/devcontainer.json`).
 
 4. The VS Code window will reload and start building the dev container. A progress notification provides status updates. You only have to build a dev container the first time you open it; opening the folder after the first successful build will be much quicker.
 
-    ![Dev Container Progress Notification](images/containers/dev-container-progress.png)
+   ![Dev Container Progress Notification](images/containers/dev-container-progress.png)
 
 5. After the build completes, VS Code will automatically connect to the container.
 
@@ -148,8 +149,8 @@ If you are using [Windows Subsystem for Linux v2 (WSL 2)](https://learn.microsof
 
 Once the WSL 2 engine is enabled, you can either:
 
-* Use the **Dev Containers: Reopen in Container** command from a folder already opened using the [WSL](https://aka.ms/vscode-remote/download/wsl) extension.
-* Select **Dev Containers: Open Folder in Container...** from the Command Palette (`kbstyle(F1)`) and choose a WSL folder using the local `\\wsl$` share (from the Windows side).
+- Use the **Dev Containers: Reopen in Container** command from a folder already opened using the [WSL](https://aka.ms/vscode-remote/download/wsl) extension.
+- Select **Dev Containers: Open Folder in Container...** from the Command Palette (`kbstyle(F1)`) and choose a WSL folder using the local `\\wsl$` share (from the Windows side).
 
 The rest of the quick start applies as-is! You can learn more about the [WSL extension in its documentation](/docs/remote/wsl.md).
 
@@ -173,8 +174,8 @@ You can also follow a similar process to open a [VS Code multi-root workspace](/
 
 You can either:
 
-* Use the **Dev Containers: Open Workspace in Container...** command.
-* Use **File > Open Workspace...** once you have opened a folder that contains a `.code-workspace` file in a container.
+- Use the **Dev Containers: Open Workspace in Container...** command.
+- Use **File > Open Workspace...** once you have opened a folder that contains a `.code-workspace` file in a container.
 
 Once connected, you may want to **add the `.devcontainer` folder** to the workspace so you can easily edit its contents if it is not already visible.
 
@@ -192,25 +193,25 @@ For example, follow these steps to open one of the "try" repositories in a Repos
 
 2. Enter `microsoft/vscode-remote-try-node` (or one of the other "try" repositories), a Git URI, a GitHub branch URL, or a GitHub PR URL in the input box that appears and press `kbstyle(Enter)`.
 
-    ![Input box with a repository name in it](images/containers/vscode-remote-try-node.png)
+   ![Input box with a repository name in it](images/containers/vscode-remote-try-node.png)
 
-    > **Tip:** If you choose a private repository, you may want to setup a credential manager or add your SSH keys to your SSH agent. See [Sharing Git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md).
+   > **Tip:** If you choose a private repository, you may want to setup a credential manager or add your SSH keys to your SSH agent. See [Sharing Git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md).
 
 3. If your repository does not have a `.devcontainer/devcontainer.json` file in it, you'll be asked to pick a starting point from a filterable list or an existing [Dockerfile](https://docs.docker.com/engine/reference/builder/) or [Docker Compose file](https://docs.docker.com/compose/compose-file/#compose-file-structure-and-examples) (if one exists).
 
-    > **Note:** When using Alpine Linux containers, some extensions may not work due to `glibc` dependencies in native code inside the extension.
+   > **Note:** When using Alpine Linux containers, some extensions may not work due to `glibc` dependencies in native code inside the extension.
 
-    ![Select a node Dev Container Template](images/containers/select-dev-container-def.png)
+   ![Select a node Dev Container Template](images/containers/select-dev-container-def.png)
 
-    The list will be automatically sorted based on the contents of the folder you open. The dev container Templates displayed come from our [first-party and community index](https://containers.dev/templates), which is part of the [Dev Container Specification](https://containers.dev/). We host a set of Templates as part of the spec in the [devcontainers/templates repository](https://github.com/devcontainers/templates). You can browse the `src` folder of that repository to see the contents of each Template.
+   The list will be automatically sorted based on the contents of the folder you open. The dev container Templates displayed come from our [first-party and community index](https://containers.dev/templates), which is part of the [Dev Container Specification](https://containers.dev/). We host a set of Templates as part of the spec in the [devcontainers/templates repository](https://github.com/devcontainers/templates). You can browse the `src` folder of that repository to see the contents of each Template.
 
 4. The VS Code window (instance) will reload, clone the source code, and start building the dev container. A progress notification provides status updates.
 
-    ![Dev Container Progress Notification](images/containers/dev-container-progress.png)
+   ![Dev Container Progress Notification](images/containers/dev-container-progress.png)
 
-    If you pasted in a GitHub pull request URL in step 2, the PR will be automatically checked out and the [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extension will be installed in the container. The extension provides additional PR related features like a PR explorer, interacting with PR comments inline, and status bar visibility.
+   If you pasted in a GitHub pull request URL in step 2, the PR will be automatically checked out and the [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extension will be installed in the container. The extension provides additional PR related features like a PR explorer, interacting with PR comments inline, and status bar visibility.
 
-    ![PR status in status bar](images/containers/checkout-pr-status.png)
+   ![PR status in status bar](images/containers/checkout-pr-status.png)
 
 5. After the build completes, VS Code will automatically connect to the container. You can now work with the repository source code in this independent environment as you would if you had cloned the code locally.
 
@@ -265,17 +266,15 @@ You can also create a devcontainer.json by hand and use any image, Dockerfile, o
 
 ```json
 {
-    "image": "mcr.microsoft.com/devcontainers/typescript-node",
-    "forwardPorts": [ 3000 ],
-    "customizations": {
-        // Configure properties specific to VS Code.
-        "vscode": {
-            // Add the IDs of extensions you want installed when the container is created.
-            "extensions": [
-                "streetsidesoftware.code-spell-checker"
-            ]
-        }
+  "image": "mcr.microsoft.com/devcontainers/typescript-node",
+  "forwardPorts": [3000],
+  "customizations": {
+    // Configure properties specific to VS Code.
+    "vscode": {
+      // Add the IDs of extensions you want installed when the container is created.
+      "extensions": ["streetsidesoftware.code-spell-checker"]
     }
+  }
 }
 ```
 
@@ -350,7 +349,7 @@ This allows you to have a separate **more complex** `devcontainer.json` you use 
 
 ```json
 {
-    "image": "mcr.microsoft.com/devcontainers/go:1"
+  "image": "mcr.microsoft.com/devcontainers/go:1"
 }
 ```
 
@@ -466,17 +465,17 @@ To publish a port, you can:
 
 1. **Use the appPort property:** If you reference an image or Dockerfile in `devcontainer.json`, you can use the `appPort` property to publish ports to the host.
 
-    ```json
-    "appPort": [ 3000, "8921:5000" ]
-    ```
+   ```json
+   "appPort": [ 3000, "8921:5000" ]
+   ```
 
 2. **Use the Docker Compose ports mapping:** The [ports mapping](https://docs.docker.com/compose/compose-file#ports) can easily be added your `docker-compose.yml` file to publish additional ports.
 
-    ```yaml
-    ports:
-    - "3000"
-    - "8921:5000"
-    ```
+   ```yaml
+   ports:
+     - "3000"
+     - "8921:5000"
+   ```
 
 In each case, you'll need to rebuild your container for the setting to take effect. You can do this by running the **Dev Containers: Rebuild Container** command in the Command Palette (`kbstyle(F1)`) when you are connected to the container.
 
@@ -524,7 +523,7 @@ Since this just establishes the default, you are still able to change the settin
 
 By default, the Dev Containers extension automatically starts the containers mentioned in the `devcontainer.json` when you open the folder. When you close VS Code, the extension automatically shuts down the containers you've connected to. You can change this behavior by adding `"shutdownAction": "none"` to `devcontainer.json`.
 
-While you can use the command line to manage your containers, you can also use the  **Remote Explorer**. To stop a container, select Containers from the dropdown (if present), right-click on a running container, and select **Stop Container**. You can also start exited containers, remove containers, and remove recent folders. From the Details view, you can forward ports and open already forwarded ports in the browser.
+While you can use the command line to manage your containers, you can also use the **Remote Explorer**. To stop a container, select Containers from the dropdown (if present), right-click on a running container, and select **Stop Container**. You can also start exited containers, remove containers, and remove recent folders. From the Details view, you can forward ports and open already forwarded ports in the browser.
 
 ![Containers Explorer screenshot](images/containers/containers-explorer.png)
 
@@ -544,9 +543,9 @@ Or in `settings.json`:
 
 ```json
 {
-    "dotfiles.repository": "your-github-id/your-dotfiles-repo",
-    "dotfiles.targetPath": "~/dotfiles",
-    "dotfiles.installCommand": "~/dotfiles/install.sh"
+  "dotfiles.repository": "your-github-id/your-dotfiles-repo",
+  "dotfiles.targetPath": "~/dotfiles",
+  "dotfiles.installCommand": "~/dotfiles/install.sh"
 }
 ```
 
@@ -556,14 +555,14 @@ From this point forward, the dotfiles repository will be used whenever a contain
 
 ### Dev Containers limitations
 
-* Windows container images are **not** supported.
-* All roots/folders in a multi-root workspace will be opened in the same container, regardless of whether there are configuration files at lower levels.
-* The unofficial Ubuntu Docker **snap** package for Linux is **not** supported. Follow the [official Docker install instructions for your distribution](https://docs.docker.com/install/#supported-platforms).
-* Docker Toolbox on Windows is not supported.
-* If you clone a Git repository using SSH and your SSH key has a passphrase, VS Code's pull and sync features may hang when running remotely. Either use an SSH key without a passphrase, clone using HTTPS, or run `git push` from the command line to work around the issue.
-* Local proxy settings are not reused inside the container, which can prevent extensions from working unless the appropriate proxy information is configured (for example global `HTTP_PROXY` or `HTTPS_PROXY` environment variables with the appropriate proxy information).
-* You cannot use Dev Containers from a Remote - SSH connection to a Windows machine.
-* There is an incompatibility between OpenSSH versions on Windows when the ssh-agent runs with version <= 8.8 and the SSH client (on any platform) runs version >= 8.9. The workaround is to upgrade OpenSSH on Windows to 8.9 or later, either using winget or an installer from [Win32-OpenSSH/releases](https://github.com/PowerShell/Win32-OpenSSH/releases). (Note that `ssh-add -l` will work correctly, but `ssh <ssh-server>` will fail with `<ssh-server>: Permission denied (publickey)`. This also affects Git when using SSH to connect to the repository.)
+- Windows container images are **not** supported.
+- All roots/folders in a multi-root workspace will be opened in the same container, regardless of whether there are configuration files at lower levels.
+- The unofficial Ubuntu Docker **snap** package for Linux is **not** supported. Follow the [official Docker install instructions for your distribution](https://docs.docker.com/install/#supported-platforms).
+- Docker Toolbox on Windows is not supported.
+- If you clone a Git repository using SSH and your SSH key has a passphrase, VS Code's pull and sync features may hang when running remotely. Either use an SSH key without a passphrase, clone using HTTPS, or run `git push` from the command line to work around the issue.
+- Local proxy settings are not reused inside the container, which can prevent extensions from working unless the appropriate proxy information is configured (for example global `HTTP_PROXY` or `HTTPS_PROXY` environment variables with the appropriate proxy information).
+- You cannot use Dev Containers from a Remote - SSH connection to a Windows machine.
+- There is an incompatibility between OpenSSH versions on Windows when the ssh-agent runs with version <= 8.8 and the SSH client (on any platform) runs version >= 8.9. The workaround is to upgrade OpenSSH on Windows to 8.9 or later, either using winget or an installer from [Win32-OpenSSH/releases](https://github.com/PowerShell/Win32-OpenSSH/releases). (Note that `ssh-add -l` will work correctly, but `ssh <ssh-server>` will fail with `<ssh-server>: Permission denied (publickey)`. This also affects Git when using SSH to connect to the repository.)
 
 See [here for a list of active issues](https://aka.ms/vscode-remote/containers/issues) related to Containers.
 
@@ -585,17 +584,17 @@ In addition, while Alpine support is available, some extensions installed in the
 
 See the [Advanced container configuration](/remote/advancedcontainers/overview.md) articles for information on the following topics:
 
-* [Adding environment variables](/remote/advancedcontainers/environment-variables.md)
-* [Adding another local file mount](/remote/advancedcontainers/add-local-file-mount.md)
-* [Changing or removing the default source code mount](/remote/advancedcontainers/change-default-source-mount.md)
-* [Improving container disk performance](/remote/advancedcontainers/improve-performance.md)
-* [Adding a non-root user to your dev container](/remote/advancedcontainers/add-nonroot-user.md)
-* [Setting the project name for Docker Compose](/remote/advancedcontainers/set-docker-compose-project-name.md)
-* [Using Docker or Kubernetes from inside a container](/remote/advancedcontainers/use-docker-kubernetes.md)
-* [Connecting to multiple containers at once](/remote/advancedcontainers/connect-multiple-containers.md)
-* [Developing inside a container on a remote Docker Machine or SSH host](/remote/advancedcontainers/develop-remote-host.md)
-* [Reducing Dockerfile build warnings](/remote/advancedcontainers/reduce-docker-warnings.md)
-* [Sharing git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md)
+- [Adding environment variables](/remote/advancedcontainers/environment-variables.md)
+- [Adding another local file mount](/remote/advancedcontainers/add-local-file-mount.md)
+- [Changing or removing the default source code mount](/remote/advancedcontainers/change-default-source-mount.md)
+- [Improving container disk performance](/remote/advancedcontainers/improve-performance.md)
+- [Adding a non-root user to your dev container](/remote/advancedcontainers/add-nonroot-user.md)
+- [Setting the project name for Docker Compose](/remote/advancedcontainers/set-docker-compose-project-name.md)
+- [Using Docker or Kubernetes from inside a container](/remote/advancedcontainers/use-docker-kubernetes.md)
+- [Connecting to multiple containers at once](/remote/advancedcontainers/connect-multiple-containers.md)
+- [Developing inside a container on a remote Docker Machine or SSH host](/remote/advancedcontainers/develop-remote-host.md)
+- [Reducing Dockerfile build warnings](/remote/advancedcontainers/reduce-docker-warnings.md)
+- [Sharing git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md)
 
 ## devcontainer.json reference
 
@@ -603,17 +602,17 @@ There is a full [devcontainer.json reference](https://containers.dev/implementor
 
 ## Questions or feedback
 
-* See [Tips and Tricks](/docs/devcontainers/tips-and-tricks.md) or the [FAQ](/docs/devcontainers/faq.md).
-* Search on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode-remote).
-* Add a [feature request](https://aka.ms/vscode-remote/feature-requests) or [report a problem](https://aka.ms/vscode-remote/issues/new).
-* Create a [Dev Container Template](https://containers.dev/templates) or [Feature](https://containers.dev/features) for others to use.
-* Review and provide feedback on the [Development Containers Specification](https://containers.dev/).
-* Contribute to [our documentation](https://github.com/microsoft/vscode-docs) or [VS Code itself](https://github.com/microsoft/vscode).
-* See our [CONTRIBUTING](https://aka.ms/vscode-remote/contributing) guide for details.
+- See [Tips and Tricks](/docs/devcontainers/tips-and-tricks.md) or the [FAQ](/docs/devcontainers/faq.md).
+- Search on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode-remote).
+- Add a [feature request](https://aka.ms/vscode-remote/feature-requests) or [report a problem](https://aka.ms/vscode-remote/issues/new).
+- Create a [Dev Container Template](https://containers.dev/templates) or [Feature](https://containers.dev/features) for others to use.
+- Review and provide feedback on the [Development Containers Specification](https://containers.dev/).
+- Contribute to [our documentation](https://github.com/microsoft/vscode-docs) or [VS Code itself](https://github.com/microsoft/vscode).
+- See our [CONTRIBUTING](https://aka.ms/vscode-remote/contributing) guide for details.
 
 ## Next steps
 
-* [Attach to a Running Container](/docs/devcontainers/attach-container.md) - Attach to an already running Docker container.
-* [Create a Development Container](/docs/devcontainers/create-dev-container.md) - Create a custom container for your work environment.
-* [Advanced Containers](/remote/advancedcontainers/overview.md) - Find solutions to advanced container scenarios.
-* [devcontainer.json reference](https://containers.dev/implementors/json_reference) - Review the `devcontainer.json` schema.
+- [Attach to a Running Container](/docs/devcontainers/attach-container.md) - Attach to an already running Docker container.
+- [Create a Development Container](/docs/devcontainers/create-dev-container.md) - Create a custom container for your work environment.
+- [Advanced Containers](/remote/advancedcontainers/overview.md) - Find solutions to advanced container scenarios.
+- [devcontainer.json reference](https://containers.dev/implementors/json_reference) - Review the `devcontainer.json` schema.

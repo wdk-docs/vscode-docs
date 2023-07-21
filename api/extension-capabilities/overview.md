@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: d22675fc-6609-43f2-a66b-8f2a52597195
+id: d22675fc-6609-43f2-a66b-8f2a52597195
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: 详细了解Visual Studio Code的丰富扩展(插件)API。
+description: 详细了解Visual Studio Code的丰富扩展(插件)API。
 sidebar_position: 1
 ---
 

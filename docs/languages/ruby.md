@@ -1,12 +1,13 @@
 ---
 Order: 15
 Area: languages
-TOCTitle: Ruby
-ContentId: 33c079a7-f8d5-48fc-9d92-16be760b42ab
+title: Ruby
+id: 33c079a7-f8d5-48fc-9d92-16be760b42ab
 PageTitle: Ruby with Visual Studio Code
 DateApproved: 3/23/2023
-MetaDescription: Learn about Visual Studio Code editor features (code completion, debugging, snippets, linting) for Ruby.
+description: Learn about Visual Studio Code editor features (code completion, debugging, snippets, linting) for Ruby.
 ---
+
 # Ruby in Visual Studio Code
 
 [Ruby](https://www.ruby-lang.org) is a dynamic, open-source programming language known for its simplicity and productivity. With an expressive and elegant syntax, part of the Ruby philosophy is to make developers happy. It is often used for web development with a range of different frameworks, and for scripting, allowing for fast iterations when building prototypes.
@@ -22,7 +23,7 @@ This topic goes into detail about setting up and using Ruby within Visual Studio
 
 While Ruby is installed by default on some operating systems (such as macOS and some distributions of Linux), we recommend using a version manager such as [rbenv](https://github.com/rbenv/rbenv) to be able to access newer versions of Ruby on Windows, macOS, and Linux. Follow the [installation guidance](https://github.com/rbenv/rbenv#installation) for your platform.
 
->**Note**: As with installing any new toolset on your machine, you'll want to make sure to restart your terminal/Command Prompt and VS Code instances to use the updated toolset location in your platform's PATH variable.
+> **Note**: As with installing any new toolset on your machine, you'll want to make sure to restart your terminal/Command Prompt and VS Code instances to use the updated toolset location in your platform's PATH variable.
 
 ### Install the Ruby LSP extension in VS Code
 
@@ -85,12 +86,12 @@ Ruby LSP is able to use [semantic syntax highlighting](https://github.com/micros
 
 For example, it can highlight:
 
-* Method invocations consistently, without confusing it with local variables.
-* Local arguments (such as method, block or lambda arguments) consistently inside the scope in which they exist.
+- Method invocations consistently, without confusing it with local variables.
+- Local arguments (such as method, block or lambda arguments) consistently inside the scope in which they exist.
 
 ![Ruby LSP semantic highlighting](images/ruby/ruby_lsp_semantic_highlighting.png)
 
->**Note**: This screenshot is using the Spinel theme included in the [Ruby extension pack](https://marketplace.visualstudio.com/items?itemName=Shopify.ruby-extensions-pack). Themes must use the information surfaced by the Ruby LSP in order to provide rich highlighting for Ruby files.
+> **Note**: This screenshot is using the Spinel theme included in the [Ruby extension pack](https://marketplace.visualstudio.com/items?itemName=Shopify.ruby-extensions-pack). Themes must use the information surfaced by the Ruby LSP in order to provide rich highlighting for Ruby files.
 
 To use this feature, the editor must have semantic highlighting enabled.
 
@@ -152,36 +153,34 @@ Example:
 
 ```json
 {
-    "version": "0.2.0",
-    "configurations": [
-        // Run all tests in a file using Minitest
-        {
-            "type": "rdbg",
-            "name": "Minitest - current file",
-            "request": "launch",
-            "script": "-Itest ${file}",
-            "askParameters": false
-        },
-        // If your test runner supports line numbers, such as in Rails,
-        // you can add a task like this one to run only the test under the cursor
-        {
-            "name": "Minitest - current line",
-            "type": "rdbg",
-            "request": "launch",
-            "command": "${workspaceRoot}/bin/rails",
-            "script": "test",
-            "args": [
-                "${file}:${lineNumber}"
-            ],
-            "askParameters": false,
-        },
-        // Attach the debugger to an active process (for example, Rails server)
-        {
-            "type": "rdbg",
-            "name": "Attach with rdbg",
-            "request": "attach"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    // Run all tests in a file using Minitest
+    {
+      "type": "rdbg",
+      "name": "Minitest - current file",
+      "request": "launch",
+      "script": "-Itest ${file}",
+      "askParameters": false
+    },
+    // If your test runner supports line numbers, such as in Rails,
+    // you can add a task like this one to run only the test under the cursor
+    {
+      "name": "Minitest - current line",
+      "type": "rdbg",
+      "request": "launch",
+      "command": "${workspaceRoot}/bin/rails",
+      "script": "test",
+      "args": ["${file}:${lineNumber}"],
+      "askParameters": false
+    },
+    // Attach the debugger to an active process (for example, Rails server)
+    {
+      "type": "rdbg",
+      "name": "Attach with rdbg",
+      "request": "attach"
+    }
+  ]
 }
 ```
 
@@ -205,6 +204,6 @@ If you have any issues or feature requests, feel free to log them in the Ruby LS
 
 If you'd like to learn more about VS Code, try these topics:
 
-* [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
-* [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
-* [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
+- [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
+- [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
+- [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.

@@ -1,15 +1,16 @@
 ---
 Order: 3
 Area: other
-TOCTitle: Unity
-ContentId: 75CD2FA6-2F91-428A-A88D-880611AE75A0
+title: Unity
+id: 75CD2FA6-2F91-428A-A88D-880611AE75A0
 PageTitle: Visual Studio Code and Unity
 DateApproved: 11/4/2022
-MetaDescription: Visual Studio Code can replace MonoDevelop as the editor for Unity
+description: Visual Studio Code can replace MonoDevelop as the editor for Unity
 ---
+
 # Unity Development with VS Code
 
-Visual Studio Code can be a great companion to Unity for editing C# files.  All of the [C#](/docs/languages/csharp.md) features are supported and more.  In the screen below, you can see code colorization, bracket matching, IntelliSense, CodeLens and that's just the start.
+Visual Studio Code can be a great companion to Unity for editing C# files. All of the [C#](/docs/languages/csharp.md) features are supported and more. In the screen below, you can see code colorization, bracket matching, IntelliSense, CodeLens and that's just the start.
 
 ![Unity Example](images/unity/wow.gif)
 
@@ -56,16 +57,16 @@ Open up **Unity Preferences**, **External Tools**, then browse for the Visual St
 
 With the solution file selected, you are now ready to start editing with VS Code. Here is a list of some of the things you can expect:
 
-* Syntax Highlighting
-* Bracket matching
-* IntelliSense
-* Snippets
-* CodeLens
-* Peek
-* Go-to Definition
-* Code Actions/Lightbulbs
-* Go to symbol
-* Hover
+- Syntax Highlighting
+- Bracket matching
+- IntelliSense
+- Snippets
+- CodeLens
+- Peek
+- Go-to Definition
+- Code Actions/Lightbulbs
+- Go to symbol
+- Hover
 
 Two topics that will help you are [Basic Editing](/docs/editor/codebasics.md) and [C#](/docs/languages/csharp.md). In the image below, you can see VS Code showing hover context, peeking references and more.
 
@@ -77,8 +78,8 @@ If you are installing VS Code for the first time, you might be missing targeting
 
 Targeting pack download links:
 
-* [Windows: .NET Framework 4.7.1 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net471)
-* [macOS: Download .NET SDK](https://dotnet.microsoft.com/download)
+- [Windows: .NET Framework 4.7.1 Developer Pack](https://dotnet.microsoft.com/download/dotnet-framework/net471)
+- [macOS: Download .NET SDK](https://dotnet.microsoft.com/download)
 
 Steps:
 
@@ -95,7 +96,7 @@ Due to how Unity handles its `.csproj` files, it does not seem possible to insta
 
 When you're done, open the package file using a tool such as 7zip and extract `Microsoft.Unity.Analyzers.dll` onto your project's root folder. You can place it inside a folder named `NuGet`, for example. Do not place it inside `Assets` or `Packages`, as that will cause Unity to try to process the `.dll`, which will make it output an error in the console.
 
->**Note**: 7zip cannot open a `.nupkg` file by right-click and **Open with**. Instead, you have to open the 7zip application, navigate to the file, and then select **Extract**.
+> **Note**: 7zip cannot open a `.nupkg` file by right-click and **Open with**. Instead, you have to open the 7zip application, navigate to the file, and then select **Extract**.
 
 Next, create an `omnisharp.json` file at the root folder of your project, as explained [here](https://www.strathweb.com/2019/04/roslyn-analyzers-in-code-fixes-in-omnisharp-and-vs-code/). Analyzer support in OmniSharp is experimental at the moment, so we need to enable it explicitly. We also need to point it to the `.dll` file we just extracted.
 
@@ -103,12 +104,10 @@ Your `omnisharp.json` file should end up looking like this:
 
 ```json
 {
-    "RoslynExtensionsOptions": {
-        "EnableAnalyzersSupport": true,
-        "LocationPaths": [
-            "./NuGet/microsoft.unity.analyzers.1.14.0/analyzers/dotnet/cs"
-        ]
-    }
+  "RoslynExtensionsOptions": {
+    "EnableAnalyzersSupport": true,
+    "LocationPaths": ["./NuGet/microsoft.unity.analyzers.1.14.0/analyzers/dotnet/cs"]
+  }
 }
 ```
 
@@ -140,15 +139,15 @@ You are now ready to code in Visual Studio Code, while getting the same warnings
 
 Read on to learn more about:
 
-* [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
-* [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
-* [C#](/docs/languages/csharp.md) - learn about the C# support in VS Code
+- [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
+- [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
+- [C#](/docs/languages/csharp.md) - learn about the C# support in VS Code
 
 ## Common questions
 
 ### I don't have IntelliSense
 
-You need to ensure that your solution is open in VS Code (not just a single file).  Open the folder with your solution and you usually will not need to do anything else.  If for some reason VS Code has not selected the right solution context, you can change the selected project by clicking on the OmniSharp flame icon on the status bar.
+You need to ensure that your solution is open in VS Code (not just a single file). Open the folder with your solution and you usually will not need to do anything else. If for some reason VS Code has not selected the right solution context, you can change the selected project by clicking on the OmniSharp flame icon on the status bar.
 
 ![OmniSharp Flame on the Status Bar](images/unity/omnisharp.png)
 
@@ -158,7 +157,7 @@ Choose the `-CSharp` version of the solution file and VS Code will light up.
 
 ### How can I change the file exclusions?
 
-Unity creates a number of additional files that can clutter your workspace in VS Code.  You can easily hide these so that you can focus on the files you actually want to edit.
+Unity creates a number of additional files that can clutter your workspace in VS Code. You can easily hide these so that you can focus on the files you actually want to edit.
 
 To do this, add the following JSON to your [workspace settings](/docs/getstarted/settings.md). By adding these excludes to your workspace settings, you will not change your global user settings and it allows anyone also working on the project to have the same file excludes.
 
@@ -185,11 +184,11 @@ To do this, add the following JSON to your [workspace settings](/docs/getstarted
 
 As you can see below this will clean things up a lot...
 
-Before|After
-------|-----
-![Unfiltered files](images/unity/unfilteredfiles.png)|![filtered files](images/unity/filteredfiles.png)
+| Before                                                | After                                             |
+| ----------------------------------------------------- | ------------------------------------------------- |
+| ![Unfiltered files](images/unity/unfilteredfiles.png) | ![filtered files](images/unity/filteredfiles.png) |
 
-To edit this directly within VS Code Settings editor, go to **File** > **Preferences** > **Settings** (**Code** > **Preferences** > **Settings** on macOS). Switch to the **Workspace** tab and then type "files exclude" into the Settings editor search bar.  Add a glob pattern similar to the pattern shown below by clicking the **Add Pattern** button for the **Files: Exclude** setting.  You will need to add each pattern separately.
+To edit this directly within VS Code Settings editor, go to **File** > **Preferences** > **Settings** (**Code** > **Preferences** > **Settings** on macOS). Switch to the **Workspace** tab and then type "files exclude" into the Settings editor search bar. Add a glob pattern similar to the pattern shown below by clicking the **Add Pattern** button for the **Files: Exclude** setting. You will need to add each pattern separately.
 
 ```
 **/.git

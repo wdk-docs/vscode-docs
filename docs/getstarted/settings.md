@@ -1,11 +1,11 @@
 ---
 Order: 6
 Area: getstarted
-TOCTitle: Settings
-ContentId: FDA6D86C-FF24-49BC-A1EB-E3BA43130FA0
+title: Settings
+id: FDA6D86C-FF24-49BC-A1EB-E3BA43130FA0
 PageTitle: Visual Studio Code User and Workspace Settings
 DateApproved: 7/6/2023
-MetaDescription: How to modify Visual Studio Code User and Workspace Settings.
+description: How to modify Visual Studio Code User and Workspace Settings.
 ---
 
 # User and Workspace Settings

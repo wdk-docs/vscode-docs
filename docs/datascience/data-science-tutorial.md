@@ -1,11 +1,11 @@
 ---
 Order: 3
 Area: datascience
-TOCTitle: Data Science Tutorial
-ContentId: 3c7ae641-e45c-4892-9d8c-7f22bdc549dd
+title: Data Science Tutorial
+id: 3c7ae641-e45c-4892-9d8c-7f22bdc549dd
 PageTitle: Python and Data Science Tutorial in Visual Studio Code
 DateApproved: 1/9/2023
-MetaDescription: Python data science tutorial demonstrating the use of common data science and machine learning libraries with Visual Studio code Jupyter Notebook support.
+description: Python data science tutorial demonstrating the use of common data science and machine learning libraries with Visual Studio code Jupyter Notebook support.
 MetaSocialImage: images/tutorial/social.png
 ---
 
@@ -22,7 +22,7 @@ The following installations are required for the completion of this tutorial. Ma
 
 - [Miniconda with latest Python](https://docs.conda.io/en/latest/miniconda.html)
 
-   > **Note**: If you already have the full Anaconda distribution installed, you don't need to install Miniconda. Alternatively, if you'd prefer not to use Anaconda or Miniconda, you can create a Python virtual environment and install the packages needed for the tutorial using pip. If you go this route, you will need to install the following packages: pandas, jupyter, seaborn, scikit-learn, keras, and tensorflow.
+  > **Note**: If you already have the full Anaconda distribution installed, you don't need to install Miniconda. Alternatively, if you'd prefer not to use Anaconda or Miniconda, you can create a Python virtual environment and install the packages needed for the tutorial using pip. If you go this route, you will need to install the following packages: pandas, jupyter, seaborn, scikit-learn, keras, and tensorflow.
 
 ## Set up a data science environment
 
@@ -123,7 +123,7 @@ This tutorial uses the [Titanic dataset](https://hbiostat.org/data/repo/titanic.
 
    > **Tip**: To quickly copy your graph, you can hover over the upper right corner of your graph and click on the **Copy to Clipboard** button that appears. You can also better view details of your graph by clicking the **Expand image** button.
 
-      ![Plot Viewer Buttons](images/data-science-tutorial/plot-viewer-buttons.png)
+   ![Plot Viewer Buttons](images/data-science-tutorial/plot-viewer-buttons.png)
 
 1. These graphs are helpful in seeing some of the relationships between survival and the input variables of the data, but it's also possible to use **pandas** to calculate correlations. To do so, all the variables used need to be numeric for the correlation calculation and currently gender is stored as a string. To convert those string values to integers, add and run the following code.
 
@@ -150,7 +150,7 @@ This tutorial uses the [Titanic dataset](https://hbiostat.org/data/repo/titanic.
    data.corr().abs()[["survived"]]
    ```
 
-      ![Determining the correlation between having relatives and survival](images/data-science-tutorial/jupyter-cell-04.png)
+   ![Determining the correlation between having relatives and survival](images/data-science-tutorial/jupyter-cell-04.png)
 
 1. You'll notice that in fact when looked at from the standpoint of whether a person had relatives, versus how many relatives, there is a higher correlation with survival. With this information in hand, you can now drop from the dataset the low value **sibsp** and **parch** columns, as well as any rows that had **NaN** values, to end up with a dataset that can be used for training a model.
 

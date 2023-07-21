@@ -1,11 +1,11 @@
 ---
 Order: 12
 Area: java
-TOCTitle: GUI Applications
-ContentId: 517db620-d166-4f72-99c1-fa046710dffe
+title: GUI Applications
+id: 517db620-d166-4f72-99c1-fa046710dffe
 PageTitle: Develop Java GUI Applications in Visual Studio Code
 DateApproved: 10/11/2022
-MetaDescription: How to develop Java GUI Applications (JavaFX, AWT, Swing) in Visual Studio Code
+description: How to develop Java GUI Applications (JavaFX, AWT, Swing) in Visual Studio Code
 ---
 
 # Working with GUI applications in VS Code

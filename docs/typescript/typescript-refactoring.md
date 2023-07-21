@@ -1,12 +1,13 @@
 ---
 Order: 4
 Area: typescript
-TOCTitle: Refactoring
-ContentId: ff7a9f28-26b2-4ac6-8c16-1a16182bb6ca
+title: Refactoring
+id: ff7a9f28-26b2-4ac6-8c16-1a16182bb6ca
 PageTitle: TypeScript refactoring with Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Learn about TypeScript refactorings supported by Visual Studio Code.
+description: Learn about TypeScript refactorings supported by Visual Studio Code.
 ---
+
 # Refactoring TypeScript
 
 [Source code refactoring](https://en.wikipedia.org/wiki/Code_refactoring) can improve the quality and maintainability of your project by restructuring your code while not modifying the runtime behavior. Visual Studio Code supports refactoring operations (refactorings) such as [Extract Method](https://refactoring.com/catalog/extractMethod.html) and [Extract Variable](https://refactoring.com/catalog/extractVariable.html) to improve your code base from within your editor.
@@ -29,50 +30,50 @@ See [Refactorings](/docs/editor/refactoring.md) for more information about refac
 
 Available TypeScript refactorings include:
 
-* **Extract to method or function** - Extract the selected statements or expressions to either a new method or a new function in the file.
+- **Extract to method or function** - Extract the selected statements or expressions to either a new method or a new function in the file.
 
-   ![Triggering the extract method refactoring on a selection](images/refactoring/refactor-extract-function.gif)
+  ![Triggering the extract method refactoring on a selection](images/refactoring/refactor-extract-function.gif)
 
-   After selecting the **Extract to method** or **Extract to function** refactoring, enter the name of the extracted method/function.
+  After selecting the **Extract to method** or **Extract to function** refactoring, enter the name of the extracted method/function.
 
-* **Extract to constant** - Extract the selected expression to a new constant in the file.
+- **Extract to constant** - Extract the selected expression to a new constant in the file.
 
-   ![Extracting a constant from a selection](images/refactoring/refactor-extract-constant.gif)
+  ![Extracting a constant from a selection](images/refactoring/refactor-extract-constant.gif)
 
-* **Extract type to interface or type alias** - Extract the selected complex type to either an interface or a type alias.
+- **Extract type to interface or type alias** - Extract the selected complex type to either an interface or a type alias.
 
-   ![Extract an inline type to an interface](images/refactoring/refactor-extract-interface.gif)
+  ![Extract an inline type to an interface](images/refactoring/refactor-extract-interface.gif)
 
-* **Move to new file** - Move one or more classes, functions, constants, or interfaces in the top-level scope of the file to a new file. The new file's name is inferred from the selected symbol's name.
+- **Move to new file** - Move one or more classes, functions, constants, or interfaces in the top-level scope of the file to a new file. The new file's name is inferred from the selected symbol's name.
 
-   ![Moving a class to a new file](images/refactoring/refactor-move-file.gif)
+  ![Moving a class to a new file](images/refactoring/refactor-move-file.gif)
 
-* **Convert between named imports and namespace imports** - Convert between named imports (`import { Name } from './foo'`) and namespace imports (`import * as foo from './foo'`).
+- **Convert between named imports and namespace imports** - Convert between named imports (`import { Name } from './foo'`) and namespace imports (`import * as foo from './foo'`).
 
-   ![Converting a named import to a namespace import](images/refactoring/refactor-convert-import.gif)
+  ![Converting a named import to a namespace import](images/refactoring/refactor-convert-import.gif)
 
-* **Convert between default export and named export** - Convert from using a `export default` and having a named export (`export const Foo = ...`).
+- **Convert between default export and named export** - Convert from using a `export default` and having a named export (`export const Foo = ...`).
 
-* **Convert parameters to destructured object** - Rewrite a function that takes a long list of arguments to take a single arguments object.
+- **Convert parameters to destructured object** - Rewrite a function that takes a long list of arguments to take a single arguments object.
 
-* **Generate get and set accessors** - Encapsulate a selected class property by generating a getter and setter for it.
+- **Generate get and set accessors** - Encapsulate a selected class property by generating a getter and setter for it.
 
-   ![Generating getters and setters from class property](images/refactoring/refactor-generate-get-set.gif)
+  ![Generating getters and setters from class property](images/refactoring/refactor-generate-get-set.gif)
 
-* **Infer function return types** - Adds explicit return type annotations to functions.
+- **Infer function return types** - Adds explicit return type annotations to functions.
 
-    ![The Infer function return type refactoring in action](images/refactoring/ts-infer-return.gif)
+  ![The Infer function return type refactoring in action](images/refactoring/ts-infer-return.gif)
 
-* **Add/remove braces from arrow function** - Converts single line arrow function to multiline and back.
+- **Add/remove braces from arrow function** - Converts single line arrow function to multiline and back.
 
 ## Quick Fixes
 
 Quick Fixes are suggested edits that address simple coding errors. Example Quick Fixes include:
 
-* Adding a missing `this` to a member access.
-* Fixing a misspelled property name.
-* Removing unreachable code or unused imports
-* Declaring
+- Adding a missing `this` to a member access.
+- Fixing a misspelled property name.
+- Removing unreachable code or unused imports
+- Declaring
 
 When you move your cursor on to a TypeScript error, VS Code shows a light bulb that indicates that Quick Fixes are available. Click the light bulb or press `kb(editor.action.quickFix)` to show a list of available Quick Fixes and [refactorings](#refactoring).
 
@@ -119,9 +120,9 @@ When you move or rename a file that is imported by other files in your TypeScrip
 
 The `typescript.updateImportsOnFileMove.enabled` setting controls this behavior. Valid settings values are:
 
-* `"prompt"` - The default. Asks if paths should be updated for each file move.
-* `"always"` - Always automatically update paths.
-* `"never"` - Do not update paths automatically and do not prompt.
+- `"prompt"` - The default. Asks if paths should be updated for each file move.
+- `"always"` - Always automatically update paths.
+- `"never"` - Do not update paths automatically and do not prompt.
 
 ## Code Actions on Save
 
@@ -139,10 +140,10 @@ You can also set `editor.codeActionsOnSave` to an array of Code Actions to execu
 
 Here are some source actions:
 
-* `"organizeImports"` -  Enables organize imports on save.
-* `"fixAll"` - Auto Fix on Save computes all possible fixes in one round (for all providers including ESLint).
-* `"fixAll.eslint"` -  Auto Fix only for ESLint.
-* `"addMissingImports"` - Adds all missing imports on save.
+- `"organizeImports"` - Enables organize imports on save.
+- `"fixAll"` - Auto Fix on Save computes all possible fixes in one round (for all providers including ESLint).
+- `"fixAll.eslint"` - Auto Fix only for ESLint.
+- `"addMissingImports"` - Adds all missing imports on save.
 
 See [TypeScript](/docs/typescript/typescript-tutorial.md) for more information.
 
@@ -160,5 +161,5 @@ Set `"typescript.suggestionActions.enabled"` to `false` to disable suggestions.
 
 Read on to find out about:
 
-* [Editing TypeScript](/docs/typescript/typescript-editing.md) - Learn about VS Code editing features for TypeScript.
-* [Debugging TypeScript](/docs/typescript/typescript-debugging.md) - Configure the debugger for your TypeScript project.
+- [Editing TypeScript](/docs/typescript/typescript-editing.md) - Learn about VS Code editing features for TypeScript.
+- [Debugging TypeScript](/docs/typescript/typescript-debugging.md) - Configure the debugger for your TypeScript project.

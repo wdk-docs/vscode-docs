@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 1664249a-ba7a-4a53-b3f0-9d757cff7d27
+id: 1664249a-ba7a-4a53-b3f0-9d757cff7d27
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: Learn how to extend Visual Studio Code's built-in Markdown preview.
+description: Learn how to extend Visual Studio Code's built-in Markdown preview.
 sidebar_position: 17
 ---
 

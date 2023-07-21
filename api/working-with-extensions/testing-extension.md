@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 2447F8EB-15F1-4279-B621-126C7B8EBF4B
+id: 2447F8EB-15F1-4279-B621-126C7B8EBF4B
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: 为Visual Studio Code扩展(插件)编写测试。
+description: 为Visual Studio Code扩展(插件)编写测试。
 sidebar_position: 1
 ---
 

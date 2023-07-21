@@ -1,12 +1,13 @@
 ---
 Order: 16
 Area: devcontainers
-TOCTitle: FAQ
+title: FAQ
 PageTitle: Visual Studio Code Dev Containers Frequently Asked Questions
-ContentId: c4784db6-ab00-4ac7-bca8-88edb638c593
-MetaDescription: Visual Studio Code troubleshooting tips and tricks for Dev Containers
+id: devcontainers-faq
+description: Visual Studio Code troubleshooting tips and tricks for Dev Containers
 DateApproved: 7/6/2023
 ---
+
 # Dev Containers FAQ
 
 This article includes some of the common questions for getting the [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers) extension up and running in different environments.
@@ -47,17 +48,17 @@ You can build images and deploy containers by forwarding the Docker socket and i
 
 Installation of VS Code Server requires that your local machine have outbound HTTPS (port 443) connectivity to:
 
-* `update.code.visualstudio.com`
-* `vscode.blob.core.windows.net`
-* `*.vo.msecnd.net` (Azure CDN)
+- `update.code.visualstudio.com`
+- `vscode.blob.core.windows.net`
+- `*.vo.msecnd.net` (Azure CDN)
 
 The Dev Containers extensions will download VS Code Server locally and copy it to the container once connected.
 
-You can install extensions manually without an internet connection using the **Extensions: Install from VSIX...** command, but if you use the extension panel or `devcontainer.json` to install extensions, your local machine and VS Code Server will need outbound HTTPS (port 443) access  to:
+You can install extensions manually without an internet connection using the **Extensions: Install from VSIX...** command, but if you use the extension panel or `devcontainer.json` to install extensions, your local machine and VS Code Server will need outbound HTTPS (port 443) access to:
 
-* `marketplace.visualstudio.com`
-* `*.vo.msecnd.net` (Azure CDN)
-* `*.gallerycdn.vsassets.io` (Azure CDN)
+- `marketplace.visualstudio.com`
+- `*.vo.msecnd.net` (Azure CDN)
+- `*.gallerycdn.vsassets.io` (Azure CDN)
 
 Finally, some extensions (like C#) download secondary dependencies from `download.microsoft.com` or `download.visualstudio.microsoft.com`. Others (like [Visual Studio Live Share](https://learn.microsoft.com/visualstudio/liveshare/reference/connectivity#requirements-for-connection-modes)) may have additional connectivity requirements. Consult the extension's documentation for details if you run into trouble.
 
@@ -71,12 +72,12 @@ The VS Code extension API hides most of the implementation details of running re
 
 The following articles may help answer your question:
 
-* [Advanced container configuration](/remote/advancedcontainers/overview.md) or [Tips and Tricks](/docs/devcontainers/tips-and-tricks.md)
-* [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
-* [Docker Compose file reference](https://docs.docker.com/compose/compose-file/)
-* [Docker Desktop for Windows troubleshooting guide](https://docs.docker.com/docker-for-windows/troubleshoot) and [FAQ](https://docs.docker.com/docker-for-windows/faqs/)
-* [Docker Desktop for Mac troubleshooting guide](https://docs.docker.com/docker-for-mac/troubleshoot) and [FAQ](https://docs.docker.com/docker-for-mac/faqs/)
-* [Docker Support Resources](https://success.docker.com/article/best-support-resources)
+- [Advanced container configuration](/remote/advancedcontainers/overview.md) or [Tips and Tricks](/docs/devcontainers/tips-and-tricks.md)
+- [Dockerfile reference](https://docs.docker.com/engine/reference/builder/)
+- [Docker Compose file reference](https://docs.docker.com/compose/compose-file/)
+- [Docker Desktop for Windows troubleshooting guide](https://docs.docker.com/docker-for-windows/troubleshoot) and [FAQ](https://docs.docker.com/docker-for-windows/faqs/)
+- [Docker Desktop for Mac troubleshooting guide](https://docs.docker.com/docker-for-mac/troubleshoot) and [FAQ](https://docs.docker.com/docker-for-mac/faqs/)
+- [Docker Support Resources](https://success.docker.com/article/best-support-resources)
 
 ## Can I use dev containers outside of VS Code?
 

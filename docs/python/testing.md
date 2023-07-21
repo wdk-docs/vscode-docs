@@ -1,13 +1,14 @@
 ---
 Order: 6
 Area: python
-TOCTitle: Testing
-ContentId: 9480bef3-4dfc-4671-a454-b9252567bc60
+title: Testing
+id: 9480bef3-4dfc-4671-a454-b9252567bc60
 PageTitle: Testing Python in Visual Studio Code
 DateApproved: 1/20/2023
-MetaDescription: Testing Python in Visual Studio Code including the Test Explorer
+description: Testing Python in Visual Studio Code including the Test Explorer
 MetaSocialImage: images/tutorial/social.png
 ---
+
 # Python testing in Visual Studio Code
 
 The [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) supports testing with Python's built-in [unittest](https://docs.python.org/3/library/unittest.html) framework and [pytest](https://docs.pytest.org/).
@@ -90,7 +91,7 @@ With this code, you can experience working with tests in VS Code as described in
 
 Once you have the Python extension installed and a Python file open within the editor, a test beaker icon will be displayed on the VS Code Activity bar. The beaker icon is for the **Test Explorer** view. When opening the Test Explorer, you will see a **Configure Tests** button if you don't have a test framework enabled. Once you select **Configure Tests**, you will be prompted to select a test framework and a folder containing the tests. If you're using unittest, you will also be asked to select the file glob pattern used to identify your test files.
 
- > **Note**: A file glob pattern is a defined string pattern that matches file or folder names based on wildcards to then include or not include.
+> **Note**: A file glob pattern is a defined string pattern that matches file or folder names based on wildcards to then include or not include.
 
 ![Configure Python Tests button displayed in the Test Explorer when tests haven't been configured.](images/testing/test-explorer-no-tests.png)
 
@@ -174,6 +175,7 @@ You can run tests using any of the following actions:
   ![Run test icon displayed on the gutter when the test file is open in the editor](images/testing/run-tests-gutter.png)
 
 - From the **Command Palette**, by running any of the following commands:
+
   - **Test: Run All Tests** - Runs all tests that have been discovered.
   - **Test: Run Tests in Current File** - Runs all tests in a file that that is open in the editor.
   - **Test: Run Test at Cursor** - Runs only the test method under your cursor in the editor.
@@ -182,11 +184,11 @@ You can run tests using any of the following actions:
 
   - To run all discovered tests, select the play button at the top of **Test Explorer**:
 
-      ![Running all tests through Test Explorer](images/testing/test-explorer-run-all-tests.png)
+    ![Running all tests through Test Explorer](images/testing/test-explorer-run-all-tests.png)
 
   - To run a specific group of tests, or a single test, select the file, class, or test, then select the play button to the right of that item:
 
-      ![Running tests at specific scopes through Test Explorer](images/testing/test-explorer-run-scoped-tests.png)
+    ![Running tests at specific scopes through Test Explorer](images/testing/test-explorer-run-scoped-tests.png)
 
   - You can also run a selection of tests through the Test Explorer. To do that, `kbstyle(Ctrl+Click)` (or `kbstyle(Cmd+Click)` on macOS) on the tests you wish to run, right-click on one of them and then select **Run Test**.
 
@@ -244,23 +246,23 @@ For example, the `test_decrement` functions given earlier are failing because th
 
 1. Right-click on the gutter decoration next to the function definition and select **Debug Test**, or select the **Debug Test** icon next to that test in the **Test Explorer**. VS Code starts the debugger and pauses at the breakpoint.
 
-    ![Debug Test icon in the Test Explorer](images/testing/debug-test-in-explorer.png)
+   ![Debug Test icon in the Test Explorer](images/testing/debug-test-in-explorer.png)
 
 1. In the **Debug Console** panel, enter `inc_dec.decrement(3)` to see that the actual result is 2, whereas the expected result specified in the test is the incorrect value of 4.
 
 1. Stop the debugger and correct the faulty code:
 
-    ```python
-    # unittest
-    self.assertEqual(inc_dec.decrement(3), 2)
+   ```python
+   # unittest
+   self.assertEqual(inc_dec.decrement(3), 2)
 
-    # pytest
-    assert inc_dec.decrement(3) == 2
-    ```
+   # pytest
+   assert inc_dec.decrement(3) == 2
+   ```
 
 1. Save the file and run the tests again to confirm that they pass, and see that the gutter decorations also indicate passing status.
 
-    > **Note**: Running or debugging a test does not automatically save the test file. Always be sure to save changes to a test before running it, otherwise you'll likely be confused by the results because they still reflect the previous version of the file!
+   > **Note**: Running or debugging a test does not automatically save the test file. Always be sure to save changes to a test before running it, otherwise you'll likely be confused by the results because they still reflect the previous version of the file!
 
 You can use the following commands from the Command Palette to debug tests:
 
@@ -276,13 +278,13 @@ For example, the configuration below in the `launch.json` file disables the `jus
 
 ```json
 {
-    "name": "Python: Debug Tests",
-    "type": "python",
-    "request": "launch",
-    "program": "${file}",
-    "purpose": ["debug-test"],
-    "console": "integratedTerminal",
-    "justMyCode": false
+  "name": "Python: Debug Tests",
+  "type": "python",
+  "request": "launch",
+  "program": "${file}",
+  "purpose": ["debug-test"],
+  "console": "integratedTerminal",
+  "justMyCode": false
 }
 ```
 
@@ -292,26 +294,26 @@ If you have more than one configuration entry with `"purpose": ["debug-test"]`, 
 
 Below are all the supported commands for testing with the Python extension in VS Code. These are all found via the Command Palette:
 
-| Command Name | Description |
-| ------------ | ------------|
-| **Python: Configure Tests** | Configure the test framework to be used with the Python extension.  |
-|  **Test: Clear All Results** | Clear all tests statuses, as the UI persists test results across sessions. |  Test: Debug All Tests | Debug all discovered tests. Equivalent to **Python: Debug All Tests** on versions prior to 2021.9. |
-|  **Test: Debug Failed Tests** | Debug tests that failed in the most recent test run. |
-|  **Test: Debug Last Run** | Debug tests that were executed in the most recent test run. |
-|  **Test: Debug Test at Cursor** | Debug the test method where you have your cursor focused on the editor. Similar to **Python: Debug Test Method...** on versions prior to 2021.9. |
-|  **Test: Debug Tests in Current File** | Debug tests in the file that is currently in focus on the editor. |
-|  **Test: Go to Next Test Failure** | If the error peek view is open, open and move to the peek view of the next test in the explorer that has failed. |
-|  **Test: Go to Previous Test Failure** | If the error peek view is open, open and move to the peek view of the previous test in the explorer that has failed. |
-|  **Test: Peek Output** | Opens the error peek view for a test method that has failed. |
-|  **Test: Refresh Tests** | Perform test discovery and updates the Test Explorer to reflect any test changes, addition, or deletion. Similar to **Python: Discover Tests** on versions prior to 2021.9. |
-|  **Test: Rerun Failed Tests** | Run tests that failed in the most recent test run. Similar to **Python: Run Failed Tests** on versions prior to 2021.9.  |
-|  **Test: Rerun Last Run** | Debug tests that were executed in the most recent test run.  |
-|  **Test: Run All Tests** |  Run all discovered tests. Equivalent to **Python: Run All Tests** on versions prior to 2021.9.  |
-|  **Test: Run Test at Cursor** |  Run the test method where you have your cursor focused on the editor.  Similar to **Python: Run Test Method...** on versions prior to 2021.9. |
-|  **Test: Run Test in Current File** | Run tests in the file that is currently in focus on the editor. Equivalent to **Python: Run Current Test File** on versions prior to 2021.9. |
-|  **Test: Show Output** | Open the output with details of all the test runs. Similar to **Python: Show Test Output** on versions prior to 2021.9. |
-|  **Testing: Focus on Test Explorer View** | Open the Test Explorer view. Similar to **Testing: Focus on Python View** on versions prior to 2021.9.
-|  **Test: Stop Refreshing Tests** | Cancel test discovery. |
+| Command Name                             | Description                                                                                                                                                                 |
+| ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------- | -------------------------------------------------------------------------------------------------- |
+| **Python: Configure Tests**              | Configure the test framework to be used with the Python extension.                                                                                                          |
+| **Test: Clear All Results**              | Clear all tests statuses, as the UI persists test results across sessions.                                                                                                  | Test: Debug All Tests | Debug all discovered tests. Equivalent to **Python: Debug All Tests** on versions prior to 2021.9. |
+| **Test: Debug Failed Tests**             | Debug tests that failed in the most recent test run.                                                                                                                        |
+| **Test: Debug Last Run**                 | Debug tests that were executed in the most recent test run.                                                                                                                 |
+| **Test: Debug Test at Cursor**           | Debug the test method where you have your cursor focused on the editor. Similar to **Python: Debug Test Method...** on versions prior to 2021.9.                            |
+| **Test: Debug Tests in Current File**    | Debug tests in the file that is currently in focus on the editor.                                                                                                           |
+| **Test: Go to Next Test Failure**        | If the error peek view is open, open and move to the peek view of the next test in the explorer that has failed.                                                            |
+| **Test: Go to Previous Test Failure**    | If the error peek view is open, open and move to the peek view of the previous test in the explorer that has failed.                                                        |
+| **Test: Peek Output**                    | Opens the error peek view for a test method that has failed.                                                                                                                |
+| **Test: Refresh Tests**                  | Perform test discovery and updates the Test Explorer to reflect any test changes, addition, or deletion. Similar to **Python: Discover Tests** on versions prior to 2021.9. |
+| **Test: Rerun Failed Tests**             | Run tests that failed in the most recent test run. Similar to **Python: Run Failed Tests** on versions prior to 2021.9.                                                     |
+| **Test: Rerun Last Run**                 | Debug tests that were executed in the most recent test run.                                                                                                                 |
+| **Test: Run All Tests**                  | Run all discovered tests. Equivalent to **Python: Run All Tests** on versions prior to 2021.9.                                                                              |
+| **Test: Run Test at Cursor**             | Run the test method where you have your cursor focused on the editor. Similar to **Python: Run Test Method...** on versions prior to 2021.9.                                |
+| **Test: Run Test in Current File**       | Run tests in the file that is currently in focus on the editor. Equivalent to **Python: Run Current Test File** on versions prior to 2021.9.                                |
+| **Test: Show Output**                    | Open the output with details of all the test runs. Similar to **Python: Show Test Output** on versions prior to 2021.9.                                                     |
+| **Testing: Focus on Test Explorer View** | Open the Test Explorer view. Similar to **Testing: Focus on Python View** on versions prior to 2021.9.                                                                      |
+| **Test: Stop Refreshing Tests**          | Cancel test discovery.                                                                                                                                                      |
 
 ## IntelliSense for pytest
 
@@ -325,7 +327,7 @@ When hovering over a fixture reference or a parameterized argument reference, Py
 
 ![Pylance type inference based on the types of arguments passed to the parameterization decorator.](images/testing/pytest-inferred-parametrized-argument.png)
 
-Pylance also offers [code actions](/docs/editor/refactoring.md#code-actions--quick-fixes-and-refactorings) to add type annotations to test functions that have fixture parameters.  Inlay hints for inferred fixture parameter types can also be enabled by setting `python.analysis.inlayHints.pytestParameters` to `true` in your User settings.
+Pylance also offers [code actions](/docs/editor/refactoring.md#code-actions--quick-fixes-and-refactorings) to add type annotations to test functions that have fixture parameters. Inlay hints for inferred fixture parameter types can also be enabled by setting `python.analysis.inlayHints.pytestParameters` to `true` in your User settings.
 
 ![Code action to add type annotation when hoving over a test function with a fixture parameter](images/testing/pytest-annotation-code-action.png)
 
@@ -339,19 +341,19 @@ The settings that affect the UI of the testing features are provided by VS Code 
 
 ### General Python settings
 
-| Setting<br/>(python.testing.) | Default | Description |
-| --- | --- | --- |
-| autoTestDiscoverOnSaveEnabled | `true` | Specifies whether to enable or disable auto run test discovery when saving a test file. You may need to reload the window after making changes to this setting for it to be applied. |
-| cwd | null | Specifies an optional working directory for tests. |
-| debugPort | `3000` | Port number used for debugging of unittest tests. |
-| promptToConfigure | `true` | Specifies whether VS Code prompts to configure a test framework if potential tests are discovered. |
+| Setting<br/>(python.testing.) | Default | Description                                                                                                                                                                          |
+| ----------------------------- | ------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| autoTestDiscoverOnSaveEnabled | `true`  | Specifies whether to enable or disable auto run test discovery when saving a test file. You may need to reload the window after making changes to this setting for it to be applied. |
+| cwd                           | null    | Specifies an optional working directory for tests.                                                                                                                                   |
+| debugPort                     | `3000`  | Port number used for debugging of unittest tests.                                                                                                                                    |
+| promptToConfigure             | `true`  | Specifies whether VS Code prompts to configure a test framework if potential tests are discovered.                                                                                   |
 
 ### unittest configuration settings
 
-| Unittest setting<br/>(python.testing.) | Default | Description |
-| --- | --- | --- |
-| unittestEnabled | `false` | Specifies whether unittest is enabled as the test framework. The equivalent setting for pytest should be disabled. |
-| unittestArgs | `["-v", "-s", ".", "-p", "*test*.py"]` | Arguments to pass to unittest, where each element that's separated by a space is a separate item in the list. See below for a description of the defaults. |
+| Unittest setting<br/>(python.testing.) | Default                                | Description                                                                                                                                                |
+| -------------------------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| unittestEnabled                        | `false`                                | Specifies whether unittest is enabled as the test framework. The equivalent setting for pytest should be disabled.                                         |
+| unittestArgs                           | `["-v", "-s", ".", "-p", "*test*.py"]` | Arguments to pass to unittest, where each element that's separated by a space is a separate item in the list. See below for a description of the defaults. |
 
 The default arguments for unittest are as follows:
 
@@ -365,11 +367,11 @@ See [unittest command-line interface](https://docs.python.org/3/library/unittest
 
 ### pytest configuration settings
 
-| pytest setting<br/>(python.testing.) | Default | Description |
-| --- | --- | --- |
-| pytestEnabled | `false` | Specifies whether pytest is enabled as the test framework. The equivalent setting for unittest should be disabled. |
-| pytestPath | `"pytest"` | Path to pytest. Use a full path if pytest is located outside the current environment. |
-| pytestArgs | `[]` | Arguments to pass to pytest, where each element that's separated by a space is a separate item in the list. See [pytest command-line options](https://docs.pytest.org/en/latest/reference/reference.html#command-line-flags). |
+| pytest setting<br/>(python.testing.) | Default    | Description                                                                                                                                                                                                                   |
+| ------------------------------------ | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| pytestEnabled                        | `false`    | Specifies whether pytest is enabled as the test framework. The equivalent setting for unittest should be disabled.                                                                                                            |
+| pytestPath                           | `"pytest"` | Path to pytest. Use a full path if pytest is located outside the current environment.                                                                                                                                         |
+| pytestArgs                           | `[]`       | Arguments to pass to pytest, where each element that's separated by a space is a separate item in the list. See [pytest command-line options](https://docs.pytest.org/en/latest/reference/reference.html#command-line-flags). |
 
 You can also configure pytest using a `pytest.ini` file as described on [pytest Configuration](https://docs.pytest.org/en/latest/reference/customize.html).
 
@@ -378,9 +380,9 @@ You can also configure pytest using a `pytest.ini` file as described on [pytest 
 
 ### IntelliSense settings
 
-| IntelliSense setting<br/>(python.analysis.) | Default | Description |
-| --- | --- | --- |
-| inlayHints.pytestParameters | false | Whether to display inlay hints for pytest fixture argument types. Accepted values are `true` or `false`. |
+| IntelliSense setting<br/>(python.analysis.) | Default | Description                                                                                              |
+| ------------------------------------------- | ------- | -------------------------------------------------------------------------------------------------------- |
+| inlayHints.pytestParameters                 | false   | Whether to display inlay hints for pytest fixture argument types. Accepted values are `true` or `false`. |
 
 ## See also
 

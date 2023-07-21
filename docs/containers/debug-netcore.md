@@ -1,11 +1,12 @@
 ---
 Area: containers
-ContentId: B1DF33C0-400C-413D-B60B-D1AA278F6DE3
+id: B1DF33C0-400C-413D-B60B-D1AA278F6DE3
 PageTitle: Debug a .NET app running in a Docker container
 DateApproved: 12/21/2022
-MetaDescription: Debug a .NET app running in a Docker container, using Visual Studio Code.
+description: Debug a .NET app running in a Docker container, using Visual Studio Code.
 ---
-# Debug .NET within a container
+
+# 在容器中调试。net
 
 ## Prerequisites
 
@@ -15,7 +16,7 @@ MetaDescription: Debug a .NET app running in a Docker container, using Visual St
 
 1. macOS users only: Add `/usr/local/share/dotnet/sdk/NuGetFallbackFolder` as a shared folder in your Docker preferences.
 
-    ![dockerSharedFolders](images/debug/mac-folders.png)
+   ![dockerSharedFolders](images/debug/mac-folders.png)
 
 ## Walkthrough
 

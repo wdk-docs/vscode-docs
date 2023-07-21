@@ -1,12 +1,13 @@
 ---
 Order: 8
 Area: remote
-TOCTitle: SSH Tutorial
+title: SSH Tutorial
 PageTitle: Connect over SSH with Visual Studio Code
-ContentId: beb86509-a36f-4e3b-a32e-b3d8c3966dd7
-MetaDescription: Connect over SSH with Visual Studio Code
+id: beb86509-a36f-4e3b-a32e-b3d8c3966dd7
+description: Connect over SSH with Visual Studio Code
 DateApproved: 7/6/2023
 ---
+
 # Remote development over SSH
 
 This tutorial walks you through creating and connecting to a virtual machine (VM) on Azure using the Visual Studio Code [Remote - SSH](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-ssh) extension. You'll create a Node.js Express web app to show how you can edit and debug on a remote machine with VS Code just like you could if the source code was local.
@@ -69,7 +70,7 @@ This will generate the SSH key. Press `kbstyle(Enter)` at the following prompt t
 
 You will then be prompted to enter a secure passphrase, but you can leave that blank. You should now have a `id_ed25519.pub` file which contains your new public SSH key.
 
->**Note**: If you are using a legacy system that doesn't support the Ed25519 algorithm, you can use rsa instead: `ssh-keygen -t rsa -b 4096`.
+> **Note**: If you are using a legacy system that doesn't support the Ed25519 algorithm, you can use rsa instead: `ssh-keygen -t rsa -b 4096`.
 
 ## Add SSH key to your VM
 
@@ -105,7 +106,7 @@ Before connecting in Remote - SSH, you can verify you're able to connect to your
 
 > Note: If you run into an error `ssh: connect to host <host ip> port 22: Connection timed out`, you may need to delete NRMS-Rule-106 from the Networking tab of your VM:
 
-   ![Virtual machine list of NRMS rules](images/ssh-tutorial/vm-nrms-rules.png)
+![Virtual machine list of NRMS rules](images/ssh-tutorial/vm-nrms-rules.png)
 
 Set the user and hostname in the connection information text box.
 
@@ -245,8 +246,8 @@ Congratulations, you've successfully completed this tutorial!
 
 Next, check out the other Remote Development extensions.
 
-* [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
-* [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
+- [WSL](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl)
+- [Dev Containers](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-containers)
 
 Or get them all by installing the
 [Remote Development](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack) Extension Pack.

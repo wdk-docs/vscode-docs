@@ -1,8 +1,8 @@
 ---
 Order: 81
-TOCTitle: VS Code Day
+title: VS Code Day
 PageTitle: Visual Studio Code Day 2023
-MetaDescription: Learn about the latest Visual Studio Code features and extensions during VS Code Day 2023 on April 26, 2023
+description: Learn about the latest Visual Studio Code features and extensions during VS Code Day 2023 on April 26, 2023
 Date: 2023-04-13
 Author: Burke Holland
 ---
@@ -19,19 +19,19 @@ The event kicks off with "Inside VS Code: How we build and ship it" - a keynote 
 
 We're following that with a full schedule of sessions on AI, Remote Development, TypeScript, Python, Accessibility, and much more...
 
-| Session  | Speaker   |
-|-------------- | -------------- |
-| **Keynote**: Inside VS Code - How we build and ship It   | [Erich Gamma](https://en.wikipedia.org/wiki/Erich_Gamma), [Kai Maetzel](https://www.linkedin.com/in/kai-maetzel-88ba9857)    |
-| Elevate your VS Code experience   | [Sandeep Somavarapu](https://twitter.com/sandy081)    |
-| Develop anywhere with VS Code   | [Brigit Murtaugh](https://twitter.com/BrigitMurtaugh), [Connor Peet](https://twitter.com/ConnorPeet)    |
-| VS Code tips and tricks for TypeScript   | [Matthew Pocock](https://twitter.com/mattpocockuk)    |
-| Accessibility in VS Code   | [Megan Rogge](https://twitter.com/MeganRogge_)    |
-| Using VS Code, Copilot, and Codespaces to level up to Rust from Python   | [Noah Gift](https://ene.duke.edu/faculty/noah-gift)    |
-| Creating a Dataset from scratch with GitHub Copilot   | [Alfredo Deza](https://twitter.com/alfredodeza)    |
-| Data Science for everyone and everywhere | [Soojin Choi](https://www.linkedin.com/in/soojinmin)    |
-| Writing Python web apps with VS Code | [Pamela Fox](https://twitter.com/pamelafox)    |
-| What's new in GitHub Next | [Amelia Wattenberger](https://twitter.com/Wattenberger)    |
-| GitHub integration in VS Code for Web | [Joyce Er](https://twitter.com/joyceerhl)   |
+| Session                                                                | Speaker                                                                                                                   |
+| ---------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------- |
+| **Keynote**: Inside VS Code - How we build and ship It                 | [Erich Gamma](https://en.wikipedia.org/wiki/Erich_Gamma), [Kai Maetzel](https://www.linkedin.com/in/kai-maetzel-88ba9857) |
+| Elevate your VS Code experience                                        | [Sandeep Somavarapu](https://twitter.com/sandy081)                                                                        |
+| Develop anywhere with VS Code                                          | [Brigit Murtaugh](https://twitter.com/BrigitMurtaugh), [Connor Peet](https://twitter.com/ConnorPeet)                      |
+| VS Code tips and tricks for TypeScript                                 | [Matthew Pocock](https://twitter.com/mattpocockuk)                                                                        |
+| Accessibility in VS Code                                               | [Megan Rogge](https://twitter.com/MeganRogge_)                                                                            |
+| Using VS Code, Copilot, and Codespaces to level up to Rust from Python | [Noah Gift](https://ene.duke.edu/faculty/noah-gift)                                                                       |
+| Creating a Dataset from scratch with GitHub Copilot                    | [Alfredo Deza](https://twitter.com/alfredodeza)                                                                           |
+| Data Science for everyone and everywhere                               | [Soojin Choi](https://www.linkedin.com/in/soojinmin)                                                                      |
+| Writing Python web apps with VS Code                                   | [Pamela Fox](https://twitter.com/pamelafox)                                                                               |
+| What's new in GitHub Next                                              | [Amelia Wattenberger](https://twitter.com/Wattenberger)                                                                   |
+| GitHub integration in VS Code for Web                                  | [Joyce Er](https://twitter.com/joyceerhl)                                                                                 |
 
 We're very excited about VS Code Day. But we're also engineers. We can't help but think about efficiency and simplicity, so we've taken a step back (like you may have at this point) and thought, do we need an event...for an editor?
 

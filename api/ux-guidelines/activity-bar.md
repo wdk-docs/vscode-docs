@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 13b649f1-156f-489a-9c03-c2cff8060733
+id: 13b649f1-156f-489a-9c03-c2cff8060733
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: UX guidelines for the Activity Bar in a Visual Studio Code extension.
+description: UX guidelines for the Activity Bar in a Visual Studio Code extension.
 ---
 
 # 活动栏

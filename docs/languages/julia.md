@@ -1,12 +1,13 @@
 ---
 Order: 13
 Area: languages
-TOCTitle: Julia
-ContentId: d7ec8e7c-de5e-42b3-86df-a48660f1f6e1
+title: Julia
+id: d7ec8e7c-de5e-42b3-86df-a48660f1f6e1
 PageTitle: Julia in Visual Studio Code
 DateApproved: 8/27/2021
-MetaDescription: Learn about working with the Julia programming language in Visual Studio Code.
+description: Learn about working with the Julia programming language in Visual Studio Code.
 ---
+
 # Julia in Visual Studio Code
 
 The [Julia programming language](https://julialang.org) is a high level and dynamic language built for speed and simplicity. Julia is commonly used in areas such as data science, machine learning, scientific computing, but is still a general purpose language that can handle most programming use cases.
@@ -22,10 +23,10 @@ Most of these features work out of the box, while some may require basic configu
 1. Install Julia for your platform: [https://julialang.org/downloads](https://julialang.org/downloads).
 2. Install VS Code for your platform: [https://code.visualstudio.com/download](https://code.visualstudio.com/download).
 3. Open the Julia extension on the [VS Code Marketplace](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia) and press **Install**; or manually install by doing the following steps:
-    1. Start VS Code.
-    2. Inside VS Code, go to the Extensions view by clicking **View** on the top menu bar and then selecting **Extensions**.
-    3. In the Extensions view, search for the term "julia" in the Marketplace search box, then select the Julia extension (julialang.language-julia) and select the **Install** button.
-    4. Restart VS Code.
+   1. Start VS Code.
+   2. Inside VS Code, go to the Extensions view by clicking **View** on the top menu bar and then selecting **Extensions**.
+   3. In the Extensions view, search for the term "julia" in the Marketplace search box, then select the Julia extension (julialang.language-julia) and select the **Install** button.
+   4. Restart VS Code.
 
 If you run into any issues installing the Julia VS Code extension, check out [install an extension](/docs/editor/extension-marketplace.md#install-an-extension), which should help clarify any issues.
 
@@ -91,6 +92,6 @@ If you have any issues or feature requests, feel free to log them in the Julia e
 
 If you'd like to learn more about VS Code, try these topics:
 
-* [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
-* [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
-* [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
+- [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
+- [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
+- [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.

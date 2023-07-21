@@ -1,13 +1,15 @@
 ---
 Order: 5
 Area: setup
-TOCTitle: Raspberry Pi
-ContentId: E059E35A-8AD0-4D4A-9BE1-E23D45D75C1C
+title: Raspberry Pi
+id: E059E35A-8AD0-4D4A-9BE1-E23D45D75C1C
 PageTitle: Running Visual Studio Code on Raspberry Pi OS
 DateApproved: 7/6/2023
-MetaDescription: Get Visual Studio Code up and running on Raspberry Pi OS.
+description: Get Visual Studio Code up and running on Raspberry Pi OS.
+sidebar_position: 5
 ---
-# Visual Studio Code on Raspberry Pi
+
+# 树莓派上的Visual Studio Code
 
 You can run Visual Studio Code on [Raspberry Pi](https://www.raspberrypi.org) devices.
 
@@ -47,9 +49,9 @@ You can always check when a new release is available in our [Updates](/updates) 
 
 VS Code is supported on these Raspberry Pi models running a 32-bit or 64-bit version of Raspberry Pi OS:
 
-* Raspberry Pi 3 Model B/B+
-* Raspberry Pi 4 Model B
-* Raspberry Pi 400
+- Raspberry Pi 3 Model B/B+
+- Raspberry Pi 4 Model B
+- Raspberry Pi 400
 
 While 1 GB of memory (RAM) meets the minimum system requirements, users will benefit from installing VS Code on a Raspberry Pi 4 with more memory.
 
@@ -69,6 +71,6 @@ The `"disable-hardware-acceleration": true` runtime argument switch has the effe
 
 Once you have installed VS Code, these topics will help you learn more about it:
 
-* [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript, and tools like Yeoman.
-* [User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
-* [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
+- [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript, and tools like Yeoman.
+- [User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
+- [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.

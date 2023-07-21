@@ -1,12 +1,13 @@
 ---
 Order: 5
 Area: getstarted
-TOCTitle: Themes
-ContentId: CAC88BC7-90A5-4384-8A05-2187117C0F72
+title: Themes
+id: CAC88BC7-90A5-4384-8A05-2187117C0F72
 PageTitle: Visual Studio Code Themes
 DateApproved: 7/6/2023
-MetaDescription: Changing the color theme in Visual Studio Code. You can use color themes provided by VS Code, the community or create your own new themes.
+description: Changing the color theme in Visual Studio Code. You can use color themes provided by VS Code, the community or create your own new themes.
 ---
+
 # Color Themes
 
 Color themes let you modify the colors in Visual Studio Code's user interface to suit your preferences and work environment.
@@ -35,7 +36,7 @@ The active color theme is stored in your user [settings](/docs/getstarted/settin
 
 There are several out-of-the-box color themes in VS Code for you to try.
 
-Many more themes have been uploaded to the VS Code [Extension Marketplace](/docs/editor/extension-marketplace.md) by the community.  If you find one you want to use, install it and restart VS Code and the new theme will be available.
+Many more themes have been uploaded to the VS Code [Extension Marketplace](/docs/editor/extension-marketplace.md) by the community. If you find one you want to use, install it and restart VS Code and the new theme will be available.
 
 You can search for themes in the Extensions view (`kb(workbench.view.extensions)`) search box using the `@category:"themes"` filter.
 
@@ -47,10 +48,10 @@ Windows and macOS support light and dark color schemes. There is a setting, `win
 
 To customize the themes that are used when a color scheme changes, you can set the preferred light, dark, and high contrast themes with the settings:
 
-* `workbench.preferredLightColorTheme` - defaults to "Default Light+"
-* `workbench.preferredDarkColorTheme` - defaults to "Default Dark+"
-* `workbench.preferredHighContrastColorTheme` - defaults to "Default High Contrast"
-* `workbench.preferredHighContrastLightColorTheme` - defaults to "Default High Contrast Light"
+- `workbench.preferredLightColorTheme` - defaults to "Default Light+"
+- `workbench.preferredDarkColorTheme` - defaults to "Default Dark+"
+- `workbench.preferredHighContrastColorTheme` - defaults to "Default High Contrast"
+- `workbench.preferredHighContrastLightColorTheme` - defaults to "Default High Contrast Light"
 
 ## Customizing a Color Theme
 
@@ -97,7 +98,7 @@ A pre-configured set of syntax tokens ('comments', 'strings', ...) is available 
 
 ![Advanced Token Color Customization](images/themes/token_color_customization_advanced.png)
 
->**Note**: Directly configuring TextMate rules is an advanced skill as you need to understand on how TextMate grammars work. Go to the [Color Theme guide](/api/extension-guides/color-theme.md) for more information.
+> **Note**: Directly configuring TextMate rules is an advanced skill as you need to understand on how TextMate grammars work. Go to the [Color Theme guide](/api/extension-guides/color-theme.md) for more information.
 
 Again, to customize specific themes, you can do this in one of the following ways:
 
@@ -129,14 +130,14 @@ The "Tomorrow Night Blue" color theme with semantic highlighting:
 
 Notice the color differences based on language service symbol understanding:
 
-* line 10: `languageModes` is colored as a parameter.
-* line 11: `Range` and `Position` are colored as classes and `document` as a parameter.
-* line 13: `getFoldingRanges` is colored as a function.
+- line 10: `languageModes` is colored as a parameter.
+- line 11: `Range` and `Position` are colored as classes and `document` as a parameter.
+- line 13: `getFoldingRanges` is colored as a function.
 
 The settings `editor.semanticHighlighting.enabled` serves as the main control on whether semantic highlighting is applied. It can have values `true`, `false`, and `configuredByTheme`.
 
-* `true` and `false` turn semantic highlighting on or off for all themes.
-* `configuredByTheme` is the default and lets each theme control whether semantic highlighting is enabled or not. All the themes that ship with VS Code (for example, the "Dark+" default) have semantic highlighting enabled by default.
+- `true` and `false` turn semantic highlighting on or off for all themes.
+- `configuredByTheme` is the default and lets each theme control whether semantic highlighting is enabled or not. All the themes that ship with VS Code (for example, the "Dark+" default) have semantic highlighting enabled by default.
 
 Users can override the theme setting by:
 
@@ -223,8 +224,8 @@ You can create your own File Icon Theme from icons (preferably SVG), see the [Fi
 
 Themes are just one way to customize VS Code. If you'd like to learn more about VS Code customization and extensibility, try these topics:
 
-* [Settings](/docs/getstarted/settings) -  Learn how to configure VS Code to your preferences through user and workspace settings.
-* [Snippets](/docs/editor/userdefinedsnippets.md) - Add additional snippets to your favorite language.
-* [Extension API](/api) - Learn about other ways to extend VS Code.
-* [Color Theme](/api/extension-guides/color-theme.md) - Color Theme extension API.
-* [File Icon Theme](/api/extension-guides/file-icon-theme.md) - File Icon Theme extension API.
+- [Settings](/docs/getstarted/settings) - Learn how to configure VS Code to your preferences through user and workspace settings.
+- [Snippets](/docs/editor/userdefinedsnippets.md) - Add additional snippets to your favorite language.
+- [Extension API](/api) - Learn about other ways to extend VS Code.
+- [Color Theme](/api/extension-guides/color-theme.md) - Color Theme extension API.
+- [File Icon Theme](/api/extension-guides/file-icon-theme.md) - File Icon Theme extension API.

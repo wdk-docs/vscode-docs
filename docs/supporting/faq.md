@@ -1,10 +1,11 @@
 ---
-TOCTitle: FAQ
-ContentId: E02F97FD-842B-4D27-B461-37DD18B2582E
-PageTitle: Visual Studio Code Frequently Asked Questions
+title: FAQ
+id: E02F97FD-842B-4D27-B461-37DD18B2582E
+PageTitle: Visual Studio Code 常见问题
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code Frequently Asked Questions
+description: Visual Studio Code 常见问题
 ---
+
 # Visual Studio Code FAQ
 
 Our docs contain a **Common questions** section as needed for specific topics. We've captured items here that don't fit in the other topics.
@@ -53,9 +54,9 @@ Now that the General Data Protection Regulation (GDPR) is in effect, we want to 
 
 To support GDPR:
 
-* The VS Code product notifies all users that they can opt out of telemetry collection.
-* The team actively reviews and classifies all telemetry sent (documented in [our OSS codebase](https://github.com/microsoft/vscode/pull/34997)).
-* There are valid data retention policies in place for any data collected, for example crash dumps.
+- The VS Code product notifies all users that they can opt out of telemetry collection.
+- The team actively reviews and classifies all telemetry sent (documented in [our OSS codebase](https://github.com/microsoft/vscode/pull/34997)).
+- There are valid data retention policies in place for any data collected, for example crash dumps.
 
 You can learn more about VS Code's GDPR compliance in the [telemetry documentation](/docs/getstarted/telemetry.md).
 
@@ -79,7 +80,7 @@ If you use the JSON editor for your settings, add the following line:
 
 You can install a previous release of VS Code by uninstalling your current version and then installing the download provided at the top of a specific [release notes](/updates) page.
 
->**Note:** On Linux: If the VS Code repository was installed correctly then your system package manager should handle auto-updating in the same way as other packages on the system. See [Installing VS Code on Linux](/docs/setup/linux.md).
+> **Note:** On Linux: If the VS Code repository was installed correctly then your system package manager should handle auto-updating in the same way as other packages on the system. See [Installing VS Code on Linux](/docs/setup/linux.md).
 
 ### Opt out of extension updates
 
@@ -147,38 +148,38 @@ You can find links to some release downloads at the top of a version's release n
 
 If you need a type of installation not listed there, you can manually download via the following URLs:
 
-Download type | URL
---- | ---
-Windows x64 System installer | https://update.code.visualstudio.com/{version}/win32-x64/stable
-Windows x64 User installer| https://update.code.visualstudio.com/{version}/win32-x64-user/stable
-Windows x64 zip | https://update.code.visualstudio.com/{version}/win32-x64-archive/stable
-Windows x64 CLI | https://update.code.visualstudio.com/{version}/cli-win32-x64/stable
-Windows Arm64 System installer | https://update.code.visualstudio.com/{version}/win32-arm64/stable
-Windows Arm64 User installer | https://update.code.visualstudio.com/{version}/win32-arm64-user/stable
-Windows Arm64 zip | https://update.code.visualstudio.com/{version}/win32-arm64-archive/stable
-Windows Arm64 CLI | https://update.code.visualstudio.com/{version}/cli-win32-arm64/stable
-Windows x86 System installer | https://update.code.visualstudio.com/{version}/win32/stable
-Windows x86 User installer | https://update.code.visualstudio.com/{version}/win32-user/stable
-Windows x86 zip | https://update.code.visualstudio.com/{version}/win32-archive/stable
-Windows x86 CLI | https://update.code.visualstudio.com/{version}/cli-win32-ia32/stable
-macOS Universal | https://update.code.visualstudio.com/{version}/darwin-universal/stable
-macOS Intel chip | https://update.code.visualstudio.com/{version}/darwin/stable
-macOS Intel chip CLI | https://update.code.visualstudio.com/{version}/cli-darwin-x64/stable
-macOS Apple silicon | https://update.code.visualstudio.com/{version}/darwin-arm64/stable
-macOS Apple silicon CLI | https://update.code.visualstudio.com/{version}/cli-darwin-arm64/stable
-Linux x64 | https://update.code.visualstudio.com/{version}/linux-x64/stable
-Linux x64 debian | https://update.code.visualstudio.com/{version}/linux-deb-x64/stable
-Linux x64 rpm | https://update.code.visualstudio.com/{version}/linux-rpm-x64/stable
-Linux x64 snap | https://update.code.visualstudio.com/{version}/linux-snap-x64/stable
-Linux Arm32 CLI | https://update.code.visualstudio.com/{version}/cli-linux-x64/stable
-Linux Arm32 | https://update.code.visualstudio.com/{version}/linux-armhf/stable
-Linux Arm32 debian | https://update.code.visualstudio.com/{version}/linux-deb-armhf/stable
-Linux Arm32 rpm | https://update.code.visualstudio.com/{version}/linux-rpm-armhf/stable
-Linux Arm32 CLI | https://update.code.visualstudio.com/{version}/cli-linux-armhf/stable
-Linux Arm64  | https://update.code.visualstudio.com/{version}/linux-arm64/stable
-Linux Arm64 debian | https://update.code.visualstudio.com/{version}/linux-deb-arm64/stable
-Linux Arm64 rpm | https://update.code.visualstudio.com/{version}/linux-rpm-arm64/stable
-Linux Arm64 CLI | https://update.code.visualstudio.com/{version}/cli-linux-arm64/stable
+| Download type                  | URL                                                                       |
+| ------------------------------ | ------------------------------------------------------------------------- |
+| Windows x64 System installer   | https://update.code.visualstudio.com/{version}/win32-x64/stable           |
+| Windows x64 User installer     | https://update.code.visualstudio.com/{version}/win32-x64-user/stable      |
+| Windows x64 zip                | https://update.code.visualstudio.com/{version}/win32-x64-archive/stable   |
+| Windows x64 CLI                | https://update.code.visualstudio.com/{version}/cli-win32-x64/stable       |
+| Windows Arm64 System installer | https://update.code.visualstudio.com/{version}/win32-arm64/stable         |
+| Windows Arm64 User installer   | https://update.code.visualstudio.com/{version}/win32-arm64-user/stable    |
+| Windows Arm64 zip              | https://update.code.visualstudio.com/{version}/win32-arm64-archive/stable |
+| Windows Arm64 CLI              | https://update.code.visualstudio.com/{version}/cli-win32-arm64/stable     |
+| Windows x86 System installer   | https://update.code.visualstudio.com/{version}/win32/stable               |
+| Windows x86 User installer     | https://update.code.visualstudio.com/{version}/win32-user/stable          |
+| Windows x86 zip                | https://update.code.visualstudio.com/{version}/win32-archive/stable       |
+| Windows x86 CLI                | https://update.code.visualstudio.com/{version}/cli-win32-ia32/stable      |
+| macOS Universal                | https://update.code.visualstudio.com/{version}/darwin-universal/stable    |
+| macOS Intel chip               | https://update.code.visualstudio.com/{version}/darwin/stable              |
+| macOS Intel chip CLI           | https://update.code.visualstudio.com/{version}/cli-darwin-x64/stable      |
+| macOS Apple silicon            | https://update.code.visualstudio.com/{version}/darwin-arm64/stable        |
+| macOS Apple silicon CLI        | https://update.code.visualstudio.com/{version}/cli-darwin-arm64/stable    |
+| Linux x64                      | https://update.code.visualstudio.com/{version}/linux-x64/stable           |
+| Linux x64 debian               | https://update.code.visualstudio.com/{version}/linux-deb-x64/stable       |
+| Linux x64 rpm                  | https://update.code.visualstudio.com/{version}/linux-rpm-x64/stable       |
+| Linux x64 snap                 | https://update.code.visualstudio.com/{version}/linux-snap-x64/stable      |
+| Linux Arm32 CLI                | https://update.code.visualstudio.com/{version}/cli-linux-x64/stable       |
+| Linux Arm32                    | https://update.code.visualstudio.com/{version}/linux-armhf/stable         |
+| Linux Arm32 debian             | https://update.code.visualstudio.com/{version}/linux-deb-armhf/stable     |
+| Linux Arm32 rpm                | https://update.code.visualstudio.com/{version}/linux-rpm-armhf/stable     |
+| Linux Arm32 CLI                | https://update.code.visualstudio.com/{version}/cli-linux-armhf/stable     |
+| Linux Arm64                    | https://update.code.visualstudio.com/{version}/linux-arm64/stable         |
+| Linux Arm64 debian             | https://update.code.visualstudio.com/{version}/linux-deb-arm64/stable     |
+| Linux Arm64 rpm                | https://update.code.visualstudio.com/{version}/linux-rpm-arm64/stable     |
+| Linux Arm64 CLI                | https://update.code.visualstudio.com/{version}/cli-linux-arm64/stable     |
 
 Substitute the specific release you want in the `{version}` placeholder. For example, to download the Linux Arm32 debian version for 1.50.1, you would use
 
@@ -190,7 +191,7 @@ You can use the version string `latest`, if you'd like to always download the la
 
 ## Prerelease versions
 
-Want an early peek at new VS Code features?  You can try prerelease versions of VS Code by installing the "Insiders" build.  The Insiders build installs side by side to your stable VS Code install and has isolated settings, configurations, and extensions.  The Insiders build is updated nightly so you'll get the latest bug fixes and feature updates from the day before.
+Want an early peek at new VS Code features? You can try prerelease versions of VS Code by installing the "Insiders" build. The Insiders build installs side by side to your stable VS Code install and has isolated settings, configurations, and extensions. The Insiders build is updated nightly so you'll get the latest bug fixes and feature updates from the day before.
 
 To install the Insiders build, go to the [Insiders download page](/insiders).
 
@@ -222,7 +223,7 @@ You may also see the **[Unsupported]** message if VS Code files have been mistak
 
 ## Resolving shell environment fails
 
-*This section applies to macOS and Linux environments only.*
+_This section applies to macOS and Linux environments only._
 
 When VS Code is launched from a terminal (for example, via `code .`), it has access to environment settings defined in your `.bashrc` or `.zshrc` files. This means features like tasks or debug targets also have access to those settings.
 
@@ -240,19 +241,19 @@ If you see other errors, please create an [issue](https://github.com/microsoft/v
 
 The process outlined below may help you identify which parts of your shell initialization are taking the most time:
 
-* Open your shell's startup file (for example, in VS Code by typing `~/.bashrc` or `~/.zshrc` in Quick Open (`kb(workbench.action.quickOpen)`)).
-* Selectively comment out potentially long running operations (such as `nvm` if you find that).
-* Save and fully restart VS Code.
-* Continue commenting out operations until the error disappears.
+- Open your shell's startup file (for example, in VS Code by typing `~/.bashrc` or `~/.zshrc` in Quick Open (`kb(workbench.action.quickOpen)`)).
+- Selectively comment out potentially long running operations (such as `nvm` if you find that).
+- Save and fully restart VS Code.
+- Continue commenting out operations until the error disappears.
 
->**Note**: While `nvm` is a powerful and useful Node.js package manager, it can cause slow shell startup times, if being run during shell initialization. You might consider package manager alternatives such as [asdf](https://asdf-vm.com) or search on the internet for `nvm` performance suggestions.
+> **Note**: While `nvm` is a powerful and useful Node.js package manager, it can cause slow shell startup times, if being run during shell initialization. You might consider package manager alternatives such as [asdf](https://asdf-vm.com) or search on the internet for `nvm` performance suggestions.
 
 ### Launch VS Code from a terminal
 
 If modifying your shell environment isn't practical, you can avoid VS Code's resolving shell environment phase by launching VS Code directly from a fully initialized terminal.
 
-* Typing `code` from an open terminal will launch VS Code with your last workspace.
-* Typing `code .` will launch VS Code open to the current folder.
+- Typing `code` from an open terminal will launch VS Code with your last workspace.
+- Typing `code .` will launch VS Code open to the current folder.
 
 ## VS Code is blank?
 

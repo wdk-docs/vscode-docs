@@ -1,13 +1,15 @@
 ---
 Order: 4
 Area: setup
-TOCTitle: Windows
-ContentId: 4670C281-5761-46E6-8C46-10D523946FFB
+title: Windows
+id: 4670C281-5761-46E6-8C46-10D523946FFB
 PageTitle: Running Visual Studio Code on Windows
 DateApproved: 7/6/2023
-MetaDescription: Get Visual Studio Code up and running on Windows
+description: Get Visual Studio Code up and running on Windows
+sidebar_position: 4
 ---
-# Visual Studio Code on Windows
+
+# Windows上的Visual Studio Code
 
 ## Installation
 
@@ -17,7 +19,7 @@ MetaDescription: Get Visual Studio Code up and running on Windows
 
 Alternatively, you can also download a [Zip archive](/docs/?dv=winzip), extract it and run Code from there.
 
->**Tip:** Setup will add Visual Studio Code to your `%PATH%`, so from the console you can type 'code .' to open VS Code on that folder. You will need to restart your console after the installation for the change to the `%PATH%` environmental variable to take effect.
+> **Tip:** Setup will add Visual Studio Code to your `%PATH%`, so from the console you can type 'code .' to open VS Code on that folder. You will need to restart your console after the installation for the change to the `%PATH%` environmental variable to take effect.
 
 ## User setup versus system setup
 
@@ -25,7 +27,7 @@ VS Code provides both Windows **user** and **system** level setups.
 
 The [user setup](https://go.microsoft.com/fwlink/?LinkID=534107) does not require Administrator privileges to run as the location will be under your user Local AppData (`LOCALAPPDATA`) folder. Since it requires no elevation, the user setup is able to provide a smoother background update experience. This is the preferred way to install VS Code on Windows.
 
->**Note:** When running VS Code as Administrator in a user setup installation, updates will be disabled.
+> **Note:** When running VS Code as Administrator in a user setup installation, updates will be disabled.
 
 The [system setup](https://go.microsoft.com/fwlink/?linkid=852157) requires elevation to Administrator privileges to run and will place the installation under the system's Program Files. The in-product update flow will also require elevation, making it less streamlined than the user setup. On the other hand, installing VS Code using the system setup means that it will be available to all users in the system.
 
@@ -39,7 +41,7 @@ If you need to run a 32-bit version of VS Code, both a 32-bit [Installer](https:
 
 VS Code ships monthly [releases](/updates) and supports auto-update when a new release is available. If you're prompted by VS Code, accept the newest update and it will be installed (you won't need to do anything else to get the latest bits).
 
->**Note:** You can [disable auto-update](/docs/supporting/faq.md#how-do-i-opt-out-of-vs-code-autoupdates) if you prefer to update VS Code on your own schedule.
+> **Note:** You can [disable auto-update](/docs/supporting/faq.md#how-do-i-opt-out-of-vs-code-autoupdates) if you prefer to update VS Code on your own schedule.
 
 ## Windows Subsystem for Linux
 
@@ -65,10 +67,10 @@ Available from the Microsoft Store, the [Windows Terminal (Preview)](https://www
 
 Once you have installed VS Code, these topics will help you learn more about VS Code:
 
-* [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript, and tools like Yeoman.
-* [User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
-* [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
-* [Tips and Tricks](/docs/getstarted/tips-and-tricks.md) - Lets you jump right in and learn how to be productive with VS Code.
+- [Additional Components](/docs/setup/additional-components.md) - Learn how to install Git, Node.js, TypeScript, and tools like Yeoman.
+- [User Interface](/docs/getstarted/userinterface.md) - A quick orientation to VS Code.
+- [User/Workspace Settings](/docs/getstarted/settings.md) - Learn how to configure VS Code to your preferences through settings.
+- [Tips and Tricks](/docs/getstarted/tips-and-tricks.md) - Lets you jump right in and learn how to be productive with VS Code.
 
 ## Common questions
 
@@ -85,9 +87,9 @@ On certain devices, editor scrolling is not smooth but laggy for an unpleasant e
 
 ### I'm having trouble with the installer
 
-Try using the [zip file](/docs/?dv=winzip) instead of the installer.  To use this, unzip VS Code in your `AppData\Local\Programs` folder.
+Try using the [zip file](/docs/?dv=winzip) instead of the installer. To use this, unzip VS Code in your `AppData\Local\Programs` folder.
 
->**Note:** When VS Code is installed via a Zip file, you will need to manually update it for each [release](/updates).
+> **Note:** When VS Code is installed via a Zip file, you will need to manually update it for each [release](/updates).
 
 ### Icons are missing
 
@@ -119,10 +121,11 @@ Subscribe to [issue #122951](https://github.com/microsoft/vscode/issues/122951) 
 Beginning with version `1.78.1`, VS Code on Windows will only allow to access UNC paths (these begin with a leading `\\`) that were either approved by the user on startup or where the host name is configured to be allowed via the new `security.allowedUNCHosts` setting.
 
 If you rely on using UNC paths in VS Code, you can either
-* configure the host to be allowed via the `security.allowedUNCHosts` setting (for example add `server-a` when you open a path such as `\\server-a\path`)
-* map the UNC path as network drive and use the drive letter instead of the UNC path ([documentation](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d))
-* define a global environment variable `NODE_UNC_HOST_ALLOWLIST` with the backslash-separated list of hostnames to allow, for example: `server-a\server-b` to allow the hosts `server-a` and `server-b`.
 
-*Note:* if you are using any of the remote extensions to connect to a workspace remotely (such as SSH), the `security.allowedUNCHosts` has to be configured on the remote machine and not the local machine.
+- configure the host to be allowed via the `security.allowedUNCHosts` setting (for example add `server-a` when you open a path such as `\\server-a\path`)
+- map the UNC path as network drive and use the drive letter instead of the UNC path ([documentation](https://support.microsoft.com/en-us/windows/map-a-network-drive-in-windows-29ce55d1-34e3-a7e2-4801-131475f9557d))
+- define a global environment variable `NODE_UNC_HOST_ALLOWLIST` with the backslash-separated list of hostnames to allow, for example: `server-a\server-b` to allow the hosts `server-a` and `server-b`.
+
+_Note:_ if you are using any of the remote extensions to connect to a workspace remotely (such as SSH), the `security.allowedUNCHosts` has to be configured on the remote machine and not the local machine.
 
 This change was done to improve the security when using VS Code with UNC paths. Please refer to the associated [security advisory](https://github.com/microsoft/vscode/security/advisories/GHSA-mmfh-4pv3-39hr) for more information.

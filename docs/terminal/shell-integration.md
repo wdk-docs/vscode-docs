@@ -1,11 +1,11 @@
 ---
 Order: 3
 Area: terminal
-TOCTitle: Shell Integration
-ContentId: a6a1652b-c0d8-4054-a2da-feb915eef2cc
+title: Shell Integration
+id: a6a1652b-c0d8-4054-a2da-feb915eef2cc
 PageTitle: Terminal Shell Integration in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code's embedded terminal can integrate with some shells to enhance the capabilities of the terminal.
+description: Visual Studio Code's embedded terminal can integrate with some shells to enhance the capabilities of the terminal.
 ---
 
 # Terminal Shell Integration
@@ -25,7 +25,7 @@ By default, the shell integration script should automatically activate on suppor
 
 This standard, easy way will not work for some advanced use cases like in sub-shells, through a regular `ssh` session (when not using the [Remote - SSH extension](/docs/remote/ssh.md)) or for some complex shell setups. The recommended way to enable shell integration for those is [manual installation](#manual-installation).
 
->**Note**: Automatic injection may not work on old versions of the shell, for example older versions of fish do not support the `$XDG_DATA_DIRS` environment variable which is how injection works. You may still be able to manually install to get it working.
+> **Note**: Automatic injection may not work on old versions of the shell, for example older versions of fish do not support the `$XDG_DATA_DIRS` environment variable which is how injection works. You may still be able to manually install to get it working.
 
 ### Manual installation
 

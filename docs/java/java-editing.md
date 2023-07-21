@@ -1,11 +1,11 @@
 ---
 Order: 2
 Area: java
-TOCTitle: Navigate and Edit
-ContentId: 843e139a-9e3c-4b4f-95d1-32a9a7480e8e
+title: Navigate and Edit
+id: 843e139a-9e3c-4b4f-95d1-32a9a7480e8e
 PageTitle: Navigate and edit Java Source Code in Visual Studio Code
 DateApproved: 12/9/2021
-MetaDescription: Navigate and edit Java Source Code in Visual Studio Code
+description: Navigate and edit Java Source Code in Visual Studio Code
 ---
 
 # Navigate and edit Java source code

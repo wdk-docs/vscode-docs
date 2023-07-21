@@ -1,48 +1,50 @@
 ---
 Order: 6
 Area: setup
-TOCTitle: Network
-ContentId: 84F36EDE-4D66-4A2E-B4D1-F020C73EB2AD
+title: 网络
+id: 84F36EDE-4D66-4A2E-B4D1-F020C73EB2AD
 PageTitle: Setup Visual Studio Code's Network Connection
 DateApproved: 7/6/2023
-MetaDescription: Setup VS Code's Network Connection.
+description: Setup VS Code's Network Connection.
+sidebar_position: 6
 ---
-# Network Connections in Visual Studio Code
 
-Visual Studio Code is built on top of [Electron](https://www.electronjs.org) and benefits from all the networking stack capabilities of [Chromium](https://www.chromium.org/). This also means that VS Code users get much of the networking support available in [Google Chrome](https://www.google.com/chrome/index.html).
+# Visual Studio Code中的网络连接
 
-## Common hostnames
+Visual Studio Code构建在[Electron](https://www.electronjs.org)之上，并受益于[Chromium](https://www.chromium.org/)的所有网络堆栈功能。这也意味着VS Code用户可以在[Google Chrome](https://www.google.com/chrome/index.html)中获得很多网络支持。
 
-A handful of features within VS Code require network communication to work, such as the auto-update mechanism, querying and installing extensions, and telemetry. For these features to work properly in a proxy environment, you must have the product correctly configured.
+## 普通hostnames
 
-If you are behind a firewall that needs to allow specific domains used by VS Code, here's the list of hostnames you should allow communication to go through:
+VS Code中的一些特性需要网络通信才能工作，比如自动更新机制、查询和安装扩展以及遥测。要使这些特性在代理环境中正常工作，必须正确配置产品。
 
-* `update.code.visualstudio.com` - Visual Studio Code download and update server
-* `code.visualstudio.com` - Visual Studio Code documentation
-* `go.microsoft.com` - Microsoft link forwarding service
-* `vscode.blob.core.windows.net` - Visual Studio Code blob storage, used for remote server
-* `marketplace.visualstudio.com` - Visual Studio Marketplace
-* `*.gallery.vsassets.io` - Visual Studio Marketplace
-* `*.gallerycdn.vsassets.io` - Visual Studio Marketplace
-* `rink.hockeyapp.net` - Crash reporting service
-* `bingsettingssearch.trafficmanager.net` - In-product settings search
-* `vscode.search.windows.net` - In-product settings search
-* `raw.githubusercontent.com` - GitHub repository raw file access
-* `vsmarketplacebadges.dev` - Visual Studio Marketplace badge service
-* `az764295.vo.msecnd.net` - Visual Studio Code download CDN
-* `download.visualstudio.microsoft.com` - Visual Studio download server, provides dependencies for some VS Code extensions (C++, C#)
-* `vscode-sync.trafficmanager.net` - Visual Studio Code Settings Sync service
-* `vscode-sync-insiders.trafficmanager.net` - Visual Studio Code Settings Sync service (Insiders)
-* `vscode.dev` - Used when logging in with GitHub or Microsoft for an extension or Settings Sync
-* `*.vscode-unpkg.net` - Used when loading web extensions
-* `default.exp-tas.com` - Visual Studio Code Experiment Service, used to provide experimental user experiences
+如果你在防火墙后面，需要允许VS Code使用特定的域，这里是你应该允许通信通过的主机名列表:
 
-## Proxy server support
+- `update.code.visualstudio.com` - Visual Studio Code 下载和更新服务器
+- `code.visualstudio.com` - Visual Studio Code 文档
+- `go.microsoft.com` - 微软链接转发服务
+- `vscode.blob.core.windows.net` - Visual Studio Code blob storage, 用于远程服务器
+- `marketplace.visualstudio.com` - Visual Studio 市场
+- `*.gallery.vsassets.io` - Visual Studio 市场
+- `*.gallerycdn.vsassets.io` - Visual Studio 市场
+- `rink.hockeyapp.net` - 事故报告服务
+- `bingsettingssearch.trafficmanager.net` - 产品内设置搜索
+- `vscode.search.windows.net` - 产品内设置搜索
+- `raw.githubusercontent.com` - 访问GitHub存储库原始文件
+- `vsmarketplacebadges.dev` - Visual Studio Marketplace徽章服务
+- `az764295.vo.msecnd.net` - Visual Studio Code 下载 CDN
+- `download.visualstudio.microsoft.com` - Visual Studio 下载服务器，为一些VS Code扩展(c++， c#)提供依赖
+- `vscode-sync.trafficmanager.net` - Visual Studio Code 设置同步服务
+- `vscode-sync-insiders.trafficmanager.net` - Visual Studio Code 设置同步服务 (内部人士)
+- `vscode.dev` - 登录GitHub或微软扩展或设置同步时使用
+- `*.vscode-unpkg.net` - 加载web扩展时使用
+- `default.exp-tas.com` - Visual Studio Code 实验服务, 用于提供实验性的用户体验
 
-VS Code has exactly the same proxy server support as Google Chromium. Here's a snippet from [Chromium's documentation](https://www.chromium.org/developers/design-documents/network-settings):
+## 代理服务器支持
+
+VS Code具有与Google Chromium完全相同的代理服务器支持。 以下是来自[Chromium的文档](https://www.chromium.org/developers/design-documents/network-settings)的一个片段:
 
 ```
-"The Chromium network stack uses the system network settings so that users and administrators can control the network settings of all applications easily. The network settings include:
+"Chromium网络栈使用系统网络设置，因此用户和管理员可以轻松地控制所有应用程序的网络设置。网络设置包括:
 
  - proxy settings
  - SSL/TLS settings
@@ -50,9 +52,9 @@ VS Code has exactly the same proxy server support as Google Chromium. Here's a s
  - certificate and private key stores"
 ```
 
-This means that your proxy settings should be picked up automatically.
+这意味着您的代理设置应该自动拾取。
 
-Otherwise, you can use the following command-line arguments to control your proxy settings:
+否则，您可以使用以下命令行参数来控制代理设置:
 
 ```bash
 # Disable proxy
@@ -68,20 +70,20 @@ Otherwise, you can use the following command-line arguments to control your prox
 --proxy-bypass-list=(<trailing_domain>|<ip-address>)[:<port>][;...]
 ```
 
-To learn more about these command-line arguments, see [Chromium Network Settings](https://www.chromium.org/developers/design-documents/network-settings).
+要了解有关这些命令行参数的更多信息，请参阅[Chromium Network Settings](https://www.chromium.org/developers/design-documents/network-settings).
 
-### Authenticated proxies
+### 认证代理
 
-Authenticated proxies should work seamlessly within VS Code with the addition of [PR #22369](https://github.com/microsoft/vscode/pull/22369).
+通过添加[PR #22369](https://github.com/microsoft/vscode/pull/22369)，经过身份验证的代理应该在VS Code中无缝工作。
 
-The authentication methods supported are:
+支持的身份验证方法有:
 
-* Basic
-* Digest
-* NTLM
-* Negotiate
+- Basic
+- Digest
+- NTLM
+- Negotiate
 
-When using VS Code behind an authenticated HTTP proxy, the following authentication popup should appear:
+当在经过身份验证的HTTP代理后面使用VS Code时，应该出现以下身份验证弹出框:
 
 ![proxy](images/network/proxy.png)
 
@@ -89,15 +91,15 @@ Note that SOCKS5 proxy authentication support isn't implemented yet; you can fol
 
 See [Chromium HTTP authentication](https://www.chromium.org/developers/design-documents/http-authentication) to read more about HTTP proxy authentication within VS Code.
 
-### SSL certificates
+### SSL 证书
 
-Often HTTPS proxies rewrite SSL certificates of the incoming requests. Chromium was designed to reject responses which are signed by certificates which it doesn't trust. If you hit any SSL trust issues, there are a few options available for you:
+通常HTTPS代理会重写传入请求的SSL证书。Chromium被设计为拒绝由它不信任的证书签名的响应。如果您遇到任何SSL信任问题，有几个选项可供您选择:
 
-* Since Chromium uses the OS's certificate trust infrastructure, the preferred option is to add your proxy's certificate to your OS's trust chain. See the [Chromium Root Certificate Policy](https://www.chromium.org/Home/chromium-security/root-ca-policy) documentation to learn more.
-* If your proxy runs in `localhost`, you can always try the [--allow-insecure-localhost](https://peter.sh/experiments/chromium-command-line-switches/#allow-insecure-localhost) command-line flag.
-* If all else fails, you can tell VS Code to ignore all certificate errors using the [--ignore-certificate-errors](https://peter.sh/experiments/chromium-command-line-switches/#ignore-certificate-errors) command-line flag. **Warning:** This is **dangerous** and **not recommended**, since it opens the door to security issues.
+- Since Chromium uses the OS's certificate trust infrastructure, the preferred option is to add your proxy's certificate to your OS's trust chain. See the [Chromium Root Certificate Policy](https://www.chromium.org/Home/chromium-security/root-ca-policy) documentation to learn more.
+- If your proxy runs in `localhost`, you can always try the [--allow-insecure-localhost](https://peter.sh/experiments/chromium-command-line-switches/#allow-insecure-localhost) command-line flag.
+- If all else fails, you can tell VS Code to ignore all certificate errors using the [--ignore-certificate-errors](https://peter.sh/experiments/chromium-command-line-switches/#ignore-certificate-errors) command-line flag. **Warning:** This is **dangerous** and **not recommended**, since it opens the door to security issues.
 
-## Legacy proxy server support
+## 遗留代理服务器支持
 
 Extensions don't benefit yet from the same proxy support that VS Code supports. You can follow this issue's development in [GitHub](https://github.com/microsoft/vscode/issues/12588).
 
@@ -105,11 +107,11 @@ Similarly to extensions, a few other VS Code features don't yet fully support pr
 
 Due to both of these constraints, the `http.proxy`, `http.proxyStrictSSL` and `http.proxyAuthorization` variables are still part of VS Code's settings, yet they are only respected in these two scenarios.
 
-## Troubleshooting
+## 故障排除
 
-Here are some helpful links that might help you troubleshoot networking issues in VS Code:
+这里有一些有用的链接，可以帮助你解决VS Code中的网络问题:
 
-* [Network Settings](https://www.chromium.org/developers/design-documents/network-settings)
-* [Debugging problems with the network proxy](https://www.chromium.org/developers/design-documents/network-stack/debugging-net-proxy)
-* [Configuring a SOCKS proxy server in Chrome](https://www.chromium.org/developers/design-documents/network-stack/socks-proxy)
-* [Proxy settings and fallback (Windows)](https://www.chromium.org/developers/design-documents/network-stack/proxy-settings-fallback)
+- [网络设置](https://www.chromium.org/developers/design-documents/network-settings)
+- [调试网络代理的问题](https://www.chromium.org/developers/design-documents/network-stack/debugging-net-proxy)
+- [在Chrome浏览器中配置SOCKS代理服务器](https://www.chromium.org/developers/design-documents/network-stack/socks-proxy)
+- [代理设置和回退(Windows)](https://www.chromium.org/developers/design-documents/network-stack/proxy-settings-fallback)

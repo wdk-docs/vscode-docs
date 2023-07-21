@@ -1,11 +1,11 @@
 ---
 Order: 10
 Area: csharp
-TOCTitle: Testing
-ContentId: 0e62b3c9-6c13-4a71-a942-63d37c8f47d1
+title: Testing
+id: 0e62b3c9-6c13-4a71-a942-63d37c8f47d1
 PageTitle: Testing C# with C# Dev Kit in Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: Testing C# with C# Dev Kit in Visual Studio Code
+description: Testing C# with C# Dev Kit in Visual Studio Code
 ---
 
 # Testing with C# Dev Kit
@@ -64,6 +64,7 @@ Open the Command Palette and select **.NET:New Project..** then select **NUnit3 
 - NUnit3TestAdapter
 
 From the Terminal, run the following command:
+
 ```bash
 dotnet add [location of your test csproj file] reference [location of the csproj file for project to be tested]
 ```

@@ -1,10 +1,10 @@
 ---
 Area: java
-TOCTitle: Java Web App
-ContentId: 98ddf1d3-6a8e-4b0f-a44d-e57cfdf2348c
+title: Java Web App
+id: 98ddf1d3-6a8e-4b0f-a44d-e57cfdf2348c
 PageTitle: Build and Deploy Java Web Apps to the cloud with Visual Studio Code
 DateApproved: 3/2/2023
-MetaDescription: Java web app tutorial showing how to build and deploy a Java web app to Azure with Visual Studio Code
+description: Java web app tutorial showing how to build and deploy a Java web app to Azure with Visual Studio Code
 ---
 
 # Java Web Apps with Visual Studio Code
@@ -23,7 +23,7 @@ Before running and deploying this sample, you must have the Java SE Development 
 
 Download and install the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack), which has JDK 11 included.
 
->**Note**: The `JAVA_HOME` environment variable must be set to the install location of the JDK to complete this tutorial.
+> **Note**: The `JAVA_HOME` environment variable must be set to the install location of the JDK to complete this tutorial.
 
 Download Apache Maven version 3 or greater:
 
@@ -37,7 +37,7 @@ Install Apache Maven for your local development environment:
 
 Clone the [Spring Boot Getting Started](https://github.com/spring-guides/gs-spring-boot) sample project to your local machine. You can clone a Git repository with the **Git: Clone** command in the **Command Palette** (`kb(workbench.action.showCommands)`). Paste `https://github.com/spring-guides/gs-spring-boot.git` as the URL of the remote repository and then decide the parent directory under which to put the local repository. After that, open the `complete` folder within the cloned repository in VS Code by navigating to the folder and typing `code .`.
 
->**Note**: You can install Visual Studio Code from [https://code.visualstudio.com](https://code.visualstudio.com/) and Git from [https://git-scm.com](https://git-scm.com/).
+> **Note**: You can install Visual Studio Code from [https://code.visualstudio.com](https://code.visualstudio.com/) and Git from [https://git-scm.com](https://git-scm.com/).
 
 ![Clone Spring Repository](images/java-webapp/clone-repository.gif)
 
@@ -156,11 +156,11 @@ The [Spring Boot Starter](https://learn.microsoft.com/azure/developer/java/sprin
 
 2. Navigate to `src/main/resources` and open `application.properties`. Replace below properties in `application.properties` with information of your database.
 
-    ```bash
-    azure.documentdb.uri=your-documentdb-uri
-    azure.documentdb.key=your-documentdb-key
-    azure.documentdb.database=your-documentdb-databasename
-    ```
+   ```bash
+   azure.documentdb.uri=your-documentdb-uri
+   azure.documentdb.key=your-documentdb-key
+   azure.documentdb.database=your-documentdb-databasename
+   ```
 
 ### Run and debug the application
 

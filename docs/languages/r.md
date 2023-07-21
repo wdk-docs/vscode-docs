@@ -1,11 +1,11 @@
 ---
 Order: 14
 Area: languages
-TOCTitle: R
-ContentId: 1eb31e23-be14-4613-be84-621a51cb59d7
+title: R
+id: 1eb31e23-be14-4613-be84-621a51cb59d7
 PageTitle: R in Visual Studio Code
 DateApproved: 3/23/2022
-MetaDescription: Learn about working with the R programming language in Visual Studio Code.
+description: Learn about working with the R programming language in Visual Studio Code.
 ---
 
 # R in Visual Studio Code
@@ -22,9 +22,9 @@ The [R extension](https://marketplace.visualstudio.com/items?itemName=REditorSup
 
 2. Install [`languageserver`](https://github.com/REditorSupport/languageserver) in R.
 
-    ```r
-    install.packages("languageserver")
-    ```
+   ```r
+   install.packages("languageserver")
+   ```
 
 3. Install the [R extension for Visual Studio Code](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r).
 
@@ -32,9 +32,9 @@ The [R extension](https://marketplace.visualstudio.com/items?itemName=REditorSup
 
 To enhance the experience of using R in VS Code, the following software and packages are recommended:
 
-* [radian](https://github.com/randy3k/radian): A modern R console that corrects many limitations of the official R terminal and supports many features such as syntax highlighting and auto-completion.
+- [radian](https://github.com/randy3k/radian): A modern R console that corrects many limitations of the official R terminal and supports many features such as syntax highlighting and auto-completion.
 
-* [httpgd](https://github.com/nx10/httpgd): An R package to provide a graphics device that asynchronously serves SVG graphics via HTTP and WebSockets. This package is required by the interactive plot viewer of the R extension for VS Code.
+- [httpgd](https://github.com/nx10/httpgd): An R package to provide a graphics device that asynchronously serves SVG graphics via HTTP and WebSockets. This package is required by the interactive plot viewer of the R extension for VS Code.
 
 If you run into any issues installing the R packages or the R extension for VS Code, go to the installation wiki pages ([Windows](https://github.com/REditorSupport/vscode-R/wiki/Installation:-Windows) | [macOS](https://github.com/REditorSupport/vscode-R/wiki/Installation:-macOS) | [Linux](https://github.com/REditorSupport/vscode-R/wiki/Installation:-Linux)) for more details.
 
@@ -86,6 +86,6 @@ If you have any issues, suggestions or feature requests, please feel free to ope
 
 If you'd like to learn more about VS Code, try these topics:
 
-* [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
-* [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
-* [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
+- [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
+- [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
+- [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.

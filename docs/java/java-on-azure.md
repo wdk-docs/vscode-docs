@@ -1,11 +1,11 @@
 ---
 Order: 11
 Area: java
-TOCTitle: Deploy Java Apps
-ContentId: 01210769-05be-4854-9482-13e342850ad7
+title: Deploy Java Apps
+id: 01210769-05be-4854-9482-13e342850ad7
 PageTitle: Deploy Java Web Apps
 DateApproved: 10/18/2022
-MetaDescription: How to deploy Java applications to Azure with Visual Studio Code
+description: How to deploy Java applications to Azure with Visual Studio Code
 ---
 
 # Deploy Java Web Apps

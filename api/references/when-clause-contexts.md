@@ -1,9 +1,9 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 38af73fd-ca95-48e3-9965-81f4cfe29996
+id: 38af73fd-ca95-48e3-9965-81f4cfe29996
 DateApproved: 7/6/2023
 
-MetaDescription: Visual Studio Code when clause context reference.
+description: Visual Studio Code when clause context reference.
 ---
 
 # when 子句上下文

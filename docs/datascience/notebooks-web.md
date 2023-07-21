@@ -1,11 +1,11 @@
 ---
 Order: 8
 Area: datascience
-TOCTitle: Jupyter Notebooks on the web
-ContentId: 0faf5b06-ddad-4594-8d5e-fa409c7da82c
+title: Jupyter Notebooks on the web
+id: 0faf5b06-ddad-4594-8d5e-fa409c7da82c
 PageTitle: Jupyter Notebooks on the web
 DateApproved: 1/9/2023
-MetaDescription: Working with Jupyter notebooks on the web with Visual Studio Code.
+description: Working with Jupyter notebooks on the web with Visual Studio Code.
 MetaSocialImage: images/tutorial/social.png
 ---
 

@@ -1,11 +1,11 @@
 ---
 Order: 1
 Area: cpp
-TOCTitle: Intro Videos
-ContentId: a7a9837e-f515-4644-8dae-b5d44715e63f
+title: Intro Videos
+id: a7a9837e-f515-4644-8dae-b5d44715e63f
 PageTitle: Introductory Videos for C++ in Visual Studio Code
 DateApproved: 4/13/2021
-MetaDescription: Get started with C++ in Visual Studio Code by watching these introductory videos
+description: Get started with C++ in Visual Studio Code by watching these introductory videos
 ---
 
 # Introductory Videos for C++

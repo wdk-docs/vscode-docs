@@ -1,12 +1,13 @@
 ---
 Order: 3
 Area: languages
-TOCTitle: JSON
-ContentId: FB3B14D9-A59A-4968-ACFC-5FB5D4E9B70E
+title: JSON
+id: FB3B14D9-A59A-4968-ACFC-5FB5D4E9B70E
 PageTitle: JSON editing in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Edit JSON files in Visual Studio Code
+description: Edit JSON files in Visual Studio Code
 ---
+
 # Editing JSON with Visual Studio Code
 
 JSON is a data format that is common in configuration files like `package.json` or `project.json`. We also use it extensively in Visual Studio Code for our configuration files. When opening a file that ends with `.json`, VS Code provides features to make it simpler to write or modify the file's content.
@@ -67,8 +68,8 @@ In the following example, the JSON file specifies that its contents follow the [
 
 ```json
 {
-   "$schema": "https://json.schemastore.org/coffeelint",
-   "line_endings": "unix"
+  "$schema": "https://json.schemastore.org/coffeelint",
+  "line_endings": "unix"
 }
 ```
 
@@ -89,7 +90,7 @@ The following excerpt from User [Settings](/docs/getstarted/settings.md) shows h
 ]
 ```
 
->**Tip:** In addition to defining a schema for `.babelrc`, also make sure that `.babelrc` is associated to the JSON language mode. This is also done in the settings using the `files.association` array setting.
+> **Tip:** In addition to defining a schema for `.babelrc`, also make sure that `.babelrc` is associated to the JSON language mode. This is also done in the settings using the `files.association` array setting.
 
 ### Mapping to a schema in the workspace
 
@@ -135,7 +136,7 @@ Schemas and schema associations can also be defined by an extension. Check out t
 
 ### File match syntax
 
-The file match syntax supports the '*' wildcard. Also, you can define exclusion patterns, starting with '!'. For an association to match, at least one pattern needs to match and the last matching pattern must not be an exclusion pattern.
+The file match syntax supports the '\*' wildcard. Also, you can define exclusion patterns, starting with '!'. For an association to match, at least one pattern needs to match and the last matching pattern must not be an exclusion pattern.
 
 ```json
   "json.schemas": [
@@ -198,15 +199,15 @@ If you want your descriptions to support formatting like links, you can opt in b
 
 ```json
 {
-   "$schema": "http://json-schema.org/schema",
-   "type": "object",
-   "properties": {
-       "name" : {
-           "type": "string",
-           "description": "The name of the entry",
-           "markdownDescription": "The name of the entry. [See the documentation](https://example.com)"
-       }
-   }
+  "$schema": "http://json-schema.org/schema",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "The name of the entry",
+      "markdownDescription": "The name of the entry. [See the documentation](https://example.com)"
+    }
+  }
 }
 ```
 

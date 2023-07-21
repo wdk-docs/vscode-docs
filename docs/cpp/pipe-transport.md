@@ -1,12 +1,13 @@
 ---
 Order:
 Area: cpp
-TOCTitle: Pipe transport
-ContentId: 59BE5FF7-563F-4044-A562-294E75A75F96
+title: Pipe transport
+id: 59BE5FF7-563F-4044-A562-294E75A75F96
 PageTitle: Pipe transport for remote communication in C++ projects
 DateApproved: 7/25/2019
-MetaDescription: How to set up pipe transport for debugging C++ code in Visual Studio Code.
+description: How to set up pipe transport for debugging C++ code in Visual Studio Code.
 ---
+
 # Pipe transport
 
 Pipe transport allows communication through a pipe program to a remote shell. For example, `ssh` on Linux. With the introduction of [Visual Studio Code Remote Development](/docs/remote/remote-overview.md) pipe transport is relevant primarily for IoT scenarios.

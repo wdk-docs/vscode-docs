@@ -1,12 +1,13 @@
 ---
 Order: 7
 Area: editor
-TOCTitle: AI Tools
-ContentId: 0aefcb70-7884-487f-953e-46c3e07f7cbe
+title: AI Tools
+id: 0aefcb70-7884-487f-953e-46c3e07f7cbe
 PageTitle: Use GitHub Copilot to enhance your coding with AI
 DateApproved: 7/6/2023
-MetaDescription: Enhance your coding with AI-powered suggestions from GitHub Copilot in Visual Studio Code.
+description: Enhance your coding with AI-powered suggestions from GitHub Copilot in Visual Studio Code.
 ---
+
 # AI Tools in VS Code
 
 The [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension is an AI pair programmer tool that helps you write code faster and smarter. You can use the Copilot extension in VS Code to generate code, learn from the code it generates, and even configure your editor.
@@ -86,7 +87,7 @@ There are things you can do to help ("prompt") Copilot give you the best possibl
 
 Copilot suggestions work best when Copilot has sufficient context to know what you're doing and what you want help with. Just as you would provide a colleague with the context when asking for help with a specific programming task, you can do the same with Copilot.
 
->**Note**: "Prompt engineering" is a common phrase you'll hear when discussing AI and refers to how and what information is packaged and sent to an AI API endpoint. The Copilot extension does this "prompt engineering" for you but you can help by providing hints to guide the extension.
+> **Note**: "Prompt engineering" is a common phrase you'll hear when discussing AI and refers to how and what information is packaged and sent to an AI API endpoint. The Copilot extension does this "prompt engineering" for you but you can help by providing hints to guide the extension.
 
 ### Providing context
 
@@ -150,17 +151,17 @@ Tools, which you may already be using, can help.
 
 If you'd like to learn more about productively using GitHub Copilot, you can follow up with these videos and blog posts:
 
-* [Effective Prompting for GitHub Copilot](https://www.youtube.com/watch?v=ImWfIDTxn7E)
-* [Pragmatic techniques to get the most out of GitHub Copilot](https://www.youtube.com/watch?v=CwAzIpc4AnA)
-* [Best practices for prompting GitHub Copilot in VS Code](https://www.linkedin.com/pulse/best-practices-prompting-github-copilot-vs-code-pamela-fox)
-* [How to use GitHub Copilot: Prompts, tips, and use cases](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/)
+- [Effective Prompting for GitHub Copilot](https://www.youtube.com/watch?v=ImWfIDTxn7E)
+- [Pragmatic techniques to get the most out of GitHub Copilot](https://www.youtube.com/watch?v=CwAzIpc4AnA)
+- [Best practices for prompting GitHub Copilot in VS Code](https://www.linkedin.com/pulse/best-practices-prompting-github-copilot-vs-code-pamela-fox)
+- [How to use GitHub Copilot: Prompts, tips, and use cases](https://github.blog/2023-06-20-how-to-write-better-prompts-for-github-copilot/)
 
 ## Chat features
 
 In addition to inline suggestions, you can also get assistance from Copilot via a chat interface. This is supported in two ways:
 
-* **Chat view:** Ask Copilot for help with any task or question in the GitHub Copilot Chat view.
-* **Inline chat:** Talk with Copilot while writing code, inline in your files.
+- **Chat view:** Ask Copilot for help with any task or question in the GitHub Copilot Chat view.
+- **Inline chat:** Talk with Copilot while writing code, inline in your files.
 
 > **Note:** To get access to the chat view and inline chat, you'll need to sign up for the [GitHub Copilot chat waitlist](https://github.com/github-copilot/chat_waitlist_signup/join). You'll also need to use the **Pre-Release** version of the [GitHub Copilot](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) extension.
 
@@ -192,12 +193,12 @@ You can prepend your chat inputs with a specific topic name to help Copilot give
 
 ![Copilot slash command list in chat](images/artificial-intelligence/slash-commands.png)
 
-* /explain: Explain step-by-step how the selected code works.
-* /fix: Propose a fix for the bugs in the selected code.
-* /help: Prints general help about GitHub Copilot.
-* /tests: Generate unit tests for the selected code.
-* /vscode: Questions about VS Code commands and settings.
-* /clear: Clear the session.
+- /explain: Explain step-by-step how the selected code works.
+- /fix: Propose a fix for the bugs in the selected code.
+- /help: Prints general help about GitHub Copilot.
+- /tests: Generate unit tests for the selected code.
+- /vscode: Questions about VS Code commands and settings.
+- /clear: Clear the session.
 
 ![Example using /vscode slash command](images/artificial-intelligence/slash-commands-example.png)
 

@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 8027f6fb-6c9e-4106-8ef1-f9b0ba1b7085
+id: 8027f6fb-6c9e-4106-8ef1-f9b0ba1b7085
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: 解释Visual Studio Code扩展(插件)的结构
+description: 解释Visual Studio Code扩展(插件)的结构
 sidebar_position: 2
 ---
 

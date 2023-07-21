@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 8308017a-75de-430a-b420-d9d2064162b9
+id: 8308017a-75de-430a-b420-d9d2064162b9
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: A guide to syntax highlighting
+description: A guide to syntax highlighting
 ---
 
 # 语义亮点指南

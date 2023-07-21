@@ -1,11 +1,11 @@
 ---
 Order: 6
 Area: java
-TOCTitle: Build Tools
-ContentId: 6ba93ee8-33d7-483a-a3b0-82241cedecbf
+title: Build Tools
+id: 6ba93ee8-33d7-483a-a3b0-82241cedecbf
 PageTitle: Maven and Gradle support for Java in Visual Studio Code
 DateApproved: 12/10/2021
-MetaDescription: Maven and Gradle support for Java in Visual Studio Code
+description: Maven and Gradle support for Java in Visual Studio Code
 MetaSocialImage:
 ---
 

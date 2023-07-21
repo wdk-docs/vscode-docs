@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 85918f63-ff5d-4ab8-8a18-26ad00618eff
+id: 85918f63-ff5d-4ab8-8a18-26ad00618eff
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: UX guidelines for quick picks used in a Visual Studio Code extension.
+description: UX guidelines for quick picks used in a Visual Studio Code extension.
 ---
 
 # 快速选择

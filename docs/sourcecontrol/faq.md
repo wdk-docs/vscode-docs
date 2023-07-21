@@ -1,19 +1,21 @@
 ---
 Order: 16
 Area: sourcecontrol
-TOCTitle: FAQ
+title: FAQ
 PageTitle: Source Control, Git & GitHub in VS Code Frequently Asked Questions
-ContentId: 431b4458-34c4-4aba-a0ee-eaddf7cd91a1
-MetaDescription: Visual Studio Code's Frequently Asked Questions (FAQ) for Source Control, Git & GitHub in VS Code
+id: 431b4458-34c4-4aba-a0ee-eaddf7cd91a1
+description: Visual Studio Code中关于源代码控制、Git和GitHub的常见问题解答(FAQ)
 DateApproved: 7/6/2023
+sidebar_position: 4
 ---
-# Source Control FAQ
 
-This topic answers frequently asked questions about using Git source control and GitHub in Visual Studio Code.
+# 源代码控制常见问题解答
+
+本主题回答有关在Visual Studio Code中使用Git源代码控制和GitHub的常见问题。
 
 ## Git
 
-### How to revert or undo a Git commit?
+### 如何恢复或撤销Git提交?
 
 Revert your last commit with the **Git: Undo Last Commit** command. This will reset your branch to the state right before you did the commit, including all changes. The command is also available as menu in **More Actions** `...` under **Commit** on the top of the Source Control view.
 
@@ -31,7 +33,7 @@ To update the commit message for the last local commit use the **Git: Commit Sta
 
 ### I initialized my repo but the actions in the `...` menu are all grayed out
 
-To **push, pull, and sync** you need to have a Git origin set up.  You can get the required URL from the repository host.  Once you have that URL, you need to add it to the Git settings by running a couple of command-line actions. For example:
+To **push, pull, and sync** you need to have a Git origin set up. You can get the required URL from the repository host. Once you have that URL, you need to add it to the Git settings by running a couple of command-line actions. For example:
 
 ```bash
 > git remote add origin https://github.com/<repo owner>/<repo name>.git

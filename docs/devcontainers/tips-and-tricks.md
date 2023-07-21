@@ -1,12 +1,13 @@
 ---
 Order: 15
 Area: devcontainers
-TOCTitle: Tips and Tricks
+title: Tips and Tricks
 PageTitle: Visual Studio Code Dev Containers Tips and Tricks
-ContentId: c4784db6-ab00-4ac7-bca8-88edb638c593
-MetaDescription: Visual Studio Code Remote Development troubleshooting tips and tricks for Dev Containers
+id: devcontainers-tips-and-tricks
+description: Visual Studio Code Remote Development troubleshooting tips and tricks for Dev Containers
 DateApproved: 7/6/2023
 ---
+
 # Dev Containers Tips and Tricks
 
 This article includes some tips and tricks for getting the Dev Containers extension up and running in different environments.
@@ -15,10 +16,10 @@ This article includes some tips and tricks for getting the Dev Containers extens
 
 You can use Docker with the Dev Containers extension in a few ways, including:
 
-* Docker installed locally.
-* Docker installed on a remote environment.
-* Other Docker compliant CLIs, installed locally or remotely.
-  * While other CLIs may work, they are not officially supported. Note that [attaching to a Kubernetes cluster](/docs/devcontainers/attach-container.md#attach-to-a-container-in-a-kubernetes-cluster) only requires a properly configured [kubectl CLI](https://kubernetes.io/docs/reference/kubectl/overview/).
+- Docker installed locally.
+- Docker installed on a remote environment.
+- Other Docker compliant CLIs, installed locally or remotely.
+  - While other CLIs may work, they are not officially supported. Note that [attaching to a Kubernetes cluster](/docs/devcontainers/attach-container.md#attach-to-a-container-in-a-kubernetes-cluster) only requires a properly configured [kubectl CLI](https://kubernetes.io/docs/reference/kubectl/overview/).
 
 You can learn more in the [alternative Docker options doc](/remote/advancedcontainers/docker-options.md).
 
@@ -34,7 +35,7 @@ You can learn more in the [alternative Docker options doc](/remote/advancedconta
 
 Here are some tips that applied to older versions of Docker for Windows but should now be resolved. If you run into strage behaviors due to a possible regression, these tips have solved problems in the past.
 
-1. **Use an AD domain account or local administrator account when sharing drives. Do not use an AAD (email-based) account.** AAD (email-based) accounts have well-known issues, as documented in Docker [issue #132](https://github.com/docker/for-win/issues/132) and [issue #1352](https://github.com/docker/for-win/issues/1352). If you must use an AAD account, create a separate local administrator account on your machine that you use purely for the purpose of sharing drives. Follow  the [steps in this blog post](https://blogs.msdn.microsoft.com/stevelasker/2016/06/14/configuring-docker-for-windows-volumes/) to get everything set up.
+1. **Use an AD domain account or local administrator account when sharing drives. Do not use an AAD (email-based) account.** AAD (email-based) accounts have well-known issues, as documented in Docker [issue #132](https://github.com/docker/for-win/issues/132) and [issue #1352](https://github.com/docker/for-win/issues/1352). If you must use an AAD account, create a separate local administrator account on your machine that you use purely for the purpose of sharing drives. Follow the [steps in this blog post](https://blogs.msdn.microsoft.com/stevelasker/2016/06/14/configuring-docker-for-windows-volumes/) to get everything set up.
 
 2. **Stick with alphanumeric passwords to avoid drive sharing problems.** When asked to share your drives on Windows, you will be prompted for the username and password of an account with admin privileges on the machine. If you are warned about an incorrect username or password, this may be due to special characters in the password. For example, `!`, `[` and `]` are known to cause issues. Change your password to alphanumeric characters to resolve. See this issue about [Docker volume mounting problems](https://github.com/moby/moby/issues/23992#issuecomment-234979036) for details.
 
@@ -65,7 +66,7 @@ To change Docker's drive and folder sharing settings:
 
 Since Windows and Linux use different default line endings, Git may report a large number of modified files that have no differences aside from their line endings. To prevent this from happening, you can disable line ending conversion using a `.gitattributes` file or globally on the Windows side.
 
-Typically adding or modifying a  `.gitattributes` file in your repository is the most reliable way to solve this problem. Committing this file to source control will help others and allows you to vary behaviors by repository as appropriate. For example, adding the following to `.gitattributes` file to the root of your repository will force everything to be LF, except for Windows batch files that require CRLF:
+Typically adding or modifying a `.gitattributes` file in your repository is the most reliable way to solve this problem. Committing this file to source control will help others and allows you to vary behaviors by repository as appropriate. For example, adding the following to `.gitattributes` file to the root of your repository will force everything to be LF, except for Windows batch files that require CRLF:
 
 ```yaml
 * text=auto eol=lf
@@ -149,7 +150,7 @@ However, this does not clean up any images you may have downloaded, which can cl
 
 3. You can then go to the Docker view and expand the **Containers** or **Images** node, right-click, and select **Remove Container / Image**.
 
-     ![Docker Explorer screenshot](images/tips-and-tricks/docker-remove.png)
+   ![Docker Explorer screenshot](images/tips-and-tricks/docker-remove.png)
 
 ### Option 3: Use the Docker CLI to pick containers to delete
 
@@ -190,14 +191,14 @@ This is a [well known issue](https://github.com/debuerreotype/docker-debian-arti
 
 There are two ways to resolve this error:
 
-* **Option 1**: Remove any containers that depend on the image, remove the image, and then try building again. This should download an updated image that is not affected by the problem. See [cleaning out unused containers and images](#cleaning-out-unused-containers-and-images) for details.
+- **Option 1**: Remove any containers that depend on the image, remove the image, and then try building again. This should download an updated image that is not affected by the problem. See [cleaning out unused containers and images](#cleaning-out-unused-containers-and-images) for details.
 
-* **Option 2**: If you don't want to delete your containers or images, add this line into your Dockerfile before any `apt` or `apt-get` command. It adds the needed source lists for Jessie:
+- **Option 2**: If you don't want to delete your containers or images, add this line into your Dockerfile before any `apt` or `apt-get` command. It adds the needed source lists for Jessie:
 
-    ```docker
-    # Add archived sources to source list if base image uses Debian 8 / Jessie
-    RUN cat /etc/*-release | grep -q jessie && printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
-    ```
+  ```docker
+  # Add archived sources to source list if base image uses Debian 8 / Jessie
+  RUN cat /etc/*-release | grep -q jessie && printf "deb http://archive.debian.org/debian/ jessie main\ndeb-src http://archive.debian.org/debian/ jessie main\ndeb http://security.debian.org jessie/updates main\ndeb-src http://security.debian.org jessie/updates main" > /etc/apt/sources.list
+  ```
 
 ## Resolving Docker Hub sign in errors when an email is used
 
@@ -223,19 +224,19 @@ Follow these steps:
 
 1. Install an [OpenSSH compatible SSH client](/docs/remote/troubleshooting.md#installing-a-supported-ssh-client).
 
-2. Update the [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)  `docker.environment` property in your user or workspace `settings.json` as follows:
+2. Update the [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) `docker.environment` property in your user or workspace `settings.json` as follows:
 
-    ```json
-    "docker.environment": {
-        "DOCKER_HOST": "tcp://localhost:23750"
-    }
-    ```
+   ```json
+   "docker.environment": {
+       "DOCKER_HOST": "tcp://localhost:23750"
+   }
+   ```
 
 3. Run the following command from a local terminal / PowerShell (replacing `user@hostname` with the remote user and hostname / IP for your server):
 
-    ```bash
-    ssh -NL localhost:23750:/var/run/docker.sock user@hostname
-    ```
+   ```bash
+   ssh -NL localhost:23750:/var/run/docker.sock user@hostname
+   ```
 
 VS Code will now be able to [attach to any running container](/docs/devcontainers/attach-container.md) on the remote host. You can also [use specialized, local `devcontainer.json` files to create / connect to a remote dev container](/remote/advancedcontainers/develop-remote-host.md#converting-an-existing-or-predefined-devcontainerjson).
 
@@ -243,8 +244,8 @@ Once you are done, press `kbstyle(Ctrl+C)` in the terminal / PowerShell to close
 
 > **Note:** If the `ssh` command fails, you may need to `AllowStreamLocalForwarding` on your SSH host.
 >
-> 1. Open `/etc/ssh/sshd_config` in an editor  (like Vim, nano, or Pico) on the **SSH host** (not locally).
-> 2. Add the setting  `AllowStreamLocalForwarding yes`.
+> 1. Open `/etc/ssh/sshd_config` in an editor (like Vim, nano, or Pico) on the **SSH host** (not locally).
+> 2. Add the setting `AllowStreamLocalForwarding yes`.
 > 3. Restart the SSH server (on Ubuntu, run `sudo systemctl restart sshd`).
 > 4. Retry.
 
@@ -265,17 +266,17 @@ The above code first creates a named volume called `profile` mounted to `/root`,
 
 See the [Advanced container configuration](/remote/advancedcontainers/overview.md) articles for information on the following topics:
 
-* [Adding environment variables](/remote/advancedcontainers/environment-variables.md)
-* [Adding another local file mount](/remote/advancedcontainers/add-local-file-mount.md)
-* [Changing or removing the default source code mount](/remote/advancedcontainers/change-default-source-mount.md)
-* [Improving container disk performance](/remote/advancedcontainers/improve-performance.md)
-* [Adding a non-root user to your dev container](/remote/advancedcontainers/add-nonroot-user.md)
-* [Setting the project name for Docker Compose](/remote/advancedcontainers/set-docker-compose-project-name.md)
-* [Using Docker or Kubernetes from inside a container](/remote/advancedcontainers/use-docker-kubernetes.md)
-* [Connecting to multiple containers at once](/remote/advancedcontainers/connect-multiple-containers.md)
-* [Developing inside a container on a remote Docker Machine or SSH host](/remote/advancedcontainers/develop-remote-host.md)
-* [Reducing Dockerfile build warnings](/remote/advancedcontainers/reduce-docker-warnings.md)
-* [Sharing git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md)
+- [Adding environment variables](/remote/advancedcontainers/environment-variables.md)
+- [Adding another local file mount](/remote/advancedcontainers/add-local-file-mount.md)
+- [Changing or removing the default source code mount](/remote/advancedcontainers/change-default-source-mount.md)
+- [Improving container disk performance](/remote/advancedcontainers/improve-performance.md)
+- [Adding a non-root user to your dev container](/remote/advancedcontainers/add-nonroot-user.md)
+- [Setting the project name for Docker Compose](/remote/advancedcontainers/set-docker-compose-project-name.md)
+- [Using Docker or Kubernetes from inside a container](/remote/advancedcontainers/use-docker-kubernetes.md)
+- [Connecting to multiple containers at once](/remote/advancedcontainers/connect-multiple-containers.md)
+- [Developing inside a container on a remote Docker Machine or SSH host](/remote/advancedcontainers/develop-remote-host.md)
+- [Reducing Dockerfile build warnings](/remote/advancedcontainers/reduce-docker-warnings.md)
+- [Sharing git credentials with your container](/remote/advancedcontainers/sharing-git-credentials.md)
 
 ## Extension tips
 
@@ -295,5 +296,5 @@ If you're experiencing issues using other extensions remotely (for example, othe
 
 We have a variety of other remote resources:
 
-* Search on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode-remote).
-* Add a [feature request](https://aka.ms/vscode-remote/feature-requests) or [report a problem](https://aka.ms/vscode-remote/issues/new).
+- Search on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode-remote).
+- Add a [feature request](https://aka.ms/vscode-remote/feature-requests) or [report a problem](https://aka.ms/vscode-remote/issues/new).

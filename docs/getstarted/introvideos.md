@@ -1,18 +1,19 @@
 ---
 Order: 2
 Area: getstarted
-TOCTitle: Intro Videos
-ContentId: f29747b9-0f4f-4f62-b0a7-037ffc49d972
+title: Intro Videos
+id: f29747b9-0f4f-4f62-b0a7-037ffc49d972
 PageTitle: Visual Studio Code Introductory Videos
 DateApproved: 7/6/2023
-MetaDescription: Overview of Visual Studio Code's introductory videos.
+description: Overview of Visual Studio Code's introductory videos.
 MetaSocialImage: images/introvideos/opengraph_introvideos.png
 ---
+
 # Introductory Videos
 
 Start your journey using Visual Studio Code with this set of introductory videos! These videos are designed to give you an overview of VS Code's various features and quickly get you familiar with them.
 
->**Linux users**: Make sure you have the correct multimedia codecs installed for your Linux distribution. For example, on Ubuntu, you may need to install `ubuntu-restricted-extras` to get the necessary codecs to play the videos.
+> **Linux users**: Make sure you have the correct multimedia codecs installed for your Linux distribution. For example, on Ubuntu, you may need to install `ubuntu-restricted-extras` to get the necessary codecs to play the videos.
 
 <ul class="video-list">
 	<li class="video">

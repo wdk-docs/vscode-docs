@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: a15875fa-19b5-4c11-8903-864af133ce57
+id: a15875fa-19b5-4c11-8903-864af133ce57
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: 学习“入门”部分后要采取的下一步步骤
+description: 学习“入门”部分后要采取的下一步步骤
 sidebar_position: 3
 ---
 

@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 891072bb-c46d-4392-800a-84d747072ce3
+id: 891072bb-c46d-4392-800a-84d747072ce3
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: Use Continuous Integration for testing Visual Studio Code extensions (plug-ins).
+description: Use Continuous Integration for testing Visual Studio Code extensions (plug-ins).
 sidebar_position: 4
 ---
 

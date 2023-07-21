@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: A010AEDF-EF37-406E-96F5-E129408FFDE1
+id: A010AEDF-EF37-406E-96F5-E129408FFDE1
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: Visual Studio Code built-in commands reference.
+description: Visual Studio Code built-in commands reference.
 ---
 
 # 内置命令

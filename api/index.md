@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: AD26EFB1-FFC6-4284-BAB8-F3BCB8294728
+id: AD26EFB1-FFC6-4284-BAB8-F3BCB8294728
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: Visual Studio Code有一个丰富的扩展API。学习如何为VS Code创建自己的扩展。
+description: Visual Studio Code有一个丰富的扩展API。学习如何为VS Code创建自己的扩展。
 
 sidebar_position: 1
 ---

@@ -1,11 +1,11 @@
 ---
 Order: 20
 Area: languages
-TOCTitle: .NET
-ContentId: AFFD7BDB-925E-4D02-828D-4E14360C70DA
+title: .NET
+id: AFFD7BDB-925E-4D02-828D-4E14360C70DA
 PageTitle: .NET and Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: Get started writing and debugging .NET apps with Visual Studio Code.
+description: Get started writing and debugging .NET apps with Visual Studio Code.
 ---
 
 # Using .NET in Visual Studio Code

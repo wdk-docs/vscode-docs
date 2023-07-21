@@ -1,11 +1,11 @@
 ---
 Order: 3
 Area: python
-TOCTitle: Linting
-ContentId: 0ccb0e35-c4b2-4001-91bf-79ff1618f601
+title: Linting
+id: python-linting
 PageTitle: Linting Python in Visual Studio Code
 DateApproved: 6/15/2023
-MetaDescription: Linting Python in Visual Studio Code
+description: Linting Python in Visual Studio Code
 MetaSocialImage: images/tutorial/social.png
 ---
 
@@ -21,26 +21,26 @@ Install the linting tool of your choice from the VS Code [Marketplace](https://m
 
 Microsoft publishes the following linting extensions:
 
-| Linter | Extension                                                                       |
-| ------ | ------------------------------------------------------------------------------- |
-| Pylint | [https://marketplace.visualstudio.com/items?itemName=ms-python.pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)            |
-| flake8 | [https://marketplace.visualstudio.com/items?itemName=ms-python.flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)            |
+| Linter | Extension                                                                                                                                                          |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Pylint | [https://marketplace.visualstudio.com/items?itemName=ms-python.pylint](https://marketplace.visualstudio.com/items?itemName=ms-python.pylint)                       |
+| flake8 | [https://marketplace.visualstudio.com/items?itemName=ms-python.flake8](https://marketplace.visualstudio.com/items?itemName=ms-python.flake8)                       |
 | mypy   | [https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker](https://marketplace.visualstudio.com/items?itemName=ms-python.mypy-type-checker) |
 
 Linting extensions offered by the community:
 
-| Linter | Extension                                                              |
-| ------ | ---------------------------------------------------------------------- |
+| Linter | Extension                                                                                                                                        |
+| ------ | ------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Ruff   | [https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff](https://marketplace.visualstudio.com/items?itemName=charliermarsh.ruff) |
-| mypy   | [https://marketplace.visualstudio.com/items?itemName=matangover.mypy](https://marketplace.visualstudio.com/items?itemName=matangover.mypy)    |
+| mypy   | [https://marketplace.visualstudio.com/items?itemName=matangover.mypy](https://marketplace.visualstudio.com/items?itemName=matangover.mypy)       |
 
 > **Note**: If you don't find your preferred linter in the table above or in the Marketplace, you can add support for it via an extension. You can use the [Python Extension Template](/api/advanced-topics/python-extension-template.md) to integrate new Python tools into VS Code.
 
 ## General Settings
 
-| Setting        | Default      | Description                                                                                                                                                                                            |
-| -------------- | ------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| args           | `[]`         | Arguments to be passed to the linter. **Note**: The officially supported linters run on individual open files. Make sure your configuration applies in that scenario. |
+| Setting        | Default      | Description                                                                                                                                                                                                                              |
+| -------------- | ------------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| args           | `[]`         | Arguments to be passed to the linter. **Note**: The officially supported linters run on individual open files. Make sure your configuration applies in that scenario.                                                                    |
 | importStrategy | `useBundled` | When set to `useBundled`, the extension uses the version of the tool that it ships with. When set to `fromEnvironment`, it attempts to load from your selected Python environment first, otherwise it falls back to the bundled version. |
 
 ## Disable linting
@@ -71,9 +71,9 @@ Linters report issues with some predefined severity. This can be changed using `
 
 ## Troubleshooting linting
 
-| Issue | Cause | Solution |
-| --- | --- | --- |
-| No problems reported | No Python has been selected for your workspace. | Look at the logs for the linter you are using and check the path to the Python environment it's using. If there is no Python selected, run the **Python: Select Interpreter** command from the Command Palette and select an existing interpreter for your workspace.  |
+| Issue                | Cause                                           | Solution                                                                                                                                                                                                                                                              |
+| -------------------- | ----------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| No problems reported | No Python has been selected for your workspace. | Look at the logs for the linter you are using and check the path to the Python environment it's using. If there is no Python selected, run the **Python: Select Interpreter** command from the Command Palette and select an existing interpreter for your workspace. |
 
 ## Next steps
 

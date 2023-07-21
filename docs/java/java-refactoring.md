@@ -1,11 +1,11 @@
 ---
 Order: 3
 Area: java
-TOCTitle: Refactoring
-ContentId: 36ee3e12-9bcc-4f01-9672-857ad2733c2d
+title: Refactoring
+id: 36ee3e12-9bcc-4f01-9672-857ad2733c2d
 PageTitle: Java code refactoring and Source Actions for Visual Studio Code
 DateApproved: 12/9/2021
-MetaDescription: Java code refactoring and Source Actions for Visual Studio Code
+description: Java code refactoring and Source Actions for Visual Studio Code
 ---
 
 # Java refactoring and Source Actions

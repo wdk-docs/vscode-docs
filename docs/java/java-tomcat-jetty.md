@@ -1,11 +1,11 @@
 ---
 Order: 10
 Area: java
-TOCTitle: Application Servers
-ContentId: 4f5e169c-d91d-46b7-8c36-b695b5862313
+title: Application Servers
+id: 4f5e169c-d91d-46b7-8c36-b695b5862313
 PageTitle: Working with application servers in Visual Studio Code
 DateApproved: 12/142021
-MetaDescription: Tomcat, Jetty and Open Liberty extensions for Java developer using Visual Studio Code.
+description: Tomcat, Jetty and Open Liberty extensions for Java developer using Visual Studio Code.
 ---
 
 # Working with Application Servers in VS Code

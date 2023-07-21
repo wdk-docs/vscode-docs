@@ -1,12 +1,13 @@
 ---
 Order: 5
 Area: terminal
-TOCTitle: Advanced
-ContentId: D458AFDC-C001-43FD-A4BB-9474767B2C04
+title: Advanced
+id: D458AFDC-C001-43FD-A4BB-9474767B2C04
 PageTitle: Advanced Terminal Usage in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code's integrated terminal has several advanced features.
+description: Visual Studio Code's integrated terminal has several advanced features.
 ---
+
 # Terminal Advanced
 
 Visual Studio Code's integrated terminal has many advanced features and settings, such as Unicode and emoji support, custom keybindings, and automatic replies. This topic explains these advanced features in detail. If you are new to VS Code or the integrated terminal, you may want to review the [Terminal Basics](/docs/terminal/basics.md) topic first.
@@ -15,8 +16,8 @@ Visual Studio Code's integrated terminal has many advanced features and settings
 
 The terminal supports two different types of persistent sessions:
 
-* Process reconnection: When reloading a window (for example, after installing an extension), **reconnect** to the previous process and restore its content.
-* Process revive: When restarting VS Code, a terminal's content is restored and the process is **relaunched** using its original environment.
+- Process reconnection: When reloading a window (for example, after installing an extension), **reconnect** to the previous process and restore its content.
+- Process revive: When restarting VS Code, a terminal's content is restored and the process is **relaunched** using its original environment.
 
 Both of these persistent sessions can be disabled by setting `terminal.integrated.enablePersistentSessions` to `false`, and the amount of scrollback restored is controlled by the`terminal.integrated.persistentSessionScrollback` setting. Process revive can be configured independently with `terminal.integrated.persistentSessionReviveProcess`.
 
@@ -36,14 +37,14 @@ The configurable `terminal.integrated.commandsToSkipShell` setting determines wh
     // Ensure the toggle sidebar visibility keybinding skips the shell
     "workbench.action.toggleSidebarVisibility",
     // Send quick open's keybinding to the shell
-    "-workbench.action.quickOpen",
+    "-workbench.action.quickOpen"
   ]
 }
 ```
 
 Look at the `terminal.integrated.commandsToSkipShell` setting details to see the complete list of default commands.
 
->**Tip:** `terminal.integrated.sendKeybindingsToShell` can be configured to override `terminal.integrated.commandsToSkipShell` and dispatch most keybindings to the shell. Note that this will disable keybindings like `kbstyle(Ctrl+F)` to open [find](/docs/terminal/basics#find) though.
+> **Tip:** `terminal.integrated.sendKeybindingsToShell` can be configured to override `terminal.integrated.commandsToSkipShell` and dispatch most keybindings to the shell. Note that this will disable keybindings like `kbstyle(Ctrl+F)` to open [find](/docs/terminal/basics#find) though.
 
 ### Chords
 
@@ -55,8 +56,8 @@ On macOS, `kbstyle(Cmd+K)` is a common keybindings in terminals to clear the scr
 
 ```json
 {
-    "key": "cmd+k",
-    "command": "-workbench.action.terminal.clear"
+  "key": "cmd+k",
+  "command": "-workbench.action.terminal.clear"
 }
 ```
 
@@ -64,9 +65,9 @@ Additionally, this keyboard shortcut will be overridden automatically if any ext
 
 ```json
 {
-    "key": "cmd+k",
-    "command": "workbench.action.terminal.clear",
-    "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
+  "key": "cmd+k",
+  "command": "workbench.action.terminal.clear",
+  "when": "terminalFocus && terminalHasBeenCreated || terminalFocus && terminalProcessSupported"
 }
 ```
 
@@ -94,16 +95,16 @@ This feature supports [variable substitution](/docs/editor/variables-reference.m
 
 The `sendSequence` command only works with the `\u0000` format for using characters via their character code (not `\x00`). Read more about these hex codes and terminal sequences in the following resources:
 
-* [XTerm Control Sequences](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)
-* [List of C0 and C1 control codes](https://github.com/xtermjs/xterm.js/blob/0e45909c7e79c83452493d2cd46d99c0a0bb585f/src/common/data/EscapeSequences.ts)
+- [XTerm Control Sequences](https://invisible-island.net/xterm/ctlseqs/ctlseqs.html)
+- [List of C0 and C1 control codes](https://github.com/xtermjs/xterm.js/blob/0e45909c7e79c83452493d2cd46d99c0a0bb585f/src/common/data/EscapeSequences.ts)
 
 ## Confirmation dialogs
 
 In order to avoid unnecessary output and user prompts, the terminal does not show warning dialogs when processes exit. If warnings are desirable, they can be configured with the following settings:
 
-* `terminal.integrated.confirmOnExit` - Controls whether to confirm when the window closes if there are active debug sessions.
-* `terminal.integrated.confirmOnKill` - Controls whether to confirm killing terminals when they have child processes.
-* `terminal.integrated.showExitAlert` - Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.
+- `terminal.integrated.confirmOnExit` - Controls whether to confirm when the window closes if there are active debug sessions.
+- `terminal.integrated.confirmOnKill` - Controls whether to confirm killing terminals when they have child processes.
+- `terminal.integrated.showExitAlert` - Controls whether to show the alert "The terminal process terminated with exit code" when exit code is non-zero.
 
 ## Auto replies
 
@@ -129,9 +130,9 @@ The `terminal.integrated.tabStopWidth` setting allows configuring the tab stop w
 
 The terminal has both Unicode and emoji support. When these characters are used in the terminal, there are some caveats to that support:
 
-* Some Unicode symbols have ambiguous width that may change between Unicode versions. Currently we support Unicode version 6 and 11 widths, which can be configured with the `terminal.integrated.unicodeVersion` setting. The version specified should match the Unicode version used by the shell/operating system, otherwise there could be rendering issues. Note that the Unicode version of the shell/OS may not match the font's actual width.
-* Some emojis comprised of multiple characters may not render correctly, for example, skin tone modifiers.
-* Emoji support is limited on Windows.
+- Some Unicode symbols have ambiguous width that may change between Unicode versions. Currently we support Unicode version 6 and 11 widths, which can be configured with the `terminal.integrated.unicodeVersion` setting. The version specified should match the Unicode version used by the shell/operating system, otherwise there could be rendering issues. Note that the Unicode version of the shell/OS may not match the font's actual width.
+- Some emojis comprised of multiple characters may not render correctly, for example, skin tone modifiers.
+- Emoji support is limited on Windows.
 
 ## Image support
 
@@ -139,10 +140,10 @@ Images in the terminal work provided they use either the Sixel or iTerm inline i
 
 Current limitations:
 
-* Serialization does not work, so reloading a terminal will not retain any images ([jerch/xterm-addon-image#47](https://github.com/jerch/xterm-addon-image/issues/47)).
-* Copying the selection as HTML does not include the selected image ([jerch/xterm-addon-image#50](https://github.com/jerch/xterm-addon-image/issues/50)).
-* Animated gifs don't work ([jerch/xterm-addon-image#51](https://github.com/jerch/xterm-addon-image/issues/51)).
-* Images that are shorter than a cell will not work properly, this is a [design flaw with the sequences and also occurs in XTerm](https://github.com/microsoft/vscode/issues/183840#issuecomment-1569345048).
+- Serialization does not work, so reloading a terminal will not retain any images ([jerch/xterm-addon-image#47](https://github.com/jerch/xterm-addon-image/issues/47)).
+- Copying the selection as HTML does not include the selected image ([jerch/xterm-addon-image#50](https://github.com/jerch/xterm-addon-image/issues/50)).
+- Animated gifs don't work ([jerch/xterm-addon-image#51](https://github.com/jerch/xterm-addon-image/issues/51)).
+- Images that are shorter than a cell will not work properly, this is a [design flaw with the sequences and also occurs in XTerm](https://github.com/microsoft/vscode/issues/183840#issuecomment-1569345048).
 
 ## Process environment
 
@@ -158,11 +159,11 @@ This environment inheritance can be disabled on macOS and Linux via the `termina
 
 There is some special interaction with the `$LANG` environment variable, which determines how characters are presented in the terminal. This feature is configured with the `terminal.integrated.detectLocale` setting:
 
-| Value            | Behavior
-|------------------|---
-| `on`             | Always set `$LANG` to the most commonly desired value. The chosen value is based on the operating system locale (falling back to `en-US`) with UTF-8 encoding.
-| `auto` (default) | Set `$LANG` similar to the `on` behavior if `$LANG` is not properly configured (is not set to a UTF or EUC encoding).
-| `off`            | Do not modify `$LANG`.
+| Value            | Behavior                                                                                                                                                       |
+| ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `on`             | Always set `$LANG` to the most commonly desired value. The chosen value is based on the operating system locale (falling back to `en-US`) with UTF-8 encoding. |
+| `auto` (default) | Set `$LANG` similar to the `on` behavior if `$LANG` is not properly configured (is not set to a UTF or EUC encoding).                                          |
+| `off`            | Do not modify `$LANG`.                                                                                                                                         |
 
 ### Extension environment contributions
 

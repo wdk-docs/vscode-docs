@@ -1,11 +1,11 @@
 ---
 Order: 1
 Area: java
-TOCTitle: Getting Started
-ContentId: 12d8264b-643f-4745-a7ea-8433dedb1331
+title: Getting Started
+id: 12d8264b-643f-4745-a7ea-8433dedb1331
 PageTitle: Getting Started with Java in Visual Studio Code
 DateApproved: 1/4/2022
-MetaDescription: Java tutorial showing basic Java language support in the Visual Studio Code editor
+description: Java tutorial showing basic Java language support in the Visual Studio Code editor
 ---
 
 # Getting Started with Java in VS Code

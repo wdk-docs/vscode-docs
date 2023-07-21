@@ -1,13 +1,14 @@
 ---
 Order: 7
 Area: azure
-TOCTitle: Azure Kubernetes Service
-ContentId: 131f9633-5446-4384-96ca-7bff2e3dc0fc
+title: Azure Kubernetes Service
+id: 131f9633-5446-4384-96ca-7bff2e3dc0fc
 PageTitle: Working with AKS tools and diagnostics in Visual Studio Code
 DateApproved: 12/2/2022
-MetaDescription: Working with AKS tools and diagnostics in Visual Studio Code
+description: Working with AKS tools and diagnostics in Visual Studio Code
 ---
-# AKS tools and diagnostics in VS Code
+
+# VS Code中的AKS工具和诊断
 
 This document will walk you through some of the ways you can interact with your AKS clusters directly from Visual Studio Code. [Azure Kubernetes Services](https://azure.microsoft.com/services/kubernetes-service/#overview) is a fully managed [Kubernetes](https://azure.microsoft.com/topic/what-is-kubernetes/#overview) service. Azure Kubernetes Service (AKS) offers serverless Kubernetes, an integrated continuous integration and continuous delivery (CI/CD) experience and enterprise-grade security and governance, is an open-source system for automating deployment, scaling, and management of containerized applications. We will show you how to run [diagnostic health-checks](https://learn.microsoft.com/azure/aks/concepts-diagnostics) on your AKS cluster, launch [AKS Periscope](https://github.com/azure/aks-periscope) for more in-depth troubleshooting, deploy [Azure Service Operator](https://github.com/Azure/azure-service-operator), or generate [GitHub Actions Starter Workflows](https://github.com/actions/starter-workflows).
 
@@ -65,11 +66,11 @@ Right-click on your AKS cluster and select **Save Kubeconfig** to save the kubec
 
 Right-click on your AKS cluster and select **Run AKS Diagnostics** to display diagnostics information based on your AKS cluster's backend telemetry for:
 
-* Best Practices
-* Create, Upgrade, Delete and Scale issues
-* Identity and Security
-* Network and Connectivity issues
-* Node Health
+- Best Practices
+- Create, Upgrade, Delete and Scale issues
+- Identity and Security
+- Network and Connectivity issues
+- Node Health
 
 To perform further checks on your AKS cluster to troubleshoot and get recommended solutions, select the AKS Diagnostics link at the top of the page to open it for the selected cluster. For more information on AKS Diagnostics, visit [AKS Diagnostics Overview](https://learn.microsoft.com/azure/aks/concepts-diagnostics).
 
@@ -108,7 +109,8 @@ Running the AKS Periscope requires you to have a storage account associated with
 5. Select a storage account of your choice.
 
 6. In the list of available logs, select the logs you wish to enable.
-    > Note: The incurred cost is subject to your storage account usage and Azure Storage Policy.
+
+   > Note: The incurred cost is subject to your storage account usage and Azure Storage Policy.
 
 7. When ready, select **Save** to enable collection of the selected logs.
 
@@ -128,10 +130,10 @@ For more information on Azure Service Operator, visit [Azure Service Operator (f
 
 Right-click on your AKS cluster and select **Create GitHub Workflow** to easily open and create a workflow starter template. This helps in quick generation of the workflow templates with pre-populated resource group and cluster name for:
 
-* [Starter Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service.yml)
-* [Helm Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service-helm.yml)
-* [Kompose Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service-kompose.yml)
-* [Kustomize Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service-kustomize.yml)
+- [Starter Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service.yml)
+- [Helm Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service-helm.yml)
+- [Kompose Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service-kompose.yml)
+- [Kustomize Workflow](https://github.com/actions/starter-workflows/blob/main/deployments/azure-kubernetes-service-kustomize.yml)
 
 ### Create cluster from Azure Portal
 
@@ -149,19 +151,19 @@ Right-click on your AKS cluster and select **Show Properties** to display the AK
 
 Right-click on your AKS cluster and select **Run KubectlCommands** to run Kubectl commands on your cluster. Currently, the following Kubectl commands are available:
 
-* Describe Services
-* Get All Pods
-* API Resources
-* Get Cluster Info
-* Get Node
-* Get All Events
+- Describe Services
+- Get All Pods
+- API Resources
+- Get Cluster Info
+- Get Node
+- Get All Events
 
 Congratulations! You now know how to navigate through this VS Code extension.
 
 ## Next steps
 
-* [Azure Extensions](/docs/azure/extensions.md) - The VS Code Marketplace has hundreds of extensions for Azure and the cloud.
-* [Azure Kubernetes Service Diagnostics (preview) overview](https://learn.microsoft.com/azure/aks/concepts-diagnostics)
-* [Azure Service Operator](https://azure.github.io/azure-service-operator/#azure-service-operator-v2) - Learn about Azure Service Operator.
-* [AKS Periscope](https://github.com/azure/aks-periscope)
-* [GitHub AKS Starter Workflow](https://github.com/actions/starter-workflows)
+- [Azure Extensions](/docs/azure/extensions.md) - The VS Code Marketplace has hundreds of extensions for Azure and the cloud.
+- [Azure Kubernetes Service Diagnostics (preview) overview](https://learn.microsoft.com/azure/aks/concepts-diagnostics)
+- [Azure Service Operator](https://azure.github.io/azure-service-operator/#azure-service-operator-v2) - Learn about Azure Service Operator.
+- [AKS Periscope](https://github.com/azure/aks-periscope)
+- [GitHub AKS Starter Workflow](https://github.com/actions/starter-workflows)

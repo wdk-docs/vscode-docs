@@ -1,13 +1,14 @@
 ---
 Order: 3
 Area: containers
-TOCTitle: Python
-ContentId: 3a9bc520-95e2-416e-a0ac-5be02a38c4c3
+title: Python
+id: 3a9bc520-95e2-416e-a0ac-5be02a38c4c3
 PageTitle: Build and run a Python app in a container
 DateApproved: 10/30/2022
-MetaDescription: Develop, build, and debug a Python app in a Docker container, using Visual Studio Code.
+description: Develop, build, and debug a Python app in a Docker container, using Visual Studio Code.
 ---
-# Python in a container
+
+# 容器中的Python
 
 In this tutorial, you will learn how to:
 
@@ -29,9 +30,8 @@ If you don't have a Python project already, follow the tutorial [Getting started
 
 > **Note**: If you want to containerize a complete Django or Flask web app, you can start with one of the following samples:
 >
->- [python-sample-vscode-django-tutorial](https://github.com/microsoft/python-sample-vscode-django-tutorial/tree/tutorial), which is the result of following the [Django Tutorial](/docs/python/tutorial-django.md)
->
->- [python-sample-vscode-flask-tutorial](https://github.com/microsoft/python-sample-vscode-flask-tutorial/tree/tutorial), which is the result of following the [Flask Tutorial](/docs/python/tutorial-flask.md)
+> - [python-sample-vscode-django-tutorial](https://github.com/microsoft/python-sample-vscode-django-tutorial/tree/tutorial), which is the result of following the [Django Tutorial](/docs/python/tutorial-django.md)
+> - [python-sample-vscode-flask-tutorial](https://github.com/microsoft/python-sample-vscode-flask-tutorial/tree/tutorial), which is the result of following the [Flask Tutorial](/docs/python/tutorial-flask.md)
 
 > **Note**: For this tutorial, be sure to use the **tutorial** branch of the sample repos.
 
@@ -42,7 +42,7 @@ After verifying your app runs properly, you can now containerize your applicatio
 1. Open the project folder in VS Code.
 1. Open the **Command Palette** (`kb(workbench.action.showCommands)`) and choose **Docker: Add Docker Files to Workspace...**:
 
-    ![Add Dockerfile to a Python project](images/quickstarts/python-add-python.png)
+   ![Add Dockerfile to a Python project](images/quickstarts/python-add-python.png)
 
 1. When prompted for the app type, select **Python: Django**, **Python: Flask**, or **Python: General** as the app type. For this tutorial, we'll focus on the **Python: General** case, but will also include notes for Django and Flask.
 
@@ -52,7 +52,7 @@ After verifying your app runs properly, you can now containerize your applicatio
 
    **Flask**: Choose the path to where you create your Flask instance. See the [official Flask documentation](https://flask.palletsprojects.com/en/1.1.x/api/).
 
-    >**Tip**: You may also enter the path to a folder name as long as this folder includes a `__main__.py` file.
+   > **Tip**: You may also enter the path to a folder name as long as this folder includes a `__main__.py` file.
 
 1. Select the port number. We recommend selecting port 1024 or above to mitigate security concerns from [running as a root user](/docs/containers/troubleshooting.md#running-as-a-non-root-user). Any unused will port, but Django and Flask use standard default ports.
 
@@ -64,14 +64,14 @@ After verifying your app runs properly, you can now containerize your applicatio
 
 1. With all this information, the Docker extension creates the following files:
 
-    - A `Dockerfile`. To learn more about IntelliSense in this file, refer to the [overview](/docs/containers/overview.md).
+   - A `Dockerfile`. To learn more about IntelliSense in this file, refer to the [overview](/docs/containers/overview.md).
 
-    - A `.dockerignore` file to reduce the image size by excluding files and folders that aren't needed such as `.git`, `.vscode`, and `__pycache__`.
+   - A `.dockerignore` file to reduce the image size by excluding files and folders that aren't needed such as `.git`, `.vscode`, and `__pycache__`.
 
-    - If you're using Docker Compose, a `docker-compose.yml`  and `docker-compose.debug.yml` file.
+   - If you're using Docker Compose, a `docker-compose.yml` and `docker-compose.debug.yml` file.
 
-    - If one does not already exist, a `requirements.txt` file for capturing all app dependencies.
-    > **Important Note**: To use our setup, the Python framework (Django/Flask) and Gunicorn **must be included** in the `requirements.txt` file. If the virtual environment/host machine already has these prerequisites installed and is supposed to be identical to the container environment, ensure app dependencies are ported over by running `pip freeze > requirements.txt` in the terminal. **This will overwrite your current `requirements.txt` file.**
+   - If one does not already exist, a `requirements.txt` file for capturing all app dependencies.
+     > **Important Note**: To use our setup, the Python framework (Django/Flask) and Gunicorn **must be included** in the `requirements.txt` file. If the virtual environment/host machine already has these prerequisites installed and is supposed to be identical to the container environment, ensure app dependencies are ported over by running `pip freeze > requirements.txt` in the terminal. **This will overwrite your current `requirements.txt` file.**
 
 ### (Optional) Add an environment variable to the image
 
@@ -82,7 +82,7 @@ The Docker Extension helps you author Dockerfiles by using [IntelliSense](/docs/
 1. Open the `Dockerfile`.
 2. Underneath the `EXPOSE` statement, type `kb(editor.action.triggerSuggest)` to trigger IntelliSense and scroll to `ENV`.
 
-    ![Adding environment variable to Dockerfile](images/quickstarts/python-edit-dockerfile.png)
+   ![Adding environment variable to Dockerfile](images/quickstarts/python-edit-dockerfile.png)
 
 3. Press `kbstyle(Tab)` or `kbstyle(Enter)` to complete the statement, then set the `key` to the name of the variable, and set the `value`.
 
@@ -94,30 +94,30 @@ To give Python web developers a great starting point, we chose to use [Gunicorn]
 
 - **Django**: To use Gunicorn, it must bind to an application callable (what the application server uses to communicate with your code) as an entry point. This callable is declared in the `wsgi.py` file of a Django application. To accomplish this binding, the final line in the Dockerfile says:
 
-   ```docker
-   CMD ["gunicorn", "--bind", "0.0.0.0:8000", "{workspace_folder_name}.wsgi"]
-   ```
+  ```docker
+  CMD ["gunicorn", "--bind", "0.0.0.0:8000", "{workspace_folder_name}.wsgi"]
+  ```
 
-   If your project does not follow Django's default project structure (that is, a workspace folder and a wsgi.py file >within a subfolder named the same as the workspace) you must overwrite the Gunicorn entry point in the Dockerfile to locate the correct `wsgi.py` file.
+  If your project does not follow Django's default project structure (that is, a workspace folder and a wsgi.py file >within a subfolder named the same as the workspace) you must overwrite the Gunicorn entry point in the Dockerfile to locate the correct `wsgi.py` file.
 
-   If your `wsgi.py` file is in the root folder, the final argument in the command above will be `"wsgi"`. Within subfolders, the argument would be `"subfolder1_name.subfolder2_name.wsgi"`.
+  If your `wsgi.py` file is in the root folder, the final argument in the command above will be `"wsgi"`. Within subfolders, the argument would be `"subfolder1_name.subfolder2_name.wsgi"`.
 
 - **Flask**: To use Gunicorn, it must bind to an application callable (what the application server uses to communicate with your code) as an entry point. This callable corresponds with the **file location** and **variable name** of your created Flask instance. According to [official Flask Documentation](https://flask.palletsprojects.com/en/1.1.x/api/), users generally create a Flask instance in the main module or in the `__init__.py` file of their package in this manner:
 
-   ```python
-   from flask import Flask
-   app = Flask(__name__) # Flask instance named app
-   ```
+  ```python
+  from flask import Flask
+  app = Flask(__name__) # Flask instance named app
+  ```
 
-   To accomplish this binding, the final line in the Dockerfile says:
+  To accomplish this binding, the final line in the Dockerfile says:
 
-   ```docker
-   CMD ["gunicorn", "--bind", "0.0.0.0:5000", "{subfolder}.{module_file}:app"]
-   ```
+  ```docker
+  CMD ["gunicorn", "--bind", "0.0.0.0:5000", "{subfolder}.{module_file}:app"]
+  ```
 
-   During the **Docker: Add Docker Files to Workspace...** command, you configure the path to the Flask instance, however, the Docker extension assumes your Flask instance variable is named `app`. If this is not the case, you must change the variable name in the Dockerfile.
+  During the **Docker: Add Docker Files to Workspace...** command, you configure the path to the Flask instance, however, the Docker extension assumes your Flask instance variable is named `app`. If this is not the case, you must change the variable name in the Dockerfile.
 
-   If your main module was in the root folder as a file named `main.py` and had a Flask instance variable was named `myapp`, the final argument in the command above will be `"main:myapp"`. Within subfolders, the argument would be `"subfolder1_name.subfolder2_name.main:myapp"`.
+  If your main module was in the root folder as a file named `main.py` and had a Flask instance variable was named `myapp`, the final argument in the command above will be `"main:myapp"`. Within subfolders, the argument would be `"subfolder1_name.subfolder2_name.main:myapp"`.
 
 ## Build, run, and debug the container
 
@@ -127,21 +127,22 @@ The **Docker: Add Docker Files to Workspace...** command automatically creates a
 
 1. Navigate to **Run and Debug** and select **Docker: Python - General**, **Docker: Python - Django**, or **Docker: Python - Flask**, as appropriate.
 
-    ![Selected Docker debug configuration](images/quickstarts/python-debug-configuration.png)
+   ![Selected Docker debug configuration](images/quickstarts/python-debug-configuration.png)
 
 1. Start debugging using the `kb(workbench.action.debug.start)` key.
-    - The Docker image builds.
-    - The Docker container runs.
-    - The python debugger stops at the breakpoint.
+
+   - The Docker image builds.
+   - The Docker container runs.
+   - The python debugger stops at the breakpoint.
 
 1. Step over this line once.
 1. When ready, press continue.
 
 The Docker extension will launch your browser to a randomly mapped port:
 
-  ![Django website launches](images/quickstarts/python-web-launch.png)
+![Django website launches](images/quickstarts/python-web-launch.png)
 
->**Tip**: To modify your Docker build settings, such as changing the image tag, navigate to `.vscode -> tasks.json` under the `dockerBuild` attribute in the `docker-build` task. Use IntelliSense within the file (`kb(editor.action.triggerSuggest)`) to display all other valid directives.
+> **Tip**: To modify your Docker build settings, such as changing the image tag, navigate to `.vscode -> tasks.json` under the `dockerBuild` attribute in the `docker-build` task. Use IntelliSense within the file (`kb(editor.action.triggerSuggest)`) to display all other valid directives.
 
 ## Use the Docker Explorer
 
@@ -150,7 +151,7 @@ The Docker Explorer provides an interactive experience to examine and manage Doc
 1. Navigate to the Docker Explorer.
 1. In the **Containers** tab, right-click on your container and choose **View Logs**.
 
-    ![Viewing the logs of a container](images/quickstarts/python-view-logs.png)
+   ![Viewing the logs of a container](images/quickstarts/python-view-logs.png)
 
 1. The output will be displayed in the terminal.
 
@@ -162,7 +163,7 @@ You can use the command **Azure Container Registry: Build Image in Azure** to bu
 
 1. There are two ways to invoke the build in Azure command. You can right-click on the Dockerfile, and choose **Build Image in Azure**. You can also use the **Command Palette** (`kb(workbench.action.showCommands)`) and search for the command **Azure Container Registry: Build Image in Azure**.
 
-    ![Invoke the command Build Image in Azure](images/app-service/acr-build-image-in-azure.png)
+   ![Invoke the command Build Image in Azure](images/app-service/acr-build-image-in-azure.png)
 
 1. Choose the name and tag for the built image. You'll use this to identify it in the container registry.
 

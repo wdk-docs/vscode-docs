@@ -1,13 +1,14 @@
 ---
 Order: 1
 Area: containers
-TOCTitle: Overview
-ContentId: 4B462667-8915-4BE0-B8D0-EDE51CB2D273
+title: Overview
+id: 4B462667-8915-4BE0-B8D0-EDE51CB2D273
 PageTitle: Docker extension for Visual Studio Code
 DateApproved: 12/13/2022
-MetaDescription: Tools for developing and debugging with Docker containers, using Visual Studio Code.
+description: Tools for developing and debugging with Docker containers, using Visual Studio Code.
 ---
-# Docker in Visual Studio Code
+
+# Visual Studio Code中的Docker
 
 The [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) extension makes it easy to build, manage, and deploy containerized applications in Visual Studio Code.
 
@@ -61,15 +62,15 @@ You can run Docker commands to manage [images](https://docs.docker.com/engine/re
 
 [Docker Compose](https://docs.docker.com/compose/) lets you define and run multi-container applications with Docker. Our [Compose Language Service](https://github.com/microsoft/compose-language-service) in the Docker extension gives you IntelliSense and tab completions when authoring `docker-compose.yml` files. Press `kb(editor.action.triggerSuggest)` to see a list of valid Compose directives.
 
- ![Docker Compose IntelliSense](images/overview/tab-completions.gif)
+![Docker Compose IntelliSense](images/overview/tab-completions.gif)
 
 We also provide tooltips when you hover over a Docker Compose YAML attribute.
 
- ![Docker Compose Tooltips](images/overview/hover-support.png)
+![Docker Compose Tooltips](images/overview/hover-support.png)
 
 While `Compose Up` allows you to run all of your services at once, our new feature `Compose Up - Select Services` lets you select any combination of the services you want to run.
 
-  ![Docker Compose Up - Select Subset](images/overview/select-subset.gif)
+![Docker Compose Up - Select Subset](images/overview/select-subset.gif)
 
 Once your `Compose Up` command completes, navigate to the Docker Explorer to view your services as a Compose Group. This allows you to start, stop, and view the logs of each service as a group.
 

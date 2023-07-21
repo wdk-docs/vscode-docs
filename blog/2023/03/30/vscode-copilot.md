@@ -1,8 +1,8 @@
 ---
 Order: 80
-TOCTitle: VS Code and Copilot
+title: VS Code and Copilot
 PageTitle: Visual Studio Code and GitHub Copilot AI
-MetaDescription: Learn about the Visual Studio Code team's experience and future with GitHub Copilot artificial intelligence
+description: Learn about the Visual Studio Code team's experience and future with GitHub Copilot artificial intelligence
 Date: 2023-03-30
 Author: Chris Dias
 ---
@@ -19,9 +19,9 @@ In this post, we want to give a little background on AI in VS Code, show you som
 
 ## GitHub Copilot "V1"
 
-Microsoft's Developer AI Service is [GitHub Copilot](https://github.com/features/copilot), and if you have not seen GitHub's vision for the entire development lifecycle, check out this great [blog post]( https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience).
+Microsoft's Developer AI Service is [GitHub Copilot](https://github.com/features/copilot), and if you have not seen GitHub's vision for the entire development lifecycle, check out this great [blog post](https://github.blog/2023-03-22-github-copilot-x-the-ai-powered-developer-experience).
 
-It's been more than a year since the [Copilot extension]( https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) first launched. [Oege De Moor]( https://twitter.com/oegerikus) and his team at GitHub collaborated with OpenAI to bring the first at scale example of using LLMs for development, specifically [OpenAI's codex model]( https://openai.com/blog/openai-codex).
+It's been more than a year since the [Copilot extension](https://marketplace.visualstudio.com/items?itemName=GitHub.copilot) first launched. [Oege De Moor](https://twitter.com/oegerikus) and his team at GitHub collaborated with OpenAI to bring the first at scale example of using LLMs for development, specifically [OpenAI's codex model](https://openai.com/blog/openai-codex).
 
 ![Editor with Copilot generated ghost (faded) text suggestions](editor-ghost-text.png)
 
@@ -77,16 +77,16 @@ Naming is hard (we should know, our product is called "Code"). However, "GitHub 
 
 So, if you think of yourself as the Pilot of VS Code and GitHub Copilot as…well…the Copilot, you start to get a sense of how to think about the service and ways to interact with it to get the most from your seatmate.
 
-* We can't repeat this enough: As the Pilot, you are in charge. You decide which suggestions to take and what code is integrated into your workspace.
-* Copilot's primary job is to assist you, taking care of mundane or repetitive tasks. Let it write test cases, craft sample data, or scaffold out code based on existing patterns.
-* Copilot can do more with more context. We're all accustomed to quick keyword-based web searches, but the more details you provide, the better results you will get. For example, instead of "Node Express TypeScript", ask Copilot to "scaffold out a Node.js website using the Express.js framework using TypeScript" and then iterate!
-* You can scope interactions to specific topics by pressing `/` in the Chat input field. For example, to learn how to turn on or off breadcrumbs in the editor, type in `/vscode Turn off breadcrumbs`.
+- We can't repeat this enough: As the Pilot, you are in charge. You decide which suggestions to take and what code is integrated into your workspace.
+- Copilot's primary job is to assist you, taking care of mundane or repetitive tasks. Let it write test cases, craft sample data, or scaffold out code based on existing patterns.
+- Copilot can do more with more context. We're all accustomed to quick keyword-based web searches, but the more details you provide, the better results you will get. For example, instead of "Node Express TypeScript", ask Copilot to "scaffold out a Node.js website using the Express.js framework using TypeScript" and then iterate!
+- You can scope interactions to specific topics by pressing `/` in the Chat input field. For example, to learn how to turn on or off breadcrumbs in the editor, type in `/vscode Turn off breadcrumbs`.
 
- ![Asking Copilot how to turn off VS Code breadcrumbs in the editor](turn-off-breadcrumbs.png)
+![Asking Copilot how to turn off VS Code breadcrumbs in the editor](turn-off-breadcrumbs.png)
 
-* You can also use topics as shortcuts. Instead of typing "explain this code" in the inline chat, simply type "/" + `kbstyle(Tab)` (a shortcut to `/explain`) and hit `kbstyle(Enter)`. The Chat view will open with an explanation of the selected code.
-* Know that Copilot isn't perfect and will give wrong answers. Ask clarifying questions to help decide which are right, which are wrong, and use the **Up/Down** vote buttons to help us improve the experience.
-* Last and almost as important as the first tip, always greet your Copilot with a friendly "Hello" or "Good Morning", it will put both of you in a better mood.
+- You can also use topics as shortcuts. Instead of typing "explain this code" in the inline chat, simply type "/" + `kbstyle(Tab)` (a shortcut to `/explain`) and hit `kbstyle(Enter)`. The Chat view will open with an explanation of the selected code.
+- Know that Copilot isn't perfect and will give wrong answers. Ask clarifying questions to help decide which are right, which are wrong, and use the **Up/Down** vote buttons to help us improve the experience.
+- Last and almost as important as the first tip, always greet your Copilot with a friendly "Hello" or "Good Morning", it will put both of you in a better mood.
 
 ## Getting started today
 
@@ -94,17 +94,17 @@ To see Copilot in action and get more tips on how to get the most out of Copilot
 
 The inline completions experience discussed above is available today. If you don't have Copilot through your organization, you can sign up [here](https://github.com/features/copilot) and start a free trial. From there:
 
-* Open VS Code (even better, use [Insiders](https://code.visualstudio.com/insiders/)).
-* Open the Extensions view (`kb(workbench.view.extensions)`), search for GitHub Copilot and install the extension.
-* When prompted, authenticate with your GitHub ID.
-* Open a code file and let the magic happen!
+- Open VS Code (even better, use [Insiders](https://code.visualstudio.com/insiders/)).
+- Open the Extensions view (`kb(workbench.view.extensions)`), search for GitHub Copilot and install the extension.
+- When prompted, authenticate with your GitHub ID.
+- Open a code file and let the magic happen!
 
 Today, access to the chat experiences (in-editor and Chat view), you'll need to [join the waitlist](https://github.com/github-copilot/chat_waitlist_signup/join) for access to the technical preview as we ramp up the service. Once admitted:
 
-* Open the Extensions view (`kb(workbench.view.extensions)`), search for GitHub Copilot, and install the [pre-release version](https://code.visualstudio.com/updates/v1_63#_pre-release-extensions) of the extension.
-* When prompted, authenticate with your GitHub ID.
-* To open the in-editor Chat, optionally select a block of code and press `kbstyle(Cmd+I)` on macOS or `kbstyle(Ctrl+I)` on Windows/Linux. Ask Copilot to write a Quick Sort function.
-* A "Chat" icon will appear in the Activity Bar, click on it to open the Chat view. Go ahead, ask Copilot to "write a program to calculate the airspeed velocity of an unladen swallow".
+- Open the Extensions view (`kb(workbench.view.extensions)`), search for GitHub Copilot, and install the [pre-release version](https://code.visualstudio.com/updates/v1_63#_pre-release-extensions) of the extension.
+- When prompted, authenticate with your GitHub ID.
+- To open the in-editor Chat, optionally select a block of code and press `kbstyle(Cmd+I)` on macOS or `kbstyle(Ctrl+I)` on Windows/Linux. Ask Copilot to write a Quick Sort function.
+- A "Chat" icon will appear in the Activity Bar, click on it to open the Chat view. Go ahead, ask Copilot to "write a program to calculate the airspeed velocity of an unladen swallow".
 
 You can learn more about the GitHub Copilot extension in the [AI Tools in VS Code](https://code.visualstudio.com/docs/editor/artificial-intelligence) topic.
 

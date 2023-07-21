@@ -1,12 +1,13 @@
 ---
 Order: 4
 Area: terminal
-TOCTitle: Appearance
-ContentId: F1AA7F3E-E078-4C02-B2DE-EC3F5F36F751
+title: Appearance
+id: F1AA7F3E-E078-4C02-B2DE-EC3F5F36F751
 PageTitle: Terminal Appearance in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code's integrated terminal allows customizing its appearance in various ways.
+description: Visual Studio Code's integrated terminal allows customizing its appearance in various ways.
 ---
+
 # Terminal Appearance
 
 The look of Visual Studio Code's terminal can be customized extensively.

@@ -1,12 +1,13 @@
 ---
 Order: 3
 Area: remote
-TOCTitle: Dev Containers
+title: Dev Containers
 PageTitle: Developing inside a Container using Visual Studio Code Remote Development
-ContentId: 4f0942be-6808-4252-8940-b9e9688792af
-MetaDescription: Developing inside a Container using Visual Studio Code Remote Development
+id: 4f0942be-6808-4252-8940-b9e9688792af
+description: Developing inside a Container using Visual Studio Code Remote Development
 DateApproved: 7/6/2023
 ---
+
 # Dev Containers
 
 This page is redirected to /docs/devcontainers/containers.md and only exists to keep the "Dev Containers" TOC item.

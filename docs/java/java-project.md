@@ -1,11 +1,11 @@
 ---
 Order: 5
 Area: java
-TOCTitle: Project Management
-ContentId: 251cba68-c77f-4ac6-a5de-1fab8dcca867
+title: Project Management
+id: 251cba68-c77f-4ac6-a5de-1fab8dcca867
 PageTitle: Java project management in Visual Studio Code
 DateApproved: 4/25/2022
-MetaDescription: Lightweight Mode, Maven Support, Java Package and Dependency Management in Visual Studio Code
+description: Lightweight Mode, Maven Support, Java Package and Dependency Management in Visual Studio Code
 MetaSocialImage:
 ---
 

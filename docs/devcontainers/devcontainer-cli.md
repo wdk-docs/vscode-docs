@@ -1,12 +1,13 @@
 ---
 Order: 14
 Area: devcontainers
-TOCTitle: Dev Container CLI
+title: Dev Container CLI
 PageTitle: Installing and working with the devcontainer CLI
-ContentId: 8946213d-716e-41ca-955f-944a41c70353
-MetaDescription: Documentation on using the development container (dev container) command-line interface
+id: 8946213d-716e-41ca-955f-944a41c70353
+description: Documentation on using the development container (dev container) command-line interface
 DateApproved: 7/6/2023
 ---
+
 # Dev Container CLI
 
 This topic covers the development container command-line interface (dev container CLI), which allows you to build and manage development containers, and is a companion to the [Development Containers Specification](https://containers.dev).
@@ -38,11 +39,12 @@ You can quickly try out the CLI through the Dev Containers extension. Select the
 ## Alternate installation
 
 There are additional options for using the CLI elsewhere:
+
 - Install its npm package
 - Use the GitHub Action or Azure DevOps Task
-     - You may find these in [devcontainers/ci](https://github.com/devcontainers/ci)
+  - You may find these in [devcontainers/ci](https://github.com/devcontainers/ci)
 - Build the CLI repo from sources
-     - You may learn more about building from sources in the [CLI repo's README](https://github.com/devcontainers/cli#try-it-out)
+  - You may learn more about building from sources in the [CLI repo's README](https://github.com/devcontainers/cli#try-it-out)
 
 On this page, we'll focus on using the npm package.
 
@@ -144,24 +146,24 @@ For example, you may want to pre-build a number of images that you then reuse ac
 
 1. Create dev container configuration for each image you want to pre-build, customizing as you wish (including [dev container Features](/docs/devcontainers/containers.md#dev-container-features)). For example, consider this `devcontainer.json` file:
 
-    ```json
-    {
-        "build": {
-            "dockerfile": "Dockerfile"
-        },
-        "features": {
-            "ghcr.io/devcontainers/features/docker-in-docker:1": {
-                 "version": "latest"
-            }
-        }
-    }
-    ```
+   ```json
+   {
+     "build": {
+       "dockerfile": "Dockerfile"
+     },
+     "features": {
+       "ghcr.io/devcontainers/features/docker-in-docker:1": {
+         "version": "latest"
+       }
+     }
+   }
+   ```
 
 1. Use the `devcontainer build` command to build the image and [push](https://docs.docker.com/engine/reference/commandline/push/) it to your image registry. See documentation for your image registry (such as [Azure Container Registry](https://learn.microsoft.com/azure/container-registry/container-registry-get-started-docker-cli?tabs=azure-cli), [GitHub Container Registry](https://docs.github.com/packages/working-with-a-github-packages-registry/working-with-the-container-registry#pushing-container-images), or [Docker Hub](https://docs.docker.com/engine/reference/commandline/push)) for information on image naming and additional steps like authentication.
 
-    ```bash
-    devcontainer build --workspace-folder <my_repo> --push true --image-name <my_image_name>:<optional_image_version>
-    ```
+   ```bash
+   devcontainer build --workspace-folder <my_repo> --push true --image-name <my_image_name>:<optional_image_version>
+   ```
 
 ## Avoiding problems with images built using Docker
 
@@ -177,7 +179,7 @@ The dev container CLI and specification are under active development and we welc
 
 ## Next steps
 
-* [Dev container specification repository](https://containers.dev/) - Read and contribute to the open specification.
-* [devcontainer.json reference](https://containers.dev/implementors/json_reference) - Review the `devcontainer.json` schema.
-* [Create a Development Container](/docs/devcontainers/create-dev-container.md) - Create a custom container for your work environment.
-* [Advanced Containers](/remote/advancedcontainers/overview.md) - Find solutions to advanced container scenarios.
+- [Dev container specification repository](https://containers.dev/) - Read and contribute to the open specification.
+- [devcontainer.json reference](https://containers.dev/implementors/json_reference) - Review the `devcontainer.json` schema.
+- [Create a Development Container](/docs/devcontainers/create-dev-container.md) - Create a custom container for your work environment.
+- [Advanced Containers](/remote/advancedcontainers/overview.md) - Find solutions to advanced container scenarios.

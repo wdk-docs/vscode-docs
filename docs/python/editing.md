@@ -1,11 +1,11 @@
 ---
 Order: 2
 Area: python
-TOCTitle: Editing Code
-ContentId: 0ccb0e35-c4b2-4001-91bf-79ff1618f601
+title: Editing Code
+id: python-editing
 PageTitle: Editing Python Code in Visual Studio Code
 DateApproved: 3/6/2023
-MetaDescription: Editing Python in Visual Studio Code
+description: Editing Python in Visual Studio Code
 MetaSocialImage: images/tutorial/social.png
 ---
 

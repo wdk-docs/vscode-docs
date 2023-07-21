@@ -1,12 +1,13 @@
 ---
 Order: 14
 Area: cpp
-TOCTitle: FAQ
-ContentId: 652c9cec-b8fa-4597-a894-f2ea9a095c31
+title: FAQ
+id: 652c9cec-b8fa-4597-a894-f2ea9a095c31
 PageTitle: C/C++ extension FAQ
 DateApproved: 1/17/2023
-MetaDescription: Frequently asked questions about the C/C++ extension in Visual Studio Code.
+description: Frequently asked questions about the C/C++ extension in Visual Studio Code.
 ---
+
 # Frequently asked questions
 
 - [How do I get IntelliSense to work correctly?](#how-do-i-get-intellisense-to-work-correctly)
@@ -93,7 +94,7 @@ The debugger needs to be configured to know which executable and debugger to use
 
 From the main menu, select **Run** > **Add Configuration...**.
 
-The file `launch.json` will now be open for editing with a new configuration. The default settings will *probably* work except that you need to specify the `program` setting.
+The file `launch.json` will now be open for editing with a new configuration. The default settings will _probably_ work except that you need to specify the `program` setting.
 
 See [Configure C/C++ debugging](/docs/cpp/launch-json-reference.md) for more in-depth documentation on how to configure the debugger.
 

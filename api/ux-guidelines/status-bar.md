@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 2d16d367-2831-47ca-8f0e-22e3e5fd24bc
+id: 2d16d367-2831-47ca-8f0e-22e3e5fd24bc
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: UX guidelines for status bar and status bar items in a Visual Studio Code extension.
+description: UX guidelines for status bar and status bar items in a Visual Studio Code extension.
 ---
 
 # 状态栏

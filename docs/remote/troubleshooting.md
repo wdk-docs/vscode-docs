@@ -1,12 +1,13 @@
 ---
 Order: 16
 Area: remote
-TOCTitle: Tips and Tricks
+title: Tips and Tricks
 PageTitle: Visual Studio Code Remote Development Troubleshooting Tips and Tricks
-ContentId: 42e65445-fb3b-4561-8730-bbd19769a160
-MetaDescription: Visual Studio Code Remote Development troubleshooting tips and tricks for SSH, Containers, and the Windows Subsystem for Linux (WSL)
+id: 42e65445-fb3b-4561-8730-bbd19769a160
+description: Visual Studio Code Remote Development troubleshooting tips and tricks for SSH, Containers, and the Windows Subsystem for Linux (WSL)
 DateApproved: 7/6/2023
 ---
+
 # Remote Development Tips and Tricks
 
 This article covers troubleshooting tips and tricks for each of the Visual Studio Code [Remote Development](https://aka.ms/vscode-remote/download/extension) extensions. See the [SSH](/docs/remote/ssh.md), [Containers](/docs/devcontainers/containers.md), and [WSL](/docs/remote/wsl.md) articles for details on setting up and working with each specific extension. Or try the introductory [Tutorials](/docs/remote/ssh-tutorial.md) to help get you running quickly in a remote environment.
@@ -29,7 +30,7 @@ To set up SSH key based authentication for your remote host. First we'll create 
 
 **Create your local SSH key pair**
 
- Check to see if you already have an SSH key on your **local** machine. This is typically located at `~/.ssh/id_ed25519.pub` on macOS / Linux, and the `.ssh` directory in your user profile folder on Windows (for example `C:\Users\your-user\.ssh\id_ed25519.pub`).
+Check to see if you already have an SSH key on your **local** machine. This is typically located at `~/.ssh/id_ed25519.pub` on macOS / Linux, and the `.ssh` directory in your user profile folder on Windows (for example `C:\Users\your-user\.ssh\id_ed25519.pub`).
 
 If you do not have a key, run the following command in a **local** terminal / PowerShell to generate an SSH key pair:
 
@@ -43,49 +44,49 @@ ssh-keygen -t rsa -b 4096
 
 Run one of the following commands, in a **local terminal window** replacing user and host name as appropriate to copy your local public key to the SSH host.
 
-* Connecting to a **macOS or Linux** SSH host:
+- Connecting to a **macOS or Linux** SSH host:
 
-    ```bash
-    export USER_AT_HOST="your-user-name-on-host@hostname"
-    export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+  ```bash
+  export USER_AT_HOST="your-user-name-on-host@hostname"
+  export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
 
-    ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
-    ```
+  ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
+  ```
 
-* Connecting to a **Windows** SSH host:
+- Connecting to a **Windows** SSH host:
 
-    ```bash
-    export USER_AT_HOST="your-user-name-on-host@hostname"
-    export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
+  ```bash
+  export USER_AT_HOST="your-user-name-on-host@hostname"
+  export PUBKEYPATH="$HOME/.ssh/id_ed25519.pub"
 
-    ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
-    ```
+  ssh $USER_AT_HOST "powershell New-Item -Force -ItemType Directory -Path \"\$HOME\\.ssh\"; Add-Content -Force -Path \"\$HOME\\.ssh\\authorized_keys\" -Value '$(tr -d '\n\r' < "$PUBKEYPATH")'"
+  ```
 
-    You may want to validate that the `authorized_keys` file in the `.ssh` folder for your **remote user on the SSH host** is owned by you and no other user has permission to access it. See the [OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki/Security-protection-of-various-files-in-Win32-OpenSSH#authorized_keys) for details.
+  You may want to validate that the `authorized_keys` file in the `.ssh` folder for your **remote user on the SSH host** is owned by you and no other user has permission to access it. See the [OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki/Security-protection-of-various-files-in-Win32-OpenSSH#authorized_keys) for details.
 
 **Authorize your Windows machine to connect**
 
 Run one of the following commands, in a **local PowerShell** window replacing user and host name as appropriate to copy your local public key to the SSH host.
 
-* Connecting to a **macOS or Linux** SSH host:
+- Connecting to a **macOS or Linux** SSH host:
 
-    ```powershell
-    $USER_AT_HOST="your-user-name-on-host@hostname"
-    $PUBKEYPATH="$HOME\.ssh\id_ed25519.pub"
+  ```powershell
+  $USER_AT_HOST="your-user-name-on-host@hostname"
+  $PUBKEYPATH="$HOME\.ssh\id_ed25519.pub"
 
-    $pubKey=(Get-Content "$PUBKEYPATH" | Out-String); ssh "$USER_AT_HOST" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
-    ```
+  $pubKey=(Get-Content "$PUBKEYPATH" | Out-String); ssh "$USER_AT_HOST" "mkdir -p ~/.ssh && chmod 700 ~/.ssh && echo '${pubKey}' >> ~/.ssh/authorized_keys && chmod 600 ~/.ssh/authorized_keys"
+  ```
 
-* Connecting to a **Windows** SSH host:
+- Connecting to a **Windows** SSH host:
 
-    ```powershell
-    $USER_AT_HOST="your-user-name-on-host@hostname"
-    $PUBKEYPATH="$HOME\.ssh\id_ed25519.pub"
+  ```powershell
+  $USER_AT_HOST="your-user-name-on-host@hostname"
+  $PUBKEYPATH="$HOME\.ssh\id_ed25519.pub"
 
-    Get-Content "$PUBKEYPATH" | Out-String | ssh $USER_AT_HOST "powershell `"New-Item -Force -ItemType Directory -Path `"`$HOME\.ssh`"; Add-Content -Force -Path `"`$HOME\.ssh\authorized_keys`" `""
-    ```
+  Get-Content "$PUBKEYPATH" | Out-String | ssh $USER_AT_HOST "powershell `"New-Item -Force -ItemType Directory -Path `"`$HOME\.ssh`"; Add-Content -Force -Path `"`$HOME\.ssh\authorized_keys`" `""
+  ```
 
-    Validate that the `authorized_keys` file in the `.ssh` folder for your **remote user on the SSH host** is owned by you and no other user has permission to access it. See the [OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki/Security-protection-of-various-files-in-Win32-OpenSSH#authorized_keys) for details.
+  Validate that the `authorized_keys` file in the `.ssh` folder for your **remote user on the SSH host** is owned by you and no other user has permission to access it. See the [OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki/Security-protection-of-various-files-in-Win32-OpenSSH#authorized_keys) for details.
 
 ### Improving your security with a dedicated key
 
@@ -93,30 +94,30 @@ While using a single SSH key across all your SSH hosts can be convenient, if any
 
 1. Generate a separate SSH key in a different file.
 
-    **macOS / Linux**: Run the following command in a **local terminal**:
+   **macOS / Linux**: Run the following command in a **local terminal**:
 
-    ```bash
-    ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519-remote-ssh
-    ```
+   ```bash
+   ssh-keygen -t ed25519 -f ~/.ssh/id_ed25519-remote-ssh
+   ```
 
-    **Windows**: Run the following command in a **local PowerShell**:
+   **Windows**: Run the following command in a **local PowerShell**:
 
-    ```powershell
-    ssh-keygen -t ed25519 -f "$HOME\.ssh\id_ed25519-remote-ssh"
-    ```
+   ```powershell
+   ssh-keygen -t ed25519 -f "$HOME\.ssh\id_ed25519-remote-ssh"
+   ```
 
 2. Follow the same steps in the [quick start](#quick-start-using-ssh-keys) to authorize the key on the SSH host, but set the `PUBKEYPATH` to the `id_ed25519-remote-ssh.pub` file instead.
 
 3. In VS Code, run **Remote-SSH: Open Configuration File...** in the Command Palette (`kbstyle(F1)`), select an SSH config file, and add (or modify) a host entry as follows:
 
-    ```yaml
-    Host name-of-ssh-host-here
-        User your-user-name-on-host
-        HostName host-fqdn-or-ip-goes-here
-        IdentityFile ~/.ssh/id_ed25519-remote-ssh
-    ```
+   ```yaml
+   Host name-of-ssh-host-here
+   User your-user-name-on-host
+   HostName host-fqdn-or-ip-goes-here
+   IdentityFile ~/.ssh/id_ed25519-remote-ssh
+   ```
 
-    > **Tip:** You can use `/` for Windows paths as well. If you use `\` you will need to use two slashes. For example, `C:\\path\\to\\my\\id_ed25519`.
+   > **Tip:** You can use `/` for Windows paths as well. If you use `\` you will need to use two slashes. For example, `C:\\path\\to\\my\\id_ed25519`.
 
 ### Reusing a key generated in PuTTYGen
 
@@ -127,12 +128,12 @@ If you used PuTTYGen to set up SSH public key authentication for the host you ar
 3. Validate that this new **local** file is owned by you and no other user has permissions to access it.
 4. In VS Code, run **Remote-SSH: Open Configuration File...** in the Command Palette (`kbstyle(F1)`), select the SSH config file you want to change, and add (or modify) a host entry in the config file as follows to point to the file:
 
-    ```yaml
-    Host name-of-ssh-host-here
-        User your-user-name-on-host
-        HostName host-fqdn-or-ip-goes-here
-        IdentityFile ~/.ssh/exported-keyfile-from-putty
-    ```
+   ```yaml
+   Host name-of-ssh-host-here
+   User your-user-name-on-host
+   HostName host-fqdn-or-ip-goes-here
+   IdentityFile ~/.ssh/exported-keyfile-from-putty
+   ```
 
 ### Improving security on multi-user servers
 
@@ -148,14 +149,14 @@ To configure it:
 
 2. Switch Remote - SSH into socket mode by enabling **Remote.SSH: Remote Server Listen On Socket** in your **local** VS Code [User settings](/docs/getstarted/settings.md).
 
-    ![Listen on socket VS Code setting](images/ssh/ssh-listen-on-socket.png)
+   ![Listen on socket VS Code setting](images/ssh/ssh-listen-on-socket.png)
 
 3. If you've already connected to the SSH Host, select **Remote-SSH: Kill VS Code Server on Host...** from the Command Palette (`kbstyle(F1)`) so the setting takes effect.
 
 If you encounter an error when connecting, you may need to enable socket forwarding on your SSH Host's [sshd config](https://www.ssh.com/ssh/sshd_config/). To do so:
 
 1. Open `/etc/ssh/sshd_config` in a text editor (like vi, nano, or pico) on the **SSH host** (not locally).
-2. Add the setting  `AllowStreamLocalForwarding yes`.
+2. Add the setting `AllowStreamLocalForwarding yes`.
 3. Restart the SSH server. (On Ubuntu, run `sudo systemctl restart sshd`.).
 4. Retry.
 
@@ -209,7 +210,7 @@ open failed: administratively prohibited: open failed
 If you do see that message, follow these steps to update your SSH server's [sshd config](https://www.ssh.com/ssh/sshd_config/):
 
 1. Open `/etc/ssh/sshd_config` or `C:\ProgramData\ssh\sshd_config` in a text editor (like Vim, nano, Pico, or Notepad) on the **SSH host** (not locally).
-2. Add the setting  `AllowTcpForwarding yes`.
+2. Add the setting `AllowTcpForwarding yes`.
 3. Restart the SSH server. (On Ubuntu, run `sudo systemctl restart sshd`. On Windows, in an admin PowerShell run, `Restart-Service sshd`).
 4. Retry.
 
@@ -260,9 +261,9 @@ To access your config file, run **Remote-SSH: Open Configuration File...** in th
 
 If you are connecting to an SSH remote host and are either:
 
-* Connecting with two-factor authentication
-* Using password authentication
-* Using an SSH key with a passphrase when the [SSH Agent](#setting-up-the-ssh-agent) is not running or accessible
+- Connecting with two-factor authentication
+- Using password authentication
+- Using an SSH key with a passphrase when the [SSH Agent](#setting-up-the-ssh-agent) is not running or accessible
 
 then VS Code should automatically prompt you to enter needed information. If you do not see the prompt, enable the `remote.SSH.showLoginTerminal` [setting](/docs/getstarted/settings.md) in VS Code. This setting displays the terminal whenever VS Code runs an SSH command. You can then enter your authentication code, password, or passphrase when the terminal appears.
 
@@ -279,12 +280,12 @@ To enable `ControlMaster`:
 
 1. Add an entry like this to your SSH config file:
 
-    ```yaml
-    Host *
-        ControlMaster auto
-        ControlPath  ~/.ssh/sockets/%r@%h-%p
-        ControlPersist  600
-    ```
+   ```yaml
+   Host *
+   ControlMaster auto
+   ControlPath  ~/.ssh/sockets/%r@%h-%p
+   ControlPersist  600
+   ```
 
 2. Then run `mkdir -p ~/.ssh/sockets` to create the sockets folder.
 
@@ -358,12 +359,12 @@ SSH can be strict about file permissions and if they are set incorrectly, you ma
 
 On your local machine, make sure the following permissions are set:
 
-| Folder / File |  Permissions |
-|---------------|---------------------------|
-| `.ssh` in your user folder | `chmod 700 ~/.ssh` |
-| `.ssh/config` in your user folder | `chmod 600 ~/.ssh/config` |
+| Folder / File                             | Permissions                       |
+| ----------------------------------------- | --------------------------------- |
+| `.ssh` in your user folder                | `chmod 700 ~/.ssh`                |
+| `.ssh/config` in your user folder         | `chmod 600 ~/.ssh/config`         |
 | `.ssh/id_ed25519.pub` in your user folder | `chmod 600 ~/.ssh/id_ed25519.pub` |
-| Any other key file | `chmod 600 /path/to/key/file` |
+| Any other key file                        | `chmod 600 /path/to/key/file`     |
 
 **Windows:**
 
@@ -379,10 +380,10 @@ For all other clients, consult your client's documentation for what the implemen
 
 On the remote machine you are connecting to, make sure the following permissions are set:
 
-| Folder / File | Linux / macOS Permissions |
-|---------------|---------------------------|
-| `.ssh` in your user folder on the server | `chmod 700 ~/.ssh` |
-| `.ssh/authorized_keys` in your user folder on the server  | `chmod 600 ~/.ssh/authorized_keys` |
+| Folder / File                                            | Linux / macOS Permissions          |
+| -------------------------------------------------------- | ---------------------------------- |
+| `.ssh` in your user folder on the server                 | `chmod 700 ~/.ssh`                 |
+| `.ssh/authorized_keys` in your user folder on the server | `chmod 600 ~/.ssh/authorized_keys` |
 
 Note that only Linux hosts are currently supported, which is why permissions for macOS and Windows 10 have been omitted.
 
@@ -392,25 +393,25 @@ See the [Windows OpenSSH wiki](https://github.com/PowerShell/Win32-OpenSSH/wiki/
 
 ### Installing a supported SSH client
 
-| OS | Instructions |
-|----|--------------|
+| OS                                        | Instructions                                                                                                                      |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------- |
 | Windows 10 1803+ / Server 2016/2019 1803+ | Install the [Windows OpenSSH Client](https://learn.microsoft.com/windows-server/administration/openssh/openssh_install_firstuse). |
-| Earlier Windows | Install [Git for Windows](https://git-scm.com/download/win). |
-| macOS | Comes pre-installed. |
-| Debian/Ubuntu | Run `sudo apt-get install openssh-client` |
-| RHEL / Fedora / CentOS | Run `sudo yum install openssh-clients` |
+| Earlier Windows                           | Install [Git for Windows](https://git-scm.com/download/win).                                                                      |
+| macOS                                     | Comes pre-installed.                                                                                                              |
+| Debian/Ubuntu                             | Run `sudo apt-get install openssh-client`                                                                                         |
+| RHEL / Fedora / CentOS                    | Run `sudo yum install openssh-clients`                                                                                            |
 
 VS Code will look for the `ssh` command in the PATH. Failing that, on Windows it will attempt to find `ssh.exe` in the default Git for Windows install path. You can also specifically tell VS Code where to find the SSH client by adding the `remote.SSH.path` property to `settings.json`.
 
 ### Installing a supported SSH server
 
-| OS | Instructions | Details |
-|----|--------------|---|
-| Debian 8+ / Ubuntu 16.04+ | Run `sudo apt-get install openssh-server` |  See the [Ubuntu SSH](https://help.ubuntu.com/community/SSH?action=show) documentation for details. |
-| RHEL / CentOS 7+ | Run `sudo yum install openssh-server && sudo systemctl start sshd.service && sudo systemctl enable sshd.service` | See the [RedHat SSH](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh) documentation for details. |
-| SuSE 12+ / openSUSE 42.3+ |  In Yast, go to Services Manager, select "sshd" in the list, and click **Enable**. Next go to Firewall, select the **Permanent** configuration, and under services check **sshd**. | See the [SuSE SSH](https://en.opensuse.org/OpenSSH) documentation for details. |
-| Windows 10 1803+ / Server 2016/2019 1803+ | Install the [Windows OpenSSH Server](https://learn.microsoft.com/windows-server/administration/openssh/openssh_install_firstuse). |
-| macOS 10.14+ (Mojave) | Enable [Remote Login](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac). | |
+| OS                                        | Instructions                                                                                                                                                                      | Details                                                                                                                                                    |
+| ----------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Debian 8+ / Ubuntu 16.04+                 | Run `sudo apt-get install openssh-server`                                                                                                                                         | See the [Ubuntu SSH](https://help.ubuntu.com/community/SSH?action=show) documentation for details.                                                         |
+| RHEL / CentOS 7+                          | Run `sudo yum install openssh-server && sudo systemctl start sshd.service && sudo systemctl enable sshd.service`                                                                  | See the [RedHat SSH](https://access.redhat.com/documentation/en-us/red_hat_enterprise_linux/6/html/deployment_guide/ch-openssh) documentation for details. |
+| SuSE 12+ / openSUSE 42.3+                 | In Yast, go to Services Manager, select "sshd" in the list, and click **Enable**. Next go to Firewall, select the **Permanent** configuration, and under services check **sshd**. | See the [SuSE SSH](https://en.opensuse.org/OpenSSH) documentation for details.                                                                             |
+| Windows 10 1803+ / Server 2016/2019 1803+ | Install the [Windows OpenSSH Server](https://learn.microsoft.com/windows-server/administration/openssh/openssh_install_firstuse).                                                 |
+| macOS 10.14+ (Mojave)                     | Enable [Remote Login](https://support.apple.com/guide/mac-help/allow-a-remote-computer-to-access-your-mac-mchlp1066/mac).                                                         |                                                                                                                                                            |
 
 ### Resolving hangs when doing a Git push or sync on an SSH host
 
@@ -574,7 +575,7 @@ apk update && apk add bash
 
 To open a non-default distro, run `code .` from the WSL shell of the distro to use or use **WSL: New Window using Distro**.
 
- With WSL versions older than Windows 10, May 2019 Update (version 1903), the WSL command can only use the **default distro**. For this reason, the WSL extension might prompt you if you agree to change the default distro.
+With WSL versions older than Windows 10, May 2019 Update (version 1903), the WSL command can only use the **default distro**. For this reason, the WSL extension might prompt you if you agree to change the default distro.
 
 You can always use [wslconfig.exe](https://learn.microsoft.com/windows/wsl/wsl-config) to change your default.
 
@@ -665,12 +666,12 @@ You can help us investigate this problem by sending us the core dump file. To ge
 
 In a Windows command prompt:
 
-* Run `code --locate-extension ms-vscode-remote.remote-wsl` to determine the WSL extension folder.
-* `cd` to the path that is returned.
-* Open the `wslServer.sh` script with VS Code, `code .\scripts\wslServer.sh`.
-* Before the last line (before `"$VSCODE_REMOTE_BIN/$COMMIT/bin/$SERVER_APPNAME" "$@"`), add
-`ulimit -C unlimited`.
-* Start the WSL window running the remote server and wait for the segmentation fault.
+- Run `code --locate-extension ms-vscode-remote.remote-wsl` to determine the WSL extension folder.
+- `cd` to the path that is returned.
+- Open the `wslServer.sh` script with VS Code, `code .\scripts\wslServer.sh`.
+- Before the last line (before `"$VSCODE_REMOTE_BIN/$COMMIT/bin/$SERVER_APPNAME" "$@"`), add
+  `ulimit -C unlimited`.
+- Start the WSL window running the remote server and wait for the segmentation fault.
 
 The core file will be in the WSL extension folder from above.
 
@@ -688,7 +689,7 @@ For large workspace you may want to increase the polling interval, `remote.WSL.f
 
 Since Windows and Linux use different default line endings, Git may report a large number of modified files that have no differences aside from their line endings. To prevent this from happening, you can disable line-ending conversion using a `.gitattributes` file or globally on the Windows side.
 
-Typically adding or modifying a  `.gitattributes` file in your repository is the most reliable way to solve this problem. Committing this file to source control will help others and allows you to vary behaviors by repository as appropriate. For example, adding the following to `.gitattributes` file to the root of your repository will force everything to be LF, except for Windows batch files that require CRLF:
+Typically adding or modifying a `.gitattributes` file in your repository is the most reliable way to solve this problem. Committing this file to source control will help others and allows you to vary behaviors by repository as appropriate. For example, adding the following to `.gitattributes` file to the root of your repository will force everything to be LF, except for Windows batch files that require CRLF:
 
 ```yaml
 * text=auto eol=lf
@@ -720,15 +721,15 @@ Just follow these steps:
 
 1. Configure the credential manager on Windows by running the following in a **Windows command prompt** or **PowerShell**:
 
-    ```bat
-     git config --global credential.helper wincred
-    ```
+   ```bat
+    git config --global credential.helper wincred
+   ```
 
 2. Configure WSL to use the same credential helper, but running the following in a **WSL terminal**:
 
-    ```bash
-     git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
-    ```
+   ```bash
+    git config --global credential.helper "/mnt/c/Program\ Files/Git/mingw64/bin/git-credential-manager-core.exe"
+   ```
 
 Any password you enter when working with Git on the Windows side will now be available to WSL and vice versa.
 
@@ -786,13 +787,13 @@ If the extension's webview content uses an `iframe` to connect to a local web se
 
 **Resolution:** The extension can use the `webview.asWebviewUri` to resolve issues with `vscode-resource://` URIs.
 
-If ports are being blocked, the best approach is to instead use the [webview message passing](/api/extension-guides/webview#scripts-and-message-passing) API. As a workaround, `vscode.env.asExternalUri`  can be used allow the webview to connect to spawned localhost web servers from VS Code. However, this is currently blocked for the Codespaces browser-based editor (only) by [MicrosoftDocs/vscodespaces#11](https://github.com/MicrosoftDocs/vscodespaces/issues/11). See the [extension author's guide](/api/advanced-topics/remote-extensions#workarounds-for-using-localhost-from-a-webview) for details on the workaround.
+If ports are being blocked, the best approach is to instead use the [webview message passing](/api/extension-guides/webview#scripts-and-message-passing) API. As a workaround, `vscode.env.asExternalUri` can be used allow the webview to connect to spawned localhost web servers from VS Code. However, this is currently blocked for the Codespaces browser-based editor (only) by [MicrosoftDocs/vscodespaces#11](https://github.com/MicrosoftDocs/vscodespaces/issues/11). See the [extension author's guide](/api/advanced-topics/remote-extensions#workarounds-for-using-localhost-from-a-webview) for details on the workaround.
 
 ### Blocked localhost ports
 
 If you are trying to connect to a localhost port from an external application, the port may be blocked.
 
-**Resolution:** VS Code 1.40 introduced a new `vscode.env.asExternalUri` API for extensions to programmatically forward arbitrary ports.  See the [extension author's guide](/api/advanced-topics/remote-extensions#forwarding-localhost) for details. As a workaround, you can use the **Forward a Port** command to do so manually.
+**Resolution:** VS Code 1.40 introduced a new `vscode.env.asExternalUri` API for extensions to programmatically forward arbitrary ports. See the [extension author's guide](/api/advanced-topics/remote-extensions#forwarding-localhost) for details. As a workaround, you can use the **Forward a Port** command to do so manually.
 
 ### Errors storing extension data
 
@@ -816,8 +817,8 @@ If an incompatible extension has been installed on a remote host, container, or 
 
 2. Next, use a separate terminal / command prompt to connect to the remote host, container, or WSL.
 
-   * If SSH or WSL, connect to the environment accordingly (run `ssh` to connect to the server or open WSL terminal).
-   * If using a container, identify the container ID by calling `docker ps -a` and looking through the list for an image with the correct name. If the container is stopped, run `docker run -it <id> /bin/sh`. If it is running, run `docker exec -it <id> /bin/sh`.
+   - If SSH or WSL, connect to the environment accordingly (run `ssh` to connect to the server or open WSL terminal).
+   - If using a container, identify the container ID by calling `docker ps -a` and looking through the list for an image with the correct name. If the container is stopped, run `docker run -it <id> /bin/sh`. If it is running, run `docker exec -it <id> /bin/sh`.
 
 3. Once you are connected, run `rm -rf ~/.vscode-server/extensions` for VS Code stable and/or `rm -rf ~/.vscode-server-insiders/extensions` for VS Code Insiders to remove all extensions.
 
@@ -874,6 +875,6 @@ If you're experiencing issues using other extensions remotely (for example, othe
 
 We have a variety of other remote resources:
 
-* See [Remote Development FAQ](/docs/remote/faq.md).
-* Search on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode-remote).
-* Add a [feature request](https://aka.ms/vscode-remote/feature-requests) or [report a problem](https://aka.ms/vscode-remote/issues/new).
+- See [Remote Development FAQ](/docs/remote/faq.md).
+- Search on [Stack Overflow](https://stackoverflow.com/questions/tagged/vscode-remote).
+- Add a [feature request](https://aka.ms/vscode-remote/feature-requests) or [report a problem](https://aka.ms/vscode-remote/issues/new).

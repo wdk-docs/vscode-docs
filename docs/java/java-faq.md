@@ -1,12 +1,13 @@
 ---
 Order: 14
 Area: java
-TOCTitle: FAQ
-ContentId: 2ad03b46-0779-4c9a-897e-6e6b628f598a
+title: FAQ
+id: 2ad03b46-0779-4c9a-897e-6e6b628f598a
 PageTitle: Java on Visual Studio Code FAQ and Wiki
 DateApproved: 8/31/2021
-MetaDescription: Java on Visual Studio Code Frequent Asked Questions and Troubleshooting Guide
+description: Java on Visual Studio Code Frequent Asked Questions and Troubleshooting Guide
 ---
+
 # Frequent Asked Questions
 
 Thanks for your interest in Java on Visual Studio Code! This FAQ will hopefully answer some of the questions you may have.
@@ -77,7 +78,7 @@ This is done by configuring the `java.jdt.ls.vmargs` setting in VS Code preferen
 
 ```json
 {
-"java.jdt.ls.vmargs": "-Dhttp.proxyHost=webproxy.corp.net -Dhttp.proxyPort=proxyport -Dhttp.proxyUser=user -Dhttp.proxyPassword=password -Dhttps.proxyHost=webproxy.corp.net -Dhttps.proxyPort=proxyport -Dhttps.proxyUser=user -Dhttps.proxyPassword=password"
+  "java.jdt.ls.vmargs": "-Dhttp.proxyHost=webproxy.corp.net -Dhttp.proxyPort=proxyport -Dhttp.proxyUser=user -Dhttp.proxyPassword=password -Dhttps.proxyHost=webproxy.corp.net -Dhttps.proxyPort=proxyport -Dhttps.proxyUser=user -Dhttps.proxyPassword=password"
 }
 ```
 

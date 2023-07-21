@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 9b10cda2-4eb0-4989-8f82-23a46b96c1bb
+id: 9b10cda2-4eb0-4989-8f82-23a46b96c1bb
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: A guide to using Tree View in Visual Studio Code extension (plug-in).
+description: A guide to using Tree View in Visual Studio Code extension (plug-in).
 sidebar_position: 6
 ---
 

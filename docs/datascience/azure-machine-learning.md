@@ -1,11 +1,11 @@
 ---
 Order: 6
 Area: datascience
-TOCTitle: Azure Machine Learning
-ContentId: 47979929-10b2-4e4d-acf3-00b32893ad1b
+title: Azure Machine Learning
+id: 47979929-10b2-4e4d-acf3-00b32893ad1b
 PageTitle: Azure Machine Learning in Visual Studio Code
 DateApproved: 1/9/2023
-MetaDescription: Learn how to build machine learning applications in Azure Machine Learning using the Visual Studio Code extension
+description: Learn how to build machine learning applications in Azure Machine Learning using the Visual Studio Code extension
 MetaSocialImage: images/tutorial/social.png
 ---
 

@@ -1,33 +1,34 @@
 ---
 Order: 8
 Area: setup
-TOCTitle: Enterprise
-ContentId: 936ab8e0-3bbe-4842-bb17-ea314665c20a
+title: 企业支持
+id: 936ab8e0-3bbe-4842-bb17-ea314665c20a
 PageTitle: Visual Studio Code enterprise support
 DateApproved: 7/6/2023
-MetaDescription: Learn about Visual Studio Code's enterprise support features.
-
+description: 了解Visual Studio Code的企业支持特性。
+sidebar_position: 8
 ---
-# Enterprise Support
 
-Visual Studio Code can be used as a development tool for enterprise teams of all sizes. As an IT admin, you can configure VS Code to achieve consistency and compatibility across your organization.
+# 企业支持
 
-## Network: Common hostnames
+Visual Studio Code可以作为各种规模的企业团队的开发工具。作为IT管理员，你可以配置VS Code来实现整个组织的一致性和兼容性。
 
-A handful of features within VS Code require network communication to work, such as the auto-update mechanism, querying and installing extensions, and telemetry. For these features to work properly in a proxy environment, you must have the product correctly configured.
+## Network: 常见的 hostnames
 
-Refer to the [network common hostnames list](/docs/setup/network.md#common-hostnames) for the required domains.
+VS Code中的一些特性需要网络通信才能工作，比如自动更新机制、查询和安装扩展以及遥测。要使这些特性在代理环境中正常工作，必须正确配置产品。
 
-## Group Policy on Windows
+请参考[网络常用主机名列表](/docs/setup/network.md#common-hostnames)了解所需的域。
 
-System administrators need a way to control default software settings across all client machines in their organization. Group Policy is a client solution that gives administrators flexibility to implement the behavior for each of the available policies and settings.
+## Windows上的组策略
 
-VS Code now has support for [Windows Registry-based Group Policy](https://learn.microsoft.com/previous-versions/windows/desktop/policy/implementing-registry-based-policy). Starting from VS Code version 1.69, each release will ship with a `policies` directory containing ADMX template files that can be added to the following path: `C:\Windows\PolicyDefinitions`.
+系统管理员需要一种方法来控制其组织中所有客户机的默认软件设置。组策略是一种客户端解决方案，它使管理员能够灵活地为每个可用策略和设置实现行为。
 
-Once the policy definitions are installed, admins can use the [Local Group Policy Editor](https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265982(v=ws.11)) to manage the policy values.
+VS Code现在支持基于[Windows注册表的组策略](https://learn.microsoft.com/previous-versions/windows/desktop/policy/implementing-registry-based-policy). 从VS Code 1.69版本开始，每个版本都会附带一个' `policies` '目录，其中包含ADMX模板文件，可以添加到以下路径:' `C:\Windows\PolicyDefinitions` '。
 
-Policies can be set both at the Computer level and the User level. If both are set, Computer level will take precedence. When a policy value is set, the value overrides the VS Code [setting](/docs/getstarted/settings.md) value configured at any level (default, user, workspace, etc.).
+一旦安装了策略定义，管理员就可以使用[本地组策略编辑器](<https://learn.microsoft.com/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/dn265982(v=ws.11)>)来管理策略值。
 
-## Additional Policies
+可以在计算机级别和用户级别设置策略。如果两者都设置，计算机级别将优先。当策略值被设置时，该值将覆盖VS Code [setting](/docs/getstarted/settings.md)在任何级别(默认，用户，工作区等)配置的值。
 
-The goal is to promote current VS Code settings as Policies and follow closely existing settings, so that the naming and behavior are consistent. If there are requests to enact more policies, please open an issue in the VS Code [GitHub repository](https://github.com/microsoft/vscode). The team will determine if there is already a corresponding setting for the behavior or if a new setting should be created to control the desired behavior.
+## 额外的政策
+
+目标是将当前的VS Code设置提升为策略，并密切关注现有的设置，以便命名和行为保持一致。如果有要求制定更多的政策，请在VS Code [GitHub存储库](https://github.com/microsoft/vscode)中打开一个问题。团队将确定是否已经有相应的行为设置，或者是否应该创建一个新的设置来控制期望的行为。

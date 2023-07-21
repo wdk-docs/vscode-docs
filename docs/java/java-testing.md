@@ -1,11 +1,11 @@
 ---
 Order: 8
 Area: java
-TOCTitle: Testing
-ContentId: 82be3b78-2c09-4571-abec-69f95f111e0f
+title: Testing
+id: 82be3b78-2c09-4571-abec-69f95f111e0f
 PageTitle: Java Testing in Visual Studio Code
 DateApproved: 2/11/2022
-MetaDescription: See how you can test your Java code in Visual Studio Code.
+description: See how you can test your Java code in Visual Studio Code.
 MetaSocialImage:
 ---
 

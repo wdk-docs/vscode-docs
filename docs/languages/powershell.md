@@ -1,12 +1,13 @@
 ---
 Order: 8
 Area: languages
-TOCTitle: PowerShell
-ContentId: 8688bb6d-793e-4a37-aed2-5af4cfe89940
+title: PowerShell
+id: 8688bb6d-793e-4a37-aed2-5af4cfe89940
 PageTitle: PowerShell editing with Visual Studio Code
 DateApproved: 07/11/2023
-MetaDescription: Learn about using PowerShell in Visual Studio Code
+description: Learn about using PowerShell in Visual Studio Code
 ---
+
 # PowerShell in Visual Studio Code
 
 [PowerShell][20] is a task-based command-line shell and scripting language built on [.NET][19] that
@@ -221,6 +222,7 @@ choosing **Install Another Version...**.
 If you find a bug, [open an issue][18] and revert to the stable version while we fix it.
 
 <!-- link references -->
+
 [01]: /docs/editor/debugging
 [02]: /docs/editor/editingevolved#_go-to-definition
 [03]: /docs/editor/editingevolved#_open-symbol-by-name

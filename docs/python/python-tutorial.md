@@ -1,13 +1,14 @@
 ---
 Order: 1
 Area: python
-TOCTitle: Tutorial
-ContentId: 77828f36-ae45-4887-b25c-34545edd52d3
+title: Tutorial
+id: 77828f36-ae45-4887-b25c-34545edd52d3
 PageTitle: Get Started Tutorial for Python in Visual Studio Code
 DateApproved: 6/12/2023
-MetaDescription: A Python hello world tutorial using the Python extension in Visual Studio Code
+description: A Python hello world tutorial using the Python extension in Visual Studio Code
 MetaSocialImage: images/tutorial/social.png
 ---
+
 # Getting Started with Python in VS Code
 
 In this tutorial, you will learn how to use Python 3 in Visual Studio Code to create, run, and debug a Python "Roll a dice" application, work with virtual environments, use packages, and more! By using the [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python), you turn VS Code into a great, lightweight Python editor.
@@ -30,15 +31,15 @@ Along with the Python extension, you need to install a Python interpreter. Which
 
 Install [Python from python.org](https://www.python.org/downloads/). Use the **Download Python** button that appears first on the page to download the latest version.
 
->**Note**: If you don't have admin access, an additional option for installing Python on Windows is to use the Microsoft Store. The Microsoft Store provides installs of [supported Python versions](https://apps.microsoft.com/store/search?publisher=Python%20Software%20Foundation).
+> **Note**: If you don't have admin access, an additional option for installing Python on Windows is to use the Microsoft Store. The Microsoft Store provides installs of [supported Python versions](https://apps.microsoft.com/store/search?publisher=Python%20Software%20Foundation).
 
 For additional information about using Python on Windows, see [Using Python on Windows at Python.org](https://docs.python.org/3.9/using/windows.html)
 
 ### macOS
 
-The system install of Python on macOS is not supported. Instead, a package management system like  [Homebrew](https://brew.sh/) is recommended. To install Python using Homebrew on macOS use `brew install python3` at the Terminal prompt.
+The system install of Python on macOS is not supported. Instead, a package management system like [Homebrew](https://brew.sh/) is recommended. To install Python using Homebrew on macOS use `brew install python3` at the Terminal prompt.
 
-> **Note**: On macOS, make sure the location of your VS Code installation is included in your PATH environment variable.  See [these setup instructions](/docs/setup/mac.md#launching-from-the-command-line) for more information.
+> **Note**: On macOS, make sure the location of your VS Code installation is included in your PATH environment variable. See [these setup instructions](/docs/setup/mac.md#launching-from-the-command-line) for more information.
 
 ### Linux
 
@@ -50,18 +51,22 @@ The built-in Python 3 installation on Linux works well, but to install other Pyt
 
 - **Windows Subsystem for Linux**: If you are working on Windows and want a Linux environment for working with Python, the [Windows Subsystem for Linux](https://learn.microsoft.com/windows/wsl/about) (WSL) is an option for you. If you choose this option, you'll also want to install the [WSL extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl). For more information about using WSL with VS Code, see [VS Code Remote Development](/docs/remote/remote-overview.md) or try the [Working in WSL tutorial](/docs/remote/wsl-tutorial.md), which will walk you through setting up WSL, installing Python, and creating a Hello World application running in WSL.
 
->**Note**: To verify that you've installed Python successfully on your machine, run one of the following commands (depending on your operating system):
+> **Note**: To verify that you've installed Python successfully on your machine, run one of the following commands (depending on your operating system):
 >
->Linux/macOS: open a Terminal Window and type the following command:
+> Linux/macOS: open a Terminal Window and type the following command:
+>
 > ```bash
->python3 --version
->```
->Windows: open a command prompt and run the following command:
->```bat
->py -3 --version
->```
->If the installation was successful, the output window should show the version of Python that you installed.
->Alternatively, you can use the `py -0` command in the VS Code integrated terminal to view the versions of python installed on your machine. The default interpreter is identified by an asterisk (*).
+> python3 --version
+> ```
+>
+> Windows: open a command prompt and run the following command:
+>
+> ```bat
+> py -3 --version
+> ```
+>
+> If the installation was successful, the output window should show the version of Python that you installed.
+> Alternatively, you can use the `py -0` command in the VS Code integrated terminal to view the versions of python installed on your machine. The default interpreter is identified by an asterisk (\*).
 
 ## Start VS Code in a workspace folder
 
@@ -75,7 +80,7 @@ cd hello
 code .
 ```
 
->**Note**: If you're using an Anaconda distribution, be sure to use an Anaconda command prompt.
+> **Note**: If you're using an Anaconda distribution, be sure to use an Anaconda command prompt.
 
 Alternately, you can create a folder through the operating system UI, then use VS Code's **File > Open Folder** to open the project folder.
 
@@ -115,7 +120,7 @@ Name the file `hello.py`, and VS Code will automatically open it in the editor:
 
 By using the `.py` file extension, you tell VS Code to interpret this file as a Python program, so that it evaluates the contents with the Python extension and the selected interpreter.
 
->**Note**: The File Explorer toolbar also allows you to create folders within your workspace to better organize your code. You can use the **New folder** button to quickly create a folder.
+> **Note**: The File Explorer toolbar also allows you to create folders within your workspace to better organize your code. You can use the **New folder** button to quickly create a folder.
 
 Now that you have a code file in your Workspace, enter the following source code in `hello.py`:
 

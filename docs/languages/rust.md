@@ -1,19 +1,20 @@
 ---
 Order: 16
 Area: languages
-TOCTitle: Rust
-ContentId: 643d022e-9370-4ca5-bccd-c3a583c5df75
+title: Rust
+id: 643d022e-9370-4ca5-bccd-c3a583c5df75
 PageTitle: Rust with Visual Studio Code
 DateApproved: 4/26/2022
-MetaDescription: Learn about Visual Studio Code editor features (code completion, debugging, snippets, linting) for Rust.
+description: Learn about Visual Studio Code editor features (code completion, debugging, snippets, linting) for Rust.
 ---
+
 # Rust in Visual Studio Code
 
 [Rust](https://www.rust-lang.org) is a powerful programming language, often used for systems programming where performance and correctness are high priorities. If you are new to Rust and want to learn more, [The Rust Programming Language](https://doc.rust-lang.org/book) online book is a great place to start. This topic goes into detail about setting up and using Rust within Visual Studio Code, with the [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer) extension.
 
 ![Rust extension banner](images/rust/rust-analyzer-extension.png)
 
->**Note**: There is also another popular Rust extension in the VS Code Marketplace (extension ID: rust-lang.rust) but this extension is deprecated and rust-analyzer is the recommended VS Code Rust extension by rust-lang.org.
+> **Note**: There is also another popular Rust extension in the VS Code Marketplace (extension ID: rust-lang.rust) but this extension is deprecated and rust-analyzer is the recommended VS Code Rust extension by rust-lang.org.
 
 ## Installation
 
@@ -21,7 +22,7 @@ MetaDescription: Learn about Visual Studio Code editor features (code completion
 
 First you will need to have the Rust toolset installed on your machine. Rust is installed via the [rustup](https://rustup.rs) installer, which supports installation on Windows, macOS, and Linux. Follow the rustup installation guidance for your platform, taking care to install any extra tools required to build and run Rust programs.
 
->**Note**: As with installing any new toolset on your machine, you'll want to make sure to restart your terminal/Command Prompt and VS Code instances to use the updated toolset location in your platform's PATH variable.
+> **Note**: As with installing any new toolset on your machine, you'll want to make sure to restart your terminal/Command Prompt and VS Code instances to use the updated toolset location in your platform's PATH variable.
 
 ### 2. Install the rust-analyzer extension
 
@@ -51,7 +52,7 @@ There are new stable versions of Rust published every 6 weeks so this is a good 
 
 ### Local Rust documentation
 
-When you install Rust, you also get the full Rust documentation set locally installed on your machine, which you can review by typing `rustup doc`.  The Rust documentation, including [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html) and [The Cargo Book](https://doc.rust-lang.org/stable/cargo/), will open in your local browser so you can continue your Rust journey while offline.
+When you install Rust, you also get the full Rust documentation set locally installed on your machine, which you can review by typing `rustup doc`. The Rust documentation, including [The Rust Programming Language](https://doc.rust-lang.org/book/title-page.html) and [The Cargo Book](https://doc.rust-lang.org/stable/cargo/), will open in your local browser so you can continue your Rust journey while offline.
 
 ## Hello World
 
@@ -76,7 +77,7 @@ cd hello_world
 code .
 ```
 
->**Note**: Enable [Workspace Trust](/docs/editor/workspace-trust.md) for the new folder as you are the author. You can enable Workspace Trust for your entire project folder parent to avoid being prompted when you create new projects by checking the option to **Trust the authors of all the files in parent folder 'my_projects`**.
+> **Note**: Enable [Workspace Trust](/docs/editor/workspace-trust.md) for the new folder as you are the author. You can enable Workspace Trust for your entire project folder parent to avoid being prompted when you create new projects by checking the option to **Trust the authors of all the files in parent folder 'my_projects`**.
 
 `cargo new` creates a simple Hello World project with a `main.rs` source code file and `Cargo.toml` [Cargo manifest](https://doc.rust-lang.org/cargo/reference/manifest.html) file.
 
@@ -149,7 +150,7 @@ As you type in a Rust file, IntelliSense provides you with suggested completions
 
 ![Smart completion for Rust String member](images/rust/code-completions.png)
 
->**Tip**: Use `kb(editor.action.triggerSuggest)` to trigger the suggestions manually.
+> **Tip**: Use `kb(editor.action.triggerSuggest)` to trigger the suggestions manually.
 
 ## Semantic syntax highlighting
 
@@ -166,10 +167,10 @@ In `settings.json`, you would add:
   "editor.semanticTokenColorCustomizations": {
     "rules": {
       "*.mutable": {
-        "fontStyle": "", // set to empty string to disable underline, which is the default
-      },
+        "fontStyle": "" // set to empty string to disable underline, which is the default
+      }
     }
-  },
+  }
 }
 ```
 
@@ -179,15 +180,15 @@ You can learn more about rust-analyzer's semantic syntax customizations in the [
 
 Code navigation features are available in the context menu in the editor.
 
-* **Go to Definition** `kb(editor.action.revealDefinition)` - Go to the source code of the type definition.
-* **Peek Definition** `kb(editor.action.peekDefinition)` - Bring up a Peek window with the type definition.
-* **Go to References** `kb(editor.action.goToReferences)` - Show all references for the type.
-* **Show Call Hierarchy** `kb(editor.showCallHierarchy)` - Show all calls from or to a function.
+- **Go to Definition** `kb(editor.action.revealDefinition)` - Go to the source code of the type definition.
+- **Peek Definition** `kb(editor.action.peekDefinition)` - Bring up a Peek window with the type definition.
+- **Go to References** `kb(editor.action.goToReferences)` - Show all references for the type.
+- **Show Call Hierarchy** `kb(editor.showCallHierarchy)` - Show all calls from or to a function.
 
 You can navigate via symbol search using the **Go to Symbol** commands from the **Command Palette** (`kb(workbench.action.showCommands)`).
 
-* Go to Symbol in File - `kb(workbench.action.gotoSymbol)`
-* Go to Symbol in Workspace - `kb(workbench.action.showAllSymbols)`
+- Go to Symbol in File - `kb(workbench.action.gotoSymbol)`
+- Go to Symbol in Workspace - `kb(workbench.action.showAllSymbols)`
 
 ## Linting
 
@@ -211,11 +212,11 @@ The rust-analyzer extension also supports other code refactorings and code gener
 
 Here are just a few of the refactorings available:
 
-* Convert if statement to guarded return
-* Inline variable
-* Extract function
-* Add return type
-* Add import
+- Convert if statement to guarded return
+- Inline variable
+- Extract function
+- Add return type
+- Add import
 
 ## Formatting
 
@@ -231,8 +232,8 @@ The rust-analyzer extension supports debugging Rust from within VS Code.
 
 To start debugging, you will first need to install one of two language extension with debugging support:
 
-* [Microsoft C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) (ms-vscode.cpptools) – *on Windows*
-* [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) (vadimcn.vscode-lldb) – *on macOS/Linux*
+- [Microsoft C++](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools) (ms-vscode.cpptools) – _on Windows_
+- [CodeLLDB](https://marketplace.visualstudio.com/items?itemName=vadimcn.vscode-lldb) (vadimcn.vscode-lldb) – _on macOS/Linux_
 
 If you forget to install one of these extensions, rust-analyzer will provide a notification with links to the VS Code Marketplace when you try to start a debug session.
 
@@ -280,9 +281,9 @@ If you have any issues or feature requests, feel free to log them in the rust-an
 
 If you'd like to learn more about VS Code, try these topics:
 
-* [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
-* [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
-* [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
+- [Basic Editing](/docs/editor/codebasics.md) - A quick introduction to the basics of the VS Code editor.
+- [Install an Extension](/docs/editor/extension-marketplace.md) - Learn about other extensions are available in the [Marketplace](https://marketplace.visualstudio.com/vscode).
+- [Code Navigation](/docs/editor/editingevolved.md) - Move quickly through your source code.
 
 ## Common questions
 
@@ -294,7 +295,7 @@ If you see linker errors such as **"error: linker `link.exe` not found"** when y
 
 On Windows, you will need to also install [Microsoft C++ Build Tools](https://visualstudio.microsoft.com/visual-cpp-build-tools/) in order to get the C/C++ linker `link.exe`. Be sure to select the **Desktop Development with C++** when running the Visual Studio installer.
 
->**Note**: You can use the C++ toolset from Visual Studio Build Tools along with Visual Studio Code to compile, build, and verify any codebase as long as you also have a valid Visual Studio license (either Community, Pro, or Enterprise).
+> **Note**: You can use the C++ toolset from Visual Studio Build Tools along with Visual Studio Code to compile, build, and verify any codebase as long as you also have a valid Visual Studio license (either Community, Pro, or Enterprise).
 
 **macOS**
 

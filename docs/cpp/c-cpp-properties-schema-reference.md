@@ -1,12 +1,13 @@
 ---
 Order:
 Area: cpp
-TOCTitle: c_cpp_properties.json
-ContentId: EC1BA944-09B5-41EA-AAED-779A02C90C98
+title: c_cpp_properties.json
+id: EC1BA944-09B5-41EA-AAED-779A02C90C98
 PageTitle: c_cpp_properties.json reference
 DateApproved: 3/07/2023
-MetaDescription: Schema reference for C++ project settings in Visual Studio Code.
+description: Schema reference for C++ project settings in Visual Studio Code.
 ---
+
 # c_cpp_properties.json reference
 
 This article explains the scheme for the `c_cpp_properties.json` settings file.
@@ -17,33 +18,30 @@ For more information about changing these settings, see [Customizing Default Set
 
 ```json
 {
-    "env" : {
-        "myDefaultIncludePath": [
-            "${workspaceFolder}",
-            "${workspaceFolder}/include"
-        ],
-        "myCompilerPath": "/usr/local/bin/gcc-7"
-    },
-    "configurations": [
-        {
-            "name": "Mac",
-            "intelliSenseMode": "clang-x64",
-            "includePath": [ "${myDefaultIncludePath}", "/another/path" ],
-            "macFrameworkPath": [ "/System/Library/Frameworks" ],
-            "defines": [ "FOO", "BAR=100" ],
-            "forcedInclude": [ "${workspaceFolder}/include/config.h" ],
-            "compilerPath": "/usr/bin/clang",
-            "cStandard": "c11",
-            "cppStandard": "c++17",
-            "compileCommands": "/path/to/compile_commands.json",
-            "browse": {
-                "path": [ "${workspaceFolder}" ],
-                "limitSymbolsToIncludedHeaders": true,
-                "databaseFilename": ""
-            }
-        }
-    ],
-    "version": 4
+  "env": {
+    "myDefaultIncludePath": ["${workspaceFolder}", "${workspaceFolder}/include"],
+    "myCompilerPath": "/usr/local/bin/gcc-7"
+  },
+  "configurations": [
+    {
+      "name": "Mac",
+      "intelliSenseMode": "clang-x64",
+      "includePath": ["${myDefaultIncludePath}", "/another/path"],
+      "macFrameworkPath": ["/System/Library/Frameworks"],
+      "defines": ["FOO", "BAR=100"],
+      "forcedInclude": ["${workspaceFolder}/include/config.h"],
+      "compilerPath": "/usr/bin/clang",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "compileCommands": "/path/to/compile_commands.json",
+      "browse": {
+        "path": ["${workspaceFolder}"],
+        "limitSymbolsToIncludedHeaders": true,
+        "databaseFilename": ""
+      }
+    }
+  ],
+  "version": 4
 }
 ```
 
@@ -75,6 +73,7 @@ For more information about changing these settings, see [Customizing Default Set
   The IntelliSense mode to use that maps to an architecture-specific variant of MSVC, gcc, or Clang. If not set or if set to `${default}`, the extension will choose the default for that platform.
 
   Platform defaults:
+
   - Windows: `msvc-x64`
   - Linux: `gcc-x64`
   - macOS: `clang-x64`

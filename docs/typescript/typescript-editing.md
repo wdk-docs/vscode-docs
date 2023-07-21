@@ -1,12 +1,13 @@
 ---
 Order: 3
 Area: typescript
-TOCTitle: Editing
-ContentId: db5139eb-9623-4d0b-8180-8b495e2b8b06
+title: Editing
+id: db5139eb-9623-4d0b-8180-8b495e2b8b06
 PageTitle: TypeScript editing with Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Learn about TypeScript editing with Visual Studio Code.
+description: Learn about TypeScript editing with Visual Studio Code.
 ---
+
 # Editing TypeScript
 
 Visual Studio Code has great editing support for [TypeScript](https://www.typescriptlang.org). This article goes into depth on the editing and programming language features that come built-in to VS Code. If you'd like to know more about general editing features in VS Code, such as keyboard shortcuts, multi-cursors, search, and find and replace, you can read [Basic Editing](/docs/editor/codebasics.md).
@@ -33,7 +34,7 @@ As you write a TypeScript function call, VS Code shows information about the fun
 
 ![Signature help for the lodash capitalize function](images/editing/signature-help.png)
 
-Signature help is shown automatically when you type a `(` or `,` within a function call. Use `kb(editor.action.triggerParameterHints)`  to manually trigger signature help.
+Signature help is shown automatically when you type a `(` or `,` within a function call. Use `kb(editor.action.triggerParameterHints)` to manually trigger signature help.
 
 ## Snippets
 
@@ -57,9 +58,9 @@ This can help you understand the meaning of each argument at a glance, which is 
 
 To enable parameter name hints, set `typescript.inlayHints.parameterNames.enabled`. There are three possible values:
 
-* `none` — Disable parameter inlay hints.
-* `literals` — Only show inlay hints for literals (string, number, Boolean).
-* `all` — Show inlay hints for all arguments.
+- `none` — Disable parameter inlay hints.
+- `literals` — Only show inlay hints for literals (string, number, Boolean).
+- `all` — Show inlay hints for all arguments.
 
 **Variable type inlay hints** show the types of variables that don't have explicit type annotations.
 
@@ -73,7 +74,7 @@ Setting: `typescript.inlayHints.propertyDeclarationTypes.enabled`
 
 ![Property type inlay hints](images/editing/inlay-property-types.png)
 
-**Parameter type hints**  show the types of implicitly typed parameters.
+**Parameter type hints** show the types of implicitly typed parameters.
 
 Setting: `typescript.inlayHints.parameterTypes.enabled`
 
@@ -153,16 +154,16 @@ To disable JSDoc comment suggestions in TypeScript, set `"typescript.suggest.com
 
 Code navigation lets you quickly navigate TypeScript projects.
 
-* **Go to Definition** `kb(editor.action.revealDefinition)` - Go to the source code of a symbol definition.
-* **Peek Definition** `kb(editor.action.peekDefinition)` - Bring up a Peek window that shows the definition of a symbol.
-* **Go to References** `kb(editor.action.goToReferences)` - Show all references to a symbol.
-* **Go to Type Definition** - Go to the type that defines a symbol. For an instance of a class, this will reveal the class itself instead of where the instance is defined.
-* **Go to Implementation** `kb(editor.action.goToImplementation)` - Go to the implementations of an interface or abstract method.
+- **Go to Definition** `kb(editor.action.revealDefinition)` - Go to the source code of a symbol definition.
+- **Peek Definition** `kb(editor.action.peekDefinition)` - Bring up a Peek window that shows the definition of a symbol.
+- **Go to References** `kb(editor.action.goToReferences)` - Show all references to a symbol.
+- **Go to Type Definition** - Go to the type that defines a symbol. For an instance of a class, this will reveal the class itself instead of where the instance is defined.
+- **Go to Implementation** `kb(editor.action.goToImplementation)` - Go to the implementations of an interface or abstract method.
 
 You can navigate via symbol search using the **Go to Symbol** commands from the **Command Palette** (`kb(workbench.action.showCommands)`).
 
-* **Go to Symbol in File** `kb(workbench.action.gotoSymbol)`
-* **Go to Symbol in Workspace** `kb(workbench.action.showAllSymbols)`
+- **Go to Symbol in File** `kb(workbench.action.gotoSymbol)`
+- **Go to Symbol in Workspace** `kb(workbench.action.showAllSymbols)`
 
 ## Formatting
 
@@ -184,13 +185,13 @@ If semantic highlighting is enabled and the color theme has a corresponding styl
 
 Semantic highlighting can change colors based on:
 
-* The resolved type of a symbol: namespace, variable, property, variable, class, interface, typeParameter.
-* Whether the variable/property is read-only (const) or modifiable.
-* Whether the variable/property type is callable (a function type) or not.
+- The resolved type of a symbol: namespace, variable, property, variable, class, interface, typeParameter.
+- Whether the variable/property is read-only (const) or modifiable.
+- Whether the variable/property type is callable (a function type) or not.
 
 ## Next steps
 
 Read on to find out about:
 
-* [Refactor TypeScript](/docs/typescript/typescript-refactoring.md) - Learn about the useful refactorings available for TypeScript.
-* [Debugging TypeScript](/docs/typescript/typescript-debugging.md) - Configure the debugger for your TypeScript project.
+- [Refactor TypeScript](/docs/typescript/typescript-refactoring.md) - Learn about the useful refactorings available for TypeScript.
+- [Debugging TypeScript](/docs/typescript/typescript-debugging.md) - Configure the debugger for your TypeScript project.

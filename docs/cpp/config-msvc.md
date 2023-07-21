@@ -1,12 +1,13 @@
 ---
 Order: 6
 Area: cpp
-TOCTitle: Microsoft C++ on Windows
-ContentId: c8b779d6-79e2-49d6-acfc-430d7ac3a299
+title: Microsoft C++ on Windows
+id: c8b779d6-79e2-49d6-acfc-430d7ac3a299
 PageTitle: Configure Visual Studio Code for Microsoft C++
 DateApproved: 3/7/2023
-MetaDescription: Configure the C++ extension in Visual Studio Code to target Microsoft C++ on Windows.
+description: Configure the C++ extension in Visual Studio Code to target Microsoft C++ on Windows.
 ---
+
 # Configure VS Code for Microsoft C++
 
 In this tutorial, you configure Visual Studio Code to use the Microsoft Visual C++ compiler and debugger on Windows.
@@ -23,7 +24,7 @@ To successfully complete this tutorial, you must do the following:
 
 1. Install the [C/C++ extension for VS Code](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools). You can install the C/C++ extension by searching for 'c++' in the Extensions view (`kb(workbench.view.extensions)`).
 
-    ![C/C++ extension](images/cpp/cpp-extension.png)
+   ![C/C++ extension](images/cpp/cpp-extension.png)
 
 1. Install the Microsoft Visual C++ (MSVC) compiler toolset.
 
@@ -37,7 +38,7 @@ To successfully complete this tutorial, you must do the following:
 
    ![Cpp build tools workload](images/msvc/desktop_development_with_cpp-2022.png)
 
->**Note**: You can use the C++ toolset from Visual Studio Build Tools along with Visual Studio Code to compile, build, and verify any C++ codebase as long as you also have a valid Visual Studio license (either Community, Pro, or Enterprise) that you are actively using to develop that C++ codebase.
+> **Note**: You can use the C++ toolset from Visual Studio Build Tools along with Visual Studio Code to compile, build, and verify any C++ codebase as long as you also have a valid Visual Studio license (either Community, Pro, or Enterprise) that you are actively using to develop that C++ codebase.
 
 ### Check your Microsoft Visual C++ installation
 
@@ -53,7 +54,7 @@ You can test that you have the C++ compiler, `cl.exe`, installed correctly by ty
 
 If the Developer Command Prompt is using the BuildTools location as the starting directory (you wouldn't want to put projects there), navigate to your user folder (`C:\users\{your username}\`) before you start creating new projects.
 
->**Note**: If for some reason you can't run VS Code from a **Developer Command Prompt**, you can find a workaround for building C++ projects with VS Code in [Run VS Code outside a Developer Command Prompt](#run-vs-code-outside-the-developer-command-prompt).
+> **Note**: If for some reason you can't run VS Code from a **Developer Command Prompt**, you can find a workaround for building C++ projects with VS Code in [Run VS Code outside a Developer Command Prompt](#run-vs-code-outside-the-developer-command-prompt).
 
 ## Create Hello World
 
@@ -110,7 +111,7 @@ You can also enable [Auto Save](/docs/editor/codebasics.md#save-auto-save) to au
 
 The Activity Bar on the far left lets you open different views such as **Search**, **Source Control**, and **Run**. You'll look at the **Run** view later in this tutorial. You can find out more about the other views in the VS Code [User Interface documentation](/docs/getstarted/userinterface.md).
 
->**Note**: When you save or open a C++ file, you may see a notification from the C/C++ extension about the availability of an Insiders version, which lets you test new features and fixes. You can ignore this notification by selecting the `X` (**Clear Notification**).
+> **Note**: When you save or open a C++ file, you may see a notification from the C/C++ extension about the availability of an Insiders version, which lets you test new features and fixes. You can ignore this notification by selecting the `X` (**Clear Notification**).
 
 ## Explore IntelliSense
 
@@ -137,7 +138,7 @@ You'll only be asked to choose a compiler the first time you run `helloworld.cpp
 
 4. After the build succeeds, your program's output will appear in the integrated **Terminal**.
 
-    ![screenshot of program output](images/playbutton/helloworld-terminal-output.png)
+   ![screenshot of program output](images/playbutton/helloworld-terminal-output.png)
 
 If you get an error trying to build and debug with cl.exe, make sure you have [started VS Code from the Developer Command Prompt for Visual Studio](#check-your-microsoft-visual-c-installation) using the `code .` shortcut.
 
@@ -149,33 +150,25 @@ Your new `tasks.json` file should look similar to the JSON below:
 
 ```json
 {
-"version": "2.0.0",
-"tasks": [
+  "version": "2.0.0",
+  "tasks": [
     {
-        "type": "shell",
-        "label": "C/C++: cl.exe build active file",
-        "command": "cl.exe",
-        "args": [
-            "/Zi",
-            "/EHsc",
-            "/Fe:",
-            "${fileDirname}\\${fileBasenameNoExtension}.exe",
-            "${file}"
-        ],
-        "problemMatcher": [
-            "$msCompile"
-        ],
-        "group": {
-            "kind": "build",
-            "isDefault": true
-        },
-        "detail": "Task generated by Debugger."
+      "type": "shell",
+      "label": "C/C++: cl.exe build active file",
+      "command": "cl.exe",
+      "args": ["/Zi", "/EHsc", "/Fe:", "${fileDirname}\\${fileBasenameNoExtension}.exe", "${file}"],
+      "problemMatcher": ["$msCompile"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "detail": "Task generated by Debugger."
     }
-]
+  ]
 }
 ```
 
->**Note**: You can learn more about `tasks.json` variables in the [variables reference](/docs/editor/variables-reference.md).
+> **Note**: You can learn more about `tasks.json` variables in the [variables reference](/docs/editor/variables-reference.md).
 
 The `command` setting specifies the program to run; in this case that is "cl.exe". The `args` array specifies the command-line arguments that will be passed to cl.exe. These arguments must be specified in the order expected by the compiler.
 
@@ -218,7 +211,7 @@ You can modify your `tasks.json` to build multiple C++ files by using an argumen
    ![C++ debug configuration dropdown](images/playbutton/select-cl-compiler.png)
 
 The play button has two modes: **Run C/C++ File** and **Debug C/C++ File**. It will default to the last-used mode. If you see the debug icon in the play button, you can just click the play button to debug, instead of selecting the drop-down menu item.
-   ![screenshot of play button in debug mode](images/playbutton/debug-button.png)
+![screenshot of play button in debug mode](images/playbutton/debug-button.png)
 
 If you get an error trying to build and debug with cl.exe, make sure you have [started VS Code from the Developer Command Prompt for Visual Studio](#check-your-microsoft-visual-c-installation) using the `code .` shortcut.
 
@@ -231,13 +224,13 @@ Before you start stepping through the code, let's take a moment to notice severa
 - The Integrated Terminal appears at the bottom of the source code editor. In the **Debug Output** tab, you see output that indicates the debugger is up and running.
 - The editor highlights the line where you set a breakpoint before starting the debugger:
 
-   ![Initial breakpoint](images/playbutton/breakpoint-debug.png)
+  ![Initial breakpoint](images/playbutton/breakpoint-debug.png)
 
 - The **Run and Debug** view on the left shows debugging information. You'll see an example later in the tutorial.
 
 - At the top of the code editor, a debugging control panel appears. You can move this around the screen by grabbing the dots on the left side.
 
-   ![Debugging controls](images/cpp/debug-controls.png)
+  ![Debugging controls](images/cpp/debug-controls.png)
 
 ## Step through the code
 
@@ -297,21 +290,21 @@ VS Code creates a `launch.json` file, which looks something like this:
 
 ```json
 {
-"version": "0.2.0",
-"configurations": [
+  "version": "0.2.0",
+  "configurations": [
     {
-        "name": "C/C++: cl.exe build and debug active file",
-        "type": "cppvsdbg",
-        "request": "launch",
-        "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
-        "args": [],
-        "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
-        "environment": [],
-        "externalConsole": false,
-        "preLaunchTask": "C/C++: cl.exe build active file"
+      "name": "C/C++: cl.exe build and debug active file",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "program": "${fileDirname}\\${fileBasenameNoExtension}.exe",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "preLaunchTask": "C/C++: cl.exe build active file"
     }
-]
+  ]
 }
 ```
 
@@ -339,25 +332,19 @@ Visual Studio Code places these settings in `.vscode\c_cpp_properties.json`. If 
 
 ```json
 {
-"configurations": [
+  "configurations": [
     {
-        "name": "Win32",
-        "includePath": [
-            "${workspaceFolder}/**"
-        ],
-        "defines": [
-            "_DEBUG",
-            "UNICODE",
-            "_UNICODE"
-        ],
-        "windowsSdkVersion": "10.0.18362.0",
-        "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe",
-        "cStandard": "c11",
-        "cppStandard": "c++17",
-        "intelliSenseMode": "msvc-x64"
+      "name": "Win32",
+      "includePath": ["${workspaceFolder}/**"],
+      "defines": ["_DEBUG", "UNICODE", "_UNICODE"],
+      "windowsSdkVersion": "10.0.18362.0",
+      "compilerPath": "C:/Program Files (x86)/Microsoft Visual Studio/2019/BuildTools/VC/Tools/MSVC/14.24.28314/bin/Hostx64/x64/cl.exe",
+      "cStandard": "c11",
+      "cppStandard": "c++17",
+      "intelliSenseMode": "msvc-x64"
     }
-],
-"version": 4
+  ],
+  "version": 4
 }
 ```
 
@@ -387,45 +374,37 @@ In certain circumstances, it isn't possible to run VS Code from **Developer Comm
 
 ```json
 {
-    "version": "2.0.0",
-    "windows": {
-        "options": {
-            "shell": {
-                "executable": "cmd.exe",
-                "args": [
-                    "/C",
-                    // The path to VsDevCmd.bat depends on the version of Visual Studio you have installed.
-                    "\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat\"",
-                    "&&"
-                ]
-            }
-        }
-    },
-    "tasks": [
-        {
-            "type": "shell",
-            "label": "cl.exe build active file",
-            "command": "cl.exe",
-            "args": [
-                "/Zi",
-                "/EHsc",
-                "/Fe:",
-                "${fileDirname}\\${fileBasenameNoExtension}.exe",
-                "${file}"
-            ],
-            "problemMatcher": [
-                "$msCompile"
-            ],
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            }
-        }
-    ]
+  "version": "2.0.0",
+  "windows": {
+    "options": {
+      "shell": {
+        "executable": "cmd.exe",
+        "args": [
+          "/C",
+          // The path to VsDevCmd.bat depends on the version of Visual Studio you have installed.
+          "\"C:/Program Files (x86)/Microsoft Visual Studio/2019/Community/Common7/Tools/VsDevCmd.bat\"",
+          "&&"
+        ]
+      }
+    }
+  },
+  "tasks": [
+    {
+      "type": "shell",
+      "label": "cl.exe build active file",
+      "command": "cl.exe",
+      "args": ["/Zi", "/EHsc", "/Fe:", "${fileDirname}\\${fileBasenameNoExtension}.exe", "${file}"],
+      "problemMatcher": ["$msCompile"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    }
+  ]
 }
 ```
 
->**Note**: The path to `VsDevCmd.bat` might be different depending on the Visual Studio version or installation path. You can find the path to `VsDevCmd.bat` by opening a Command Prompt and running `dir "\VsDevCmd*" /s`.
+> **Note**: The path to `VsDevCmd.bat` might be different depending on the Visual Studio version or installation path. You can find the path to `VsDevCmd.bat` by opening a Command Prompt and running `dir "\VsDevCmd*" /s`.
 
 ## Troubleshooting
 

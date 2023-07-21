@@ -1,13 +1,14 @@
 ---
 Order: 12
 Area: nodejs
-TOCTitle: Extensions
-ContentId: 3224f624-a3fc-4eeb-81d1-eb653a90a6fc
+title: Extensions
+id: 3224f624-a3fc-4eeb-81d1-eb653a90a6fc
 PageTitle: JavaScript Extensions in Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Learn more about installing and integrating JavaScript and Node.js extensions in the Visual Studio Code editor.
+description: Learn more about installing and integrating JavaScript and Node.js extensions in the Visual Studio Code editor.
 MetaSocialImage: /assets/images/nodejs_javascript_vscode.png
 ---
+
 # JavaScript extensions for VS Code
 
 Visual Studio Code supports many features for JavaScript and Node.js development. The features that ship with the downloaded product are the core features: debugging, IntelliSense, code navigation, etc.

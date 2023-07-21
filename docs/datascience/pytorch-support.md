@@ -1,13 +1,14 @@
 ---
 Order: 5
 Area: datascience
-TOCTitle: PyTorch Support
-ContentId: 7B5266AD-3D3E-491F-BD7C-B883C592D943
+title: PyTorch Support
+id: 7B5266AD-3D3E-491F-BD7C-B883C592D943
 PageTitle: PyTorch Development in Visual Studio Code
 DateApproved: 1/9/2023
-MetaDescription: This topic highlights some of the PyTorch features available within Visual Studio Code.
+description: This topic highlights some of the PyTorch features available within Visual Studio Code.
 MetaSocialImage: images/tutorial/social.png
 ---
+
 # PyTorch support in Visual Studio Code
 
 Along with support for [Jupyter Notebooks](/docs/datascience/jupyter-notebooks.md), Visual Studio Code offers many features of particular interest for PyTorch developers. This article covers some of those features and illustrates how they can help you in your projects. If you're unfamiliar with PyTorch development, Microsoft Learn offers a [Get started with PyTorch](https://learn.microsoft.com/training/paths/pytorch-fundamentals) learning path that covers the fundamentals of deep learning with PyTorch.

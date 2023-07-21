@@ -1,19 +1,20 @@
 ---
 Order: 20
 Area: editor
-TOCTitle: Workspace Trust
-ContentId: 51280c26-f78b-4f9c-997f-8350bd6ed07f
+title: Workspace Trust
+id: 51280c26-f78b-4f9c-997f-8350bd6ed07f
 PageTitle: Visual Studio Code Workspace Trust security
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code Workspace Trust folder security
+description: Visual Studio Code Workspace Trust folder security
 ---
+
 # Workspace Trust
 
 Visual Studio Code takes security seriously and wants to help you safely browse and edit code no matter the source or original authors. The Workspace Trust feature lets you decide whether code in your project folder can be executed by VS Code and extensions without your explicit approval.
 
 ![Trust this folder dialog](images/workspace-trust/workspace-trust-dialog.png)
 
->**Note**: When in doubt, leave a folder in [Restricted Mode](#restricted-mode). You can always [enable trust](#trusting-a-workspace) later.
+> **Note**: When in doubt, leave a folder in [Restricted Mode](#restricted-mode). You can always [enable trust](#trusting-a-workspace) later.
 
 ## Safe code browsing
 
@@ -100,7 +101,7 @@ If you try to install an extension in Restricted Mode, you will be prompted to e
 
 ![Workspace Trust install an extension in Restricted Mode dialog](images/workspace-trust/workspace-trust-install-extension.png)
 
->**Note**: Extension authors can learn how to update their extensions to support Workspace Trust by reading the [Workspace Trust Extension Guide](/api/extension-guides/workspace-trust.md).
+> **Note**: Extension authors can learn how to update their extensions to support Workspace Trust by reading the [Workspace Trust Extension Guide](/api/extension-guides/workspace-trust.md).
 
 ## Trusting a workspace
 
@@ -116,13 +117,13 @@ There are several ways to bring up the Workspace Editor dialog.
 
 When in Restricted Mode:
 
-* Restricted Mode banner **Manage** link
-* Restricted Mode Status bar item
+- Restricted Mode banner **Manage** link
+- Restricted Mode Status bar item
 
 You can also at any time use:
 
-* **Workspaces: Manage Workspace Trust** command from the Command Palette (`kb(workbench.action.showCommands)`)
-* **Manage Workspace Trust** from the **Manage** gear in the Activity bar
+- **Workspaces: Manage Workspace Trust** command from the Command Palette (`kb(workbench.action.showCommands)`)
+- **Manage Workspace Trust** from the **Manage** gear in the Activity bar
 
 ![Manage Workspace Trust command in the Manage gear context menu](images/workspace-trust/gear-manage-workspace-trust.png)
 
@@ -169,7 +170,7 @@ You also group and set trust on your repositories by grouping them under organiz
 
 What happens if you want to use Restricted Mode but your favorite extension doesn't support Workspace Trust? This can happen if an extension, while useful and functional, isn't being actively maintained and hasn't declared their Workspace Trust support. To handle this scenario, you can override the extension's trust state with the `extensions.supportUntrustedWorkspaces` setting.
 
->**Note**: Be careful overriding an extension's Workspace Trust support. It may be that the extension author has a good reason for disabling their extension in Restricted Mode. If in doubt, reach out to the extension author or review recent changelogs to get more context.
+> **Note**: Be careful overriding an extension's Workspace Trust support. It may be that the extension author has a good reason for disabling their extension in Restricted Mode. If in doubt, reach out to the extension author or review recent changelogs to get more context.
 
 If you open the Settings editor (`kb(workbench.action.openSettings)`) and search for "trust extensions", you can find the **Extensions: Support Untrusted Workspaces** setting, which has an **Edit in settings.json** link.
 
@@ -220,12 +221,12 @@ If you want all empty windows to be in Restricted Mode, you can set `security.wo
 
 Below are the available Workspace Trust settings:
 
-* `security.workspace.trust.enabled` - Enable Workspace Trust feature. Default is true.
-* `security.workspace.trust.startupPrompt` - Whether to show the Workspace Trust dialog on startup. Default is to only show once per distinct folder or workspace.
-* `security.workspace.trust.emptyWindow` - Whether to always trust an empty window (no open folder). Default is true.
-* `security.workspace.trust.untrustedFiles` - Controls how to handle loose files in a workspace. Default is to prompt.
-* `extensions.supportUntrustedWorkspaces` - Override extension Workspace Trust declarations. Either true or false.
-* `security.workspace.trust.banner` - Controls when the Restricted Mode banner is displayed. Default is `untilDismissed`.
+- `security.workspace.trust.enabled` - Enable Workspace Trust feature. Default is true.
+- `security.workspace.trust.startupPrompt` - Whether to show the Workspace Trust dialog on startup. Default is to only show once per distinct folder or workspace.
+- `security.workspace.trust.emptyWindow` - Whether to always trust an empty window (no open folder). Default is true.
+- `security.workspace.trust.untrustedFiles` - Controls how to handle loose files in a workspace. Default is to prompt.
+- `extensions.supportUntrustedWorkspaces` - Override extension Workspace Trust declarations. Either true or false.
+- `security.workspace.trust.banner` - Controls when the Restricted Mode banner is displayed. Default is `untilDismissed`.
 
 ## Command-line switch
 
@@ -251,9 +252,9 @@ Paths a little weird
 
 Learn more at:
 
-* [Workspace Trust Extension Guide](/api/extension-guides/workspace-trust.md) - Learn how extension authors can support Workspace Trust.
-* [What is a VS Code "workspace"?](/docs/editor/workspaces.md) - Find out more details about the VS Code "workspace" concept.
-* [GitHub Repositories extension](/docs/sourcecontrol/github.md#github-repositories-extension) - Work directly on a repository without cloning the source code to your local machine.
+- [Workspace Trust Extension Guide](/api/extension-guides/workspace-trust.md) - Learn how extension authors can support Workspace Trust.
+- [What is a VS Code "workspace"?](/docs/editor/workspaces.md) - Find out more details about the VS Code "workspace" concept.
+- [GitHub Repositories extension](/docs/sourcecontrol/github.md#github-repositories-extension) - Work directly on a repository without cloning the source code to your local machine.
 
 ## Common questions
 

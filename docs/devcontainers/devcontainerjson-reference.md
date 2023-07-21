@@ -1,12 +1,13 @@
 ---
 Order: 13
 Area: devcontainers
-TOCTitle: devcontainer.json
+title: devcontainer.json
 PageTitle: devcontainer.json reference
-ContentId: 52eaec33-21c6-410c-8e10-1ee3658a854f
-MetaDescription: devcontainer.json reference
+id: 52eaec33-21c6-410c-8e10-1ee3658a854f
+description: devcontainer.json reference
 DateApproved: 7/6/2023
 ---
+
 # devcontainer.json reference
 
 **TL;DR - This document has moved to the [Development Containers Specification](https://containers.dev/implementors/json_reference) site! This page now exists as a redirect to the specification site, which contains the latest information.**

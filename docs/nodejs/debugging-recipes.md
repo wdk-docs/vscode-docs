@@ -1,13 +1,14 @@
 ---
 Order: 10
 Area: nodejs
-TOCTitle: Debugging Recipes
-ContentId: 215832f9-d5bd-4cea-8cea-bfc4dc7ff7d1
+title: Debugging Recipes
+id: 215832f9-d5bd-4cea-8cea-bfc4dc7ff7d1
 PageTitle: JavaScript Debugging Recipes for Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription:  Learn more about how to setup debugging in Visual Studio Code with debugging recipes
+description: Learn more about how to setup debugging in Visual Studio Code with debugging recipes
 MetaSocialImage: debugging_Debugging.png
 ---
+
 # JavaScript Debugging Recipes
 
 Visual Studio Code supports debugging of many languages and platforms via debuggers that are either built-in or contributed by extensions.
@@ -22,8 +23,8 @@ The Visual Studio Code editor supports debugging Node.js applications via the bu
 
 **Recipes:**
 
-* [Debugging Node.js with Nodemon](https://github.com/microsoft/vscode-recipes/tree/main/nodemon)
-* [Debugging Node.js AWS Lambda functions](https://github.com/microsoft/vscode-recipes/tree/main/debugging-lambda-functions)
+- [Debugging Node.js with Nodemon](https://github.com/microsoft/vscode-recipes/tree/main/nodemon)
+- [Debugging Node.js AWS Lambda functions](https://github.com/microsoft/vscode-recipes/tree/main/debugging-lambda-functions)
 
 ## Debug client-side JavaScript in Browsers
 
@@ -35,17 +36,17 @@ You can read more about debugging browsers works in the [Browser Debugging docum
 
 **Recipes:**
 
-* [Debugging Angular apps with Angular CLI](https://github.com/microsoft/vscode-recipes/tree/main/Angular-CLI)
-* [Debugging Next.js apps](https://github.com/microsoft/vscode-recipes/tree/main/Next-js)
-* [Debugging Meteor apps](https://github.com/microsoft/vscode-recipes/tree/main/meteor)
-* [Debugging Vue.js apps](https://github.com/microsoft/vscode-recipes/tree/main/vuejs-cli)
-* [Debugging Mocha tests](https://github.com/microsoft/vscode-recipes/tree/main/debugging-mocha-tests)
-* [Debugging Jest tests](https://github.com/microsoft/vscode-recipes/tree/main/debugging-jest-tests)
+- [Debugging Angular apps with Angular CLI](https://github.com/microsoft/vscode-recipes/tree/main/Angular-CLI)
+- [Debugging Next.js apps](https://github.com/microsoft/vscode-recipes/tree/main/Next-js)
+- [Debugging Meteor apps](https://github.com/microsoft/vscode-recipes/tree/main/meteor)
+- [Debugging Vue.js apps](https://github.com/microsoft/vscode-recipes/tree/main/vuejs-cli)
+- [Debugging Mocha tests](https://github.com/microsoft/vscode-recipes/tree/main/debugging-mocha-tests)
+- [Debugging Jest tests](https://github.com/microsoft/vscode-recipes/tree/main/debugging-jest-tests)
 
 **Blog posts**:
 
-* [Live edit and debug your React apps directly from VS Code](https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f)
-* [Super-charged live editing and JavaScript debugging for Angular using VS Code](https://medium.com/@auchenberg/super-charged-live-editing-and-javascript-debugging-for-angular-using-visual-studio-code-c29da251ec71)
+- [Live edit and debug your React apps directly from VS Code](https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f)
+- [Super-charged live editing and JavaScript debugging for Angular using VS Code](https://medium.com/@auchenberg/super-charged-live-editing-and-javascript-debugging-for-angular-using-visual-studio-code-c29da251ec71)
 
 ## Electron - Debug Electron applications
 
@@ -55,10 +56,10 @@ The Visual Studio Code editor supports debugging [Electron](https://www.electron
 
 **Recipes:**
 
-* [Debugging Electron Main and Renderer processes](https://github.com/microsoft/vscode-recipes/tree/main/Electron)
+- [Debugging Electron Main and Renderer processes](https://github.com/microsoft/vscode-recipes/tree/main/Electron)
 
 ## Next steps
 
-* [Debugging](/docs/editor/debugging.md) - Read about general VS Code debugging features.
-* [Node.js Debugging](/docs/nodejs/nodejs-debugging.md) - Learn about the built-in Node.js debugger.
-* [Video: Getting started with Node.js debugging](https://www.youtube.com/watch?v=2oFKNL7vYV8) - Attach to a running Node.js process.
+- [Debugging](/docs/editor/debugging.md) - Read about general VS Code debugging features.
+- [Node.js Debugging](/docs/nodejs/nodejs-debugging.md) - Learn about the built-in Node.js debugger.
+- [Video: Getting started with Node.js debugging](https://www.youtube.com/watch?v=2oFKNL7vYV8) - Attach to a running Node.js process.

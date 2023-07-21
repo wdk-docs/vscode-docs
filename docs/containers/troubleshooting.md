@@ -1,13 +1,14 @@
 ---
 Order: 12
 Area: containers
-TOCTitle: Tips and Tricks
+title: Tips and Tricks
 PageTitle: Visual Studio Code Docker development troubleshooting Tips and Tricks
-ContentId: 79bb60fd-5248-43d2-8801-34b9fc2ec543
-MetaDescription: Visual Studio Code Docker development troubleshooting tips and tricks
+id: 79bb60fd-5248-43d2-8801-34b9fc2ec543
+description: Visual Studio Code Docker development troubleshooting tips and tricks
 DateApproved: 12/21/2022
 ---
-# Docker Tools Tips and Tricks
+
+# Docker工具提示和技巧
 
 This article covers troubleshooting tips and tricks for the Visual Studio Code [Docker](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) extension. See the [Overview](/docs/containers/overview.md) and quickstart articles for [Node.js](/docs/containers/quickstart-node.md), [Python](/docs/containers/quickstart-python.md), or [ASP.NET](/docs/containers/quickstart-aspnet-core.md) for details on setting up and working with Docker.
 
@@ -37,15 +38,13 @@ USER appuser
 CMD ["gunicorn", "--bind", "0.0.0.0:1024", "pythonPath.to.wsgi"]
 ```
 
-Next, ensure the `docker run` task in `tasks.json` also expects the same port. You can usually search for any occurrences of the old port number in `tasks.json` and replace it with the new port number.  The following example shows the required changes in the case of a Python Django app:
+Next, ensure the `docker run` task in `tasks.json` also expects the same port. You can usually search for any occurrences of the old port number in `tasks.json` and replace it with the new port number. The following example shows the required changes in the case of a Python Django app:
 
-``` json
+```json
 {
   "type": "docker-run",
   "label": "docker-run: debug",
-  "dependsOn": [
-    "docker-build"
-  ],
+  "dependsOn": ["docker-build"],
   "python": {
     "args": [
       "runserver",
@@ -64,7 +63,7 @@ Since VS Code runs as a non-root user, you will need to follow the steps in "Man
 
 ## Docker containers and images have disappeared from Docker view
 
-This is most likely caused by a conflict with another extension called `Docker Explorer` (not authored by Microsoft).  To resolve this issue, use a workaround described [vscode-docker issue #1609](https://github.com/microsoft/vscode-docker/issues/1609#issuecomment-586331394).
+This is most likely caused by a conflict with another extension called `Docker Explorer` (not authored by Microsoft). To resolve this issue, use a workaround described [vscode-docker issue #1609](https://github.com/microsoft/vscode-docker/issues/1609#issuecomment-586331394).
 
 ## The extension does not find Docker on a remote machine
 

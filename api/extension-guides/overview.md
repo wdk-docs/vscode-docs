@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: B32601A8-27ED-4D97-BA83-F1C8C945C635
+id: B32601A8-27ED-4D97-BA83-F1C8C945C635
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: 从Visual Studio Code扩展指南和代码示例中学习
+description: 从Visual Studio Code扩展指南和代码示例中学习
 sidebar_position: 1
 ---
 

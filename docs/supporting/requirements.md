@@ -1,41 +1,42 @@
 ---
 Order:
-TOCTitle: Requirements
-ContentId: 1D4850EE-85E2-4152-81BE-FECAE62EA99E
+title: 需求
+id: 1D4850EE-85E2-4152-81BE-FECAE62EA99E
 PageTitle: Requirements for Visual Studio Code
 DateApproved: 7/6/2023
-MetaDescription: Visual Studio Code hardware and platform (operating system) requirements.
+description: Visual Studio Code的硬件和平台(操作系统)要求。
 ---
-# Requirements for Visual Studio Code
 
-## Hardware
+# Visual Studio代码的要求
 
-Visual Studio Code is a small download (< 200 MB) and has a disk footprint of < 500 MB. VS Code is lightweight and should easily run on today's hardware.
+## 硬件
 
-We recommend:
+Visual Studio Code是一个小下载(小于200 MB)，磁盘占用小于500 MB。VS Code是轻量级的，应该很容易在今天的硬件上运行。
 
-* 1.6 GHz or faster processor
-* 1 GB of RAM
+我们建议:
 
-## Platforms
+- 1.6 GHz或更快的处理器
+- 1GB RAM
 
-VS Code is supported on the following platforms:
+## 平台
 
-* Windows 10 and 11 (32-bit and 64-bit)
-* OS X High Sierra (10.13+)
-* Linux (Debian): Ubuntu Desktop 16.04, Debian 9
-* Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 34
+VS Code支持以下平台:
 
-## Not supported
+- Windows 10 和 11 (32-bit 和 64-bit)
+- OS X High Sierra (10.13+)
+- Linux (Debian): Ubuntu Desktop 16.04, Debian 9
+- Linux (Red Hat): Red Hat Enterprise Linux 7, CentOS 7, Fedora 34
 
-* VS Code does not support application virtualization solutions such as Microsoft App-V or MSIX for Windows, or third-party app virtualization technologies.
-* Running VS Code in a virtual machine environment requires a full operating system.
-* VS Code does not support multiple simultaneous users using the software on the same machine, including shared virtual desktop infrastructure machines or a pooled Windows/Linux Virtual Desktop host pool.
-* Running the full VS Code in Windows/Linux containers is not supported but running with the [Dev Containers](/docs/devcontainers/containers.md) extension is supported. When using the Dev Containers extension, the VS Code server is running in the container while the VS Code client is on the desktop.
+## 不支持
 
-### Additional Linux requirements
+- VS Code不支持应用虚拟化解决方案，比如 Microsoft App-V or MSIX for Windows, 或者第三方应用虚拟化技术.
+- 在虚拟机环境中运行VS Code需要一个完整的操作系统。
+- VS Code不支持多个用户同时在同一台机器上使用该软件，包括共享的虚拟桌面基础架构机或池化的Windows/Linux虚拟桌面主机池。
+- 不支持在Windows/Linux容器中运行完整的VS Code，但支持使用[Dev containers](/docs/devcontainers/containers.md)扩展名运行。当使用Dev Containers扩展时，VS Code服务器在容器中运行，而VS Code客户端在桌面上。
 
-* GLIBCXX version 3.4.21 or later
-* GLIBC version 2.17 or later
+### 其他Linux要求
 
-For a list of currently known issues, see our [FAQ](faq).
+- GLIBCXX版本3.4.21及以上
+- GLIBC 2.17或更高版本
+
+有关当前已知问题的列表，请参阅我们的[FAQ](FAQ)。

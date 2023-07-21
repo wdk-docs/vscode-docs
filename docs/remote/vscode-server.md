@@ -1,12 +1,13 @@
 ---
 Order: 6
 Area: remote
-TOCTitle: VS Code Server
+title: VS Code Server
 PageTitle: Visual Studio Code Server
-ContentId: d750ab6d-82c2-4e64-8fbb-7888e1374381
-MetaDescription: Using Visual Studio Code Server
+id: d750ab6d-82c2-4e64-8fbb-7888e1374381
+description: Using Visual Studio Code Server
 DateApproved: 7/6/2023
 ---
+
 # Visual Studio Code Server
 
 The Visual Studio Code Server is a service you can run on a remote development machine, like your desktop PC or a virtual machine (VM). It allows you to securely connect to that remote machine from anywhere through a local VS Code client, without the requirement of SSH.
@@ -31,23 +32,23 @@ The CLI establishes a tunnel between a VS Code client and your remote machine. T
 
 The VS Code Server experience includes a few components:
 
-* The VS Code Server: Backend server that makes VS Code remote experiences possible.
-* [Remote - Tunnels extension](/docs/remote/tunnels.md): Automatically loaded in your local VS Code client, it facilitates the connection to the remote machine.
+- The VS Code Server: Backend server that makes VS Code remote experiences possible.
+- [Remote - Tunnels extension](/docs/remote/tunnels.md): Automatically loaded in your local VS Code client, it facilitates the connection to the remote machine.
 
 ## Scenarios
 
 The VS Code Server allows you to use VS Code in new ways, such as:
 
-* Developing on a remote machine where SSH support may be limited, or you need web-based access.
-* Developing on a machine that doesn't support the installation of VS Code desktop, such as an iPad / tablet or Chromebook.
-* Experiencing the client-side security benefit that all code can be executed in the browser sandbox.
+- Developing on a remote machine where SSH support may be limited, or you need web-based access.
+- Developing on a machine that doesn't support the installation of VS Code desktop, such as an iPad / tablet or Chromebook.
+- Experiencing the client-side security benefit that all code can be executed in the browser sandbox.
 
 ## Getting Started
 
 You can choose from two paths to enable tunneling, which are described in greater details in their respective docs content:
 
-* [Run the `tunnel` command in the `code` CLI](/docs/remote/tunnels.md#using-the-code-cli)
-* [Enable tunneling through the VS Code UI](/docs/remote/tunnels.md#using-the-vs-code-ui)
+- [Run the `tunnel` command in the `code` CLI](/docs/remote/tunnels.md#using-the-code-cli)
+- [Enable tunneling through the VS Code UI](/docs/remote/tunnels.md#using-the-vs-code-ui)
 
 ## Things to try
 
@@ -91,8 +92,8 @@ No, hosting it as a service is not allowed, as specified in the [VS Code Server 
 
 If you're working in a restricted environment, you may need to ensure the VS Code Server has access to the following endpoints:
 
-* https://code.visualstudio.com/docs/setup/network#_common-hostnames
-* https://code.visualstudio.com/docs/remote/ssh#_what-are-the-connectivity-requirements-for-the-vs-code-server-when-it-is-running-on-a-remote-machine-vm
+- https://code.visualstudio.com/docs/setup/network#_common-hostnames
+- https://code.visualstudio.com/docs/remote/ssh#_what-are-the-connectivity-requirements-for-the-vs-code-server-when-it-is-running-on-a-remote-machine-vm
 
 ### Can I use the Remote Development Extensions or a dev container with the VS Code Server?
 

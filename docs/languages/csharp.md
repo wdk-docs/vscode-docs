@@ -1,13 +1,14 @@
 ---
 Order: 19
 Area: languages
-TOCTitle: C#
-ContentId: 40C8AAC1-C00D-4E91-8877-737A598346B6
+title: C#
+id: 40C8AAC1-C00D-4E91-8877-737A598346B6
 PageTitle: C# programming with Visual Studio Code
 DateApproved: 6/6/2023
-MetaDescription: Find out how to get the best out of Visual Studio Code and C#.
+description: Find out how to get the best out of Visual Studio Code and C#.
 MetaSocialImage: images/csharp/languages_csharp.png
 ---
+
 # Working with C&#35;
 
 The C# support in Visual Studio Code is optimized for cross-platform .NET development (see [working with .NET and VS Code](/docs/languages/dotnet.md) for another relevant article). Our focus with VS Code is to be a great editor for cross-platform C# development by providing a rich C# editing experience, AI-powered development, solution management, and integrated testing experiences
@@ -18,8 +19,8 @@ VS Code supports debugging of C# applications running on either .NET or Mono.
 
 For detailed instructions on:
 
-* .NET debugging - see the [C# Dev Kit debugging documentation](/docs/csharp/debugging.md).
-* Mono debugging - see the [Mono Debug extension's README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
+- .NET debugging - see the [C# Dev Kit debugging documentation](/docs/csharp/debugging.md).
+- Mono debugging - see the [Mono Debug extension's README](https://marketplace.visualstudio.com/items?itemName=ms-vscode.mono-debug).
 
 ## Installing C&#35; support
 
@@ -31,18 +32,18 @@ For more information about the C# Dev Kit extension, see the [C# documentation](
 
 Visual Studio Code uses the power of [Roslyn](https://github.com/dotnet/roslyn) and [C# Dev Kit](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csdevkit) to offer an enhanced C# experience. We offer support for:
 
-* .NET projects
-* MSBuild projects
-* C# scripts (CSX)
+- .NET projects
+- MSBuild projects
+- C# scripts (CSX)
 
 Supported .NET project types include:
 
-* ASP.NET Core App
-* ASP.NET Core Web API
-* ASP.NET Core MVC Web App
-* Blazor Server App
-* Blazor WebAssembly App
-* Console App
+- ASP.NET Core App
+- ASP.NET Core Web API
+- ASP.NET Core MVC Web App
+- Blazor Server App
+- Blazor WebAssembly App
+- Console App
 
 And more.
 
@@ -84,7 +85,7 @@ For information on snippets in C# Dev Kit, go to the [Navigate and Edit document
 
 ![Snippets](images/csharp/snippet.png)
 
->**Tip:** You can add in your own User Defined Snippets for C#. Take a look at [User Defined Snippets](/docs/editor/userdefinedsnippets.md) to find out how.
+> **Tip:** You can add in your own User Defined Snippets for C#. Take a look at [User Defined Snippets](/docs/editor/userdefinedsnippets.md) to find out how.
 
 ## Search for Symbols
 
@@ -96,11 +97,11 @@ There are also features outside the editor. One is the ability to search for sym
 
 Another cool feature is the ability to see the number of references to a method directly above the method. Click on the reference info to see the references in the Peek view. This reference information updates as you type.
 
->**Note:** Methods defined in `object`, such as `equals` and `hashCode` do not get reference information due to performance reasons.
+> **Note:** Methods defined in `object`, such as `equals` and `hashCode` do not get reference information due to performance reasons.
 
 ![CodeLens](images/csharp/codelens.png)
 
->**Tip:** You can turn off references information displayed in CodeLens with the `editor.codeLens` [setting](/docs/getstarted/settings.md).
+> **Tip:** You can turn off references information displayed in CodeLens with the `editor.codeLens` [setting](/docs/getstarted/settings.md).
 
 ## Find References/Peek Definition
 
@@ -118,15 +119,15 @@ There are some basic quick fixes supported in VS Code. You will see a lightbulb 
 
 The extension supports the following test frameworks:
 
-* [XUnit](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
-* [NUnit](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-nunit)
-* [MSTest](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-mstest)
+- [XUnit](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-dotnet-test)
+- [NUnit](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-nunit)
+- [MSTest](https://learn.microsoft.com/dotnet/core/testing/unit-testing-with-mstest)
 
 The C# Dev Kit extension provides the following features:
 
-* Run/Debug tests cases
-* View test report
-* View tests in Testing Explorer
+- Run/Debug tests cases
+- View test report
+- View tests in Testing Explorer
 
 For more information, go to our [Testing documentation for C# Dev Kit](/docs/csharp/testing.md).
 
@@ -134,9 +135,9 @@ For more information, go to our [Testing documentation for C# Dev Kit](/docs/csh
 
 Read on to find out about:
 
-* [C# Dev Kit documentation](/docs/csharp/get-started.md)
-* [.NET Development](/docs/languages/dotnet.md) - get up and running with cross-platform .NET
-* [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
-* [Tasks](/docs/editor/tasks.md) - Use tasks to build your project and more.
-* [Debugging](/docs/editor/debugging.md) - Find out how to use the debugger with your project.
-* [Unity development](/docs/other/unity.md) - Learn about using VS Code with your Unity projects.
+- [C# Dev Kit documentation](/docs/csharp/get-started.md)
+- [.NET Development](/docs/languages/dotnet.md) - get up and running with cross-platform .NET
+- [Basic Editing](/docs/editor/codebasics.md) - Learn about the powerful VS Code editor.
+- [Tasks](/docs/editor/tasks.md) - Use tasks to build your project and more.
+- [Debugging](/docs/editor/debugging.md) - Find out how to use the debugger with your project.
+- [Unity development](/docs/other/unity.md) - Learn about using VS Code with your Unity projects.

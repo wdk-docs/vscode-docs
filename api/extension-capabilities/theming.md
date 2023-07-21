@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: 37b6ae0a-d1b5-48b6-9bd4-9b50ef11d573
+id: 37b6ae0a-d1b5-48b6-9bd4-9b50ef11d573
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: Learn how to add custom themes for colors and icons in Visual Studio Code.
+description: Learn how to add custom themes for colors and icons in Visual Studio Code.
 sidebar_position: 3
 ---
 

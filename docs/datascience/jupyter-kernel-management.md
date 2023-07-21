@@ -1,11 +1,11 @@
 ---
 Order: 7
 Area: datascience
-TOCTitle: Manage Jupyter Kernels
-ContentId: 3b6da7e6-c449-4c62-a019-9202412aac04
+title: Manage Jupyter Kernels
+id: 3b6da7e6-c449-4c62-a019-9202412aac04
 PageTitle: Manage Jupyter Kernels in Visual Studio Code
 DateApproved: 1/26/2023
-MetaDescription: Descriptions of kernel selection options and tutorials on managing different types of kernels when working with Jupyter Notebooks in Visual Studio Code.
+description: Descriptions of kernel selection options and tutorials on managing different types of kernels when working with Jupyter Notebooks in Visual Studio Code.
 MetaSocialImage: images/tutorial/social.png
 ---
 
@@ -37,7 +37,7 @@ The **Jupyter Kernels** category lists all Jupyter kernels that VS Code detects 
 
 The **Python Environments** category lists the Python environments that VS Code detects from the compute system it's operating in (your desktop, Codespaces, remote server, etc.). It shows all Python environments grouped by type (for example, conda, venv)—whether the [IPyKernel](https://ipython.readthedocs.io/en/stable/install/kernel_install.html) is installed or not.
 
-   > **Note**: You **do not** need to install [jupyter](https://pypi.org/project/jupyter/) into the Python environment you want to use. Only the IPyKernel package is required to launch a Python process as a kernel and execute code against your notebook (`pip install ipykernel`). Visit the [Jupyter extension wiki](https://github.com/microsoft/vscode-jupyter/wiki/Kernels-(Architecture)) to learn more.
+> **Note**: You **do not** need to install [jupyter](https://pypi.org/project/jupyter/) into the Python environment you want to use. Only the IPyKernel package is required to launch a Python process as a kernel and execute code against your notebook (`pip install ipykernel`). Visit the [Jupyter extension wiki](<https://github.com/microsoft/vscode-jupyter/wiki/Kernels-(Architecture)>) to learn more.
 
 ## Existing Jupyter Server
 

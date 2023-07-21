@@ -1,10 +1,10 @@
 ---
 # DO NOT TOUCH — Managed by doc writer
-ContentId: fdd5476c-13e2-4f78-9dd3-0157eed36a29
+id: fdd5476c-13e2-4f78-9dd3-0157eed36a29
 DateApproved: 7/6/2023
 
 # Summarize the whole topic in less than 300 characters for SEO purpose
-MetaDescription: UX guidelines for using context menus in a Visual Studio Code extension.
+description: UX guidelines for using context menus in a Visual Studio Code extension.
 ---
 
 # 上下文菜单
