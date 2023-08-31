@@ -155,7 +155,7 @@ The default issue triggers are:
 
 ### 解决问题
 
-From the **Issues** view, you can see your issues and work on them.
+在 **Issues** 视图中，您可以看到您的问题并对其进行处理。
 
 ![Issue view with hover](images/github/issues-view.png)
 
@@ -179,73 +179,74 @@ The [GitHub Repositories](https://marketplace.visualstudio.com/items?itemName=gi
 
 ### 打开存储库
 
-Once you have installed the GitHub Repositories extension, you can open a repository with the **GitHub Repositories: Open Repository...** command from the Command Palette (`kb(workbench.action.showCommands)`) or by clicking the Remote indicator in the lower left of the Status bar.
+一旦你安装了GitHub仓库扩展，你可以打开一个仓库与 **GitHub Repositories: Open Repository...** 命令从命令调色板 (`kb(workbench.action.showCommands)`) 或通过单击状态栏左下角的Remote指示器。
 
-![Remote indicator in the Status bar](images/github/remote-indicator.png)
+![状态栏中的远程指示器](images/github/remote-indicator.png)
 
-When you run the **Open Repository** command, you then choose whether to open a repository from GitHub, open a Pull Request from GitHub, or reopen a repository that you had previously connected to.
+当您运行 **Open Repository** 命令时，您可以选择是否从GitHub打开存储库，从GitHub打开Pull Request，或者重新打开先前连接的存储库。
 
-If you haven't logged into GitHub from VS Code before, you'll be prompted to authenticate with your GitHub account.
+如果你之前没有从VS Code登录到GitHub，你会被提示用你的GitHub账户进行身份验证。
 
 ![GitHub Repository extension open repository dropdown](images/github/open-github-repository-dropdown.png)
 
-You can provide the repository URL directly or search GitHub for the repository you want by typing in the text box.
+您可以直接提供存储库URL，或者通过在文本框中输入所需的存储库在GitHub中搜索。
 
-Once you have selected a repository or Pull Request, the VS Code window will reload and you will see the repository contents in the File Explorer. You can then open files (with full syntax highlighting and bracket matching), make edits, and commit changes, just like you would working on a local clone of a repository.
+一旦你选择了一个存储库或Pull Request, VS Code窗口将重新加载，你将在文件资源管理器中看到存储库的内容。然后，您可以打开文件(使用完整的语法高亮显示和括号匹配)、进行编辑和提交更改，就像处理存储库的本地克隆一样。
 
-One difference from working with a local repository is that when you commit a change with the GitHub Repository extension, the changes are pushed directly to the remote repository, similar to if you were working in the GitHub web interface.
+与使用本地存储库的一个不同之处在于，当您使用GitHub repository扩展提交更改时，更改将直接推送到远程存储库，类似于您在GitHub web界面中工作。
 
-Another feature of the GitHub Repositories extension is that every time you open a repository or branch, you get the up-to-date sources available from GitHub. You don't need to remember to pull to refresh as you would with a local repository.
+GitHub Repositories扩展的另一个特点是，每次你打开一个存储库或分支，你都可以从GitHub获得最新的源代码。您不需要像使用本地存储库那样记住拉出以进行刷新。
 
 The GitHub Repositories extension supports viewing and even committing LFS-tracked files without needing to install [Git LFS](https://git-lfs.github.com) (Large File System) locally. Add the file types you want tracked with LFS to a [`.gitattributes` file](https://git-lfs.com), then commit your changes directly to GitHub using the Source Control view.
 
 ### 切换分支
 
-You can easily switch between branches by clicking on the branch indicator in the Status bar. One great feature of the GitHub Repositories extension is that you can switch branches without needing to stash uncommitted changes. The extension remembers your changes and reapplies them when you switch branches.
+您可以通过单击状态栏中的分支指示器轻松地在分支之间切换。GitHub Repositories扩展的一个重要特性是，您可以切换分支，而无需隐藏未提交的更改。扩展会记住您的更改，并在切换分支时重新应用它们。
 
 ![Branch indicator on the Status bar](images/github/branch-indicator-status-bar.png)
 
 ### 远程浏览器
 
-You can quickly reopen remote repositories with the Remote Explorer available on the Activity bar. This view shows you the previously opened repositories and branches.
+您可以使用活动栏上可用的远程资源管理器快速重新打开远程存储库。这个视图显示了之前打开的存储库和分支。
 
 ![Remote Explorer view](images/github/github-remote-explorer.png)
 
 ### 创建拉取请求
 
-If your workflow uses Pull Requests, rather than direct commits to a repository, you can create a new PR from the Source Control view. You'll be prompted to provide a title and create a new branch.
+如果您的工作流使用Pull Requests，而不是直接提交到存储库，您可以从Source Control视图创建一个新的PR。系统将提示您提供一个标题并创建一个新分支。
 
-![Create a Pull Request button in the Source Control view](images/github/github-repositories-create-pull-request.png)
+![在Source Control视图中创建Pull Request按钮](images/github/github-repositories-create-pull-request.png)
 
-Once you have created a Pull Request, you can use the [GitHub Pull Request and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github) extension to review, edit, and merge your PR as described [earlier](/docs/sourcecontrol/github.md#pull-requests) in this topic.
+一旦你创建了一个拉请求，你可以使用[GitHub拉请求和问题](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)扩展来审查，编辑和合并你的PR描述[前面](/docs/sourcecontrol/github.md#pull-requests)在这个主题。
 
 ### 虚拟文件系统
 
-Without a repository's files on your local machine, the GitHub Repositories extension creates a virtual file system in memory so you can view file contents and make edits. Using a virtual file system means that some operations and extensions which assume local files are not enabled or have limited functionality. Features such as tasks, debugging, and integrated terminals are not enabled and you can learn about the level of support for the virtual file system via the **features are not available** link in the Remote indicator hover.
+如果本地机器上没有存储库的文件，GitHub知识库扩展将在内存中创建一个虚拟文件系统，以便您可以查看文件内容并进行编辑。使用虚拟文件系统意味着一些假定本地文件未启用或功能有限的操作和扩展。未启用任务、调试、集成终端等特性，您可以通过悬停“远程”指示器中的“**特性不可用**”链接了解对虚拟文件系统的支持程度。
 
 ![Remote indicator hover with features are not available link](images/github/features-not-available-hover.png)
 
-Extension authors can learn more about running in a virtual file system and workspace in the [Virtual Workspaces extension author's guide](https://github.com/microsoft/vscode/wiki/Virtual-Workspaces).
+扩展作者可以在[虚拟工作区扩展作者指南](https://github.com/microsoft/vscode/wiki/Virtual-Workspaces)中了解更多关于在虚拟文件系统和工作空间中运行的信息。.
 
 ### 继续努力...
 
-Sometimes you'll want to switch to working on a repository in a development environment with support for a local file system and full language and development tooling. The GitHub Repositories extension makes it easy for you to:
+有时，您希望切换到支持本地文件系统和完整语言和开发工具的开发环境中的存储库。GitHub知识库扩展使您可以轻松地:
 
-- Create a GitHub codespace (if you have the [GitHub Codespaces extension](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)).
-- Clone the repository locally.
-- Clone the repository into a Docker container (if you have [Docker](https://docker.com/) and the Microsoft [Docker extension](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) installed).
+- 创建一个GitHub代码空间(如果你有[GitHub代码空间扩展](https://marketplace.visualstudio.com/items?itemName=GitHub.codespaces)).
+- 在本地克隆存储库。
+- 将存储库克隆到Docker容器中 (如果你已经安装了[Docker](https://docker.com/)和微软的[Docker扩展](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker)).
 
-To switch development environments, use the **Continue Working On...** command, available from the Command Palette (`kb(workbench.action.showCommands)`) or by clicking on the Remote indicator in the Status bar.
+要切换开发环境，请使用 **Continue Working On...** 命令，可从命令调色板(`kb(workbench.action.showCommands)`)或通过单击状态栏中的Remote指示器获得。
 
-![Continue Working On command in Remote dropdown](images/github/continue-working.png)
+![在Remote下拉菜单中继续工作](images/github/continue-working.png)
 
-If you are using the [browser-based editor](/docs/remote/codespaces.md#browserbased-editor), the **"Continue Working On..."** command has the options to open the repository locally or within a cloud-hosted environment in [GitHub Codespaces](https://github.com/features/codespaces).
+如果你使用的是[基于浏览器的编辑器](/docs/remote/codespaces.md#browserbased-editor), **"Continue Working On..."** 命令可以选择在本地或在[GitHub Codespaces](https://github.com/features/codespaces)的云托管环境中打开存储库。
 
-![Continue Working On from web-based editor](images/github/codespaces-continue.png)
+![从网络编辑器继续工作](images/github/codespaces-continue.png)
 
-The first time that you use **Continue Working On** with uncommitted changes, you will have the option to bring your edits to your selected development environment using **Cloud Changes**, which uses a VS Code service to store your pending changes.
+当你第一次使用 **Continue Working On** 和未提交的更改时，你可以选择使用**Cloud changes **将你的编辑带到你选择的开发环境中，它使用VS Code服务来存储你的未决更改。
 
-These changes are deleted from our service once they are applied to your target development environment. If you choose to continue without your uncommitted changes, you can always change this preference later by configuring the setting `"workbench.cloudChanges.continueOn": "prompt"`.
+这些更改一旦应用到目标开发环境中，就会从我们的服务中删除。
+如果您选择继续而不进行未提交的更改，您可以稍后通过配置设置`"workbench.cloudChanges.continueOn": "prompt"`更改此首选项.
 
 ## GitHub Copilot
 
